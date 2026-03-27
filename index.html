@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ripple Sports Insights — Archive</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ME70MTR6PB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ME70MTR6PB');
+</script>
+
+<style>
+:root {
+  --bg:       #0a0a0f;
+  --surface:  #111118;
+  --surface2: #16161f;
+  --border:   rgba(255,255,255,0.07);
+  --ink:      #f0eff5;
+  --ink2:     #8a899a;
+  --ink3:     #3e3d50;
+  --g1: #8C52FF;
+  --g2: #2BA8FF;
+  --g3: #F7C948;
+  --grad: linear-gradient(135deg, var(--g1), var(--g2), var(--g3));
+  --grad-text: linear-gradient(-45deg, var(--g1), var(--g2), var(--g3), var(--g2));
+  --radius: 14px;
+}
+
+[data-theme="light"] {
+  --bg:       #f5f4f0;
+  --surface:  #ffffff;
+  --surface2: #eeecf5;
+  --border:   rgba(0,0,0,0.08);
+  --ink:      #0a0a0f;
+  --ink2:     #4a4958;
+  --ink3:     #b0afc0;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'DM Sans', sans-serif;
+  min-height: 100vh;
+  transition: background 0.35s, color 0.35s;
+}
+
+body::after {
+  content: '';
+  position: fixed; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+  opacity: 0.025;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.shell { max-width: 860px; margin: 0 auto; padding: 0 32px; }
+
+header {
+  padding: 56px 0 40px;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border);
+}
+
+.ripple-stage { position: absolute; inset: 0; pointer-events: none; z-index: 0; overflow: hidden; }
+
+@keyframes rippleOut {
+  0%   { transform: scale(0); opacity: 0.7; }
+  100% { transform: scale(5); opacity: 0; }
+}
+
+.rring { position: absolute; border-radius: 50%; border: 1.5px solid color-mix(in srgb, var(--g2) 45%, transparent); }
+.rring:nth-child(1) { width: 24px; height: 24px; top: 18%; left: 6%;    animation: rippleOut 3.2s cubic-bezier(.4,0,.2,1) infinite 0s; }
+.rring:nth-child(2) { width: 32px; height: 32px; top: 55%; right: 10%;  animation: rippleOut 3.2s cubic-bezier(.4,0,.2,1) infinite 1.1s; }
+.rring:nth-child(3) { width: 20px; height: 20px; bottom: 14%; left: 22%; animation: rippleOut 3.2s cubic-bezier(.4,0,.2,1) infinite 2.1s; }
+.rring:nth-child(4) { width: 28px; height: 28px; top: 30%; right: 28%;  animation: rippleOut 3.2s cubic-bezier(.4,0,.2,1) infinite 0.6s;
+  border-color: color-mix(in srgb, var(--g1) 35%, transparent); }
+
+.header-inner { position: relative; z-index: 2; display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; }
+
+@keyframes shimmer {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.brand-eyebrow {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase;
+  background: var(--grad); -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; background-clip: text;
+  margin-bottom: 8px;
+}
+
+.brand-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(52px, 8vw, 96px);
+  line-height: 0.9; letter-spacing: 0.02em;
+  background: var(--grad-text); background-size: 300% 300%;
+  animation: shimmer 6s ease infinite;
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  display: block;
+}
+
+.brand-title-sub {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(18px, 2.5vw, 30px);
+  letter-spacing: 0.22em; color: transparent;
+  -webkit-text-stroke: 1px var(--ink2); display: block; margin-top: -2px;
+}
+
+.brand-sub { font-size: 12px; color: var(--ink2); font-weight: 300; margin-top: 10px; letter-spacing: 0.04em; }
+
+.theme-btn {
+  background: var(--surface); border: 1px solid var(--border);
+  color: var(--ink2); width: 40px; height: 40px; border-radius: 10px;
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  font-size: 17px; transition: border-color 0.2s, transform 0.2s;
+  flex-shrink: 0;
+}
+.theme-btn:hover { border-color: rgba(255,255,255,0.2); transform: translateY(-2px); color: var(--ink); }
+
+.stats-bar {
+  display: flex; gap: 32px;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.stat { display: flex; flex-direction: column; gap: 3px; }
+
+.stat-num {
+  font-family: 'Bebas Neue', sans-serif; font-size: 36px; line-height: 1;
+  background: var(--grad-text); background-size: 300% 300%;
+  animation: shimmer 6s ease infinite;
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+
+.stat-label {
+  font-family: 'DM Mono', monospace; font-size: 9px;
+  text-transform: uppercase; letter-spacing: 0.12em; color: var(--ink3);
+}
+
+.section-title {
+  font-family: 'DM Mono', monospace; font-size: 9px;
+  text-transform: uppercase; letter-spacing: 0.14em;
+  color: var(--ink3); margin: 32px 0 16px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+  padding-bottom: 80px;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.issue-card {
+  display: flex; flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  text-decoration: none; color: inherit;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  animation: fadeUp 0.5s both;
+  z-index: 0;
+}
+
+.issue-card::after {
+  content: '';
+  position: absolute; inset: -1.5px;
+  border-radius: calc(var(--radius) + 1.5px);
+  background: linear-gradient(var(--angle, 0deg), var(--g1), var(--g2), var(--g3), var(--g2), var(--g1));
+  background-size: 300% 300%;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  padding: 1.5px;
+  opacity: 0;
+  transition: opacity 0.2s;
+  pointer-events: none;
+}
+
+.issue-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.4); }
+.issue-card:hover::after { opacity: 1; }
+
+.issue-card.latest { border-color: color-mix(in srgb, var(--g1) 30%, transparent); }
+.issue-card.latest::before {
+  content: 'LATEST';
+  position: absolute; top: 12px; right: 12px;
+  font-family: 'DM Mono', monospace; font-size: 8px;
+  letter-spacing: 0.12em; font-weight: 500;
+  background: var(--grad); -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; background-clip: text;
+}
+
+.issue-top {
+  background: var(--surface2);
+  padding: 18px 18px 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+.issue-num {
+  font-family: 'Bebas Neue', sans-serif; font-size: 42px; line-height: 1;
+  background: var(--grad-text); background-size: 300% 300%;
+  animation: shimmer 8s ease infinite;
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+
+.issue-date {
+  font-family: 'DM Mono', monospace; font-size: 10px;
+  color: var(--ink3); letter-spacing: 0.08em; margin-top: 4px;
+}
+
+.issue-body { padding: 14px 18px 18px; flex: 1; display: flex; flex-direction: column; gap: 10px; }
+
+.issue-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+
+.issue-tag {
+  font-family: 'DM Mono', monospace; font-size: 9px;
+  text-transform: uppercase; letter-spacing: 0.07em;
+  padding: 3px 7px; border-radius: 3px;
+  background: color-mix(in srgb, var(--g1) 10%, transparent);
+  color: var(--g2);
+  border: 1px solid color-mix(in srgb, var(--g2) 20%, transparent);
+}
+
+.issue-count {
+  font-family: 'DM Mono', monospace; font-size: 10px;
+  color: var(--ink3); margin-top: auto;
+}
+
+.issue-arrow {
+  font-size: 18px; color: var(--ink3);
+  transition: color 0.15s, transform 0.15s;
+  align-self: flex-end;
+}
+.issue-card:hover .issue-arrow { color: var(--g2); transform: translate(2px, -2px); }
+
+.issue-card:nth-child(1) { animation-delay: 0.05s; }
+.issue-card:nth-child(2) { animation-delay: 0.10s; }
+.issue-card:nth-child(3) { animation-delay: 0.15s; }
+.issue-card:nth-child(4) { animation-delay: 0.20s; }
+.issue-card:nth-child(5) { animation-delay: 0.25s; }
+
+footer {
+  border-top: 1px solid var(--border);
+  padding: 28px 32px;
+  display: flex; align-items: center; justify-content: space-between;
+  background: var(--surface);
+}
+
+.footer-brand {
+  font-family: 'Bebas Neue', sans-serif; font-size: 20px; letter-spacing: 0.05em;
+  background: var(--grad-text); background-size: 300% 300%;
+  animation: shimmer 6s ease infinite;
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+
+.footer-note { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--ink3); letter-spacing: 0.06em; text-align: right; }
+
+@media (max-width: 640px) {
+  .shell { padding: 0 16px; }
+  footer { padding: 24px 16px; flex-direction: column; align-items: flex-start; gap: 8px; }
+  .stats-bar { gap: 20px; flex-wrap: wrap; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+</style>
+</head>
+
+<body>
+<div class="shell">
+  <header>
+    <div class="ripple-stage">
+      <div class="rring"></div><div class="rring"></div>
+      <div class="rring"></div><div class="rring"></div>
+    </div>
+    <div class="header-inner">
+      <div class="brand">
+        <div class="brand-eyebrow">// Ripple Analytics · All Issues</div>
+        <h1 class="brand-title">Ripple Sports</h1>
+        <span class="brand-title-sub">Insights</span>
+        <div class="brand-sub">Weekly sports business, media &amp; on-field digest</div>
+      </div>
+      <button class="theme-btn" id="themeToggle" aria-label="Toggle theme">◐</button>
+    </div>
+  </header>
+
+  <div class="stats-bar">
+    <div class="stat">
+      <div class="stat-num" id="total-issues">2</div>
+      <div class="stat-label">Issues Published</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num" id="total-stories">40+</div>
+      <div class="stat-label">Stories This Issue</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">5</div>
+      <div class="stat-label">Sports Categories</div>
+    </div>
+  </div>
+
+  <div class="section-title">All Issues</div>
+  <div class="grid" id="grid">
+
+    <!-- Issue 15 — current -->
+    <a href="issue-15.html" class="issue-card latest">
+      <div class="issue-top">
+        <div class="issue-num">Issue 15</div>
+        <div class="issue-date">MAR 20 – MAR 26 · 2026</div>
+      </div>
+      <div class="issue-body">
+        <div class="issue-tags">
+          <span class="issue-tag">NFL</span>
+          <span class="issue-tag">WNBA</span>
+          <span class="issue-tag">NBA</span>
+          <span class="issue-tag">MLB</span>
+          <span class="issue-tag">NHL</span>
+          <span class="issue-tag">PL</span>
+          <span class="issue-tag">Real Madrid</span>
+          <span class="issue-tag">NWSL</span>
+          <span class="issue-tag">F1</span>
+          <span class="issue-tag">NASCAR</span>
+        </div>
+        <div class="issue-count">40+ stories</div>
+        <span class="issue-arrow">↗</span>
+      </div>
+    </a>
+
+    <!-- Issue 14 -->
+    <a href="issue-14.html" class="issue-card">
+      <div class="issue-top">
+        <div class="issue-num">Issue 14</div>
+        <div class="issue-date">MAR 13 – MAR 19 · 2026</div>
+      </div>
+      <div class="issue-body">
+        <div class="issue-tags">
+          <span class="issue-tag">NFL</span>
+          <span class="issue-tag">WNBA</span>
+          <span class="issue-tag">MLB</span>
+          <span class="issue-tag">NBA</span>
+          <span class="issue-tag">UCL</span>
+          <span class="issue-tag">F1</span>
+          <span class="issue-tag">March Madness</span>
+        </div>
+        <div class="issue-count">45+ stories</div>
+        <span class="issue-arrow">↗</span>
+      </div>
+    </a>
+
+  </div>
+</div>
+
+<footer>
+  <div class="footer-brand">Ripple Analytics</div>
+  <div class="footer-note">© 2026 Ripple Analytics Sports Insights<br>All rights reserved · Weekly digest</div>
+</footer>
+
+<script>
+document.getElementById('themeToggle').addEventListener('click', () => {
+  const cur = document.documentElement.getAttribute('data-theme');
+  document.documentElement.setAttribute('data-theme', cur === 'dark' ? 'light' : 'dark');
+});
+
+let angle = 0;
+(function spin() {
+  angle = (angle + 1.2) % 360;
+  document.querySelectorAll('.issue-card:hover').forEach(el => {
+    el.style.setProperty('--angle', angle + 'deg');
+  });
+  requestAnimationFrame(spin);
+})();
+
+document.getElementById('total-issues').textContent =
+  document.querySelectorAll('.issue-card').length;
+</script>
+</body>
+</html>
