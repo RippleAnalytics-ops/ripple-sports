@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ripple Sports Insights</title>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ME70MTR6PB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ME70MTR6PB', { page_title: 'Ripple Sports Insights', page_location: window.location.href, send_page_view: true });
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+:root{--bg:#0a0a0f;--surface:#111118;--surface2:#16161f;--border:rgba(255,255,255,0.07);--border-hover:rgba(255,255,255,0.16);--ink:#f0eff5;--ink2:#8a899a;--ink3:#3e3d50;--g1:#8C52FF;--g2:#2BA8FF;--g3:#F7C948;--grad:linear-gradient(135deg,var(--g1),var(--g2),var(--g3));--grad-text:linear-gradient(-45deg,var(--g1),var(--g2),var(--g3),var(--g2));--radius:14px;--shadow-hover:0 16px 40px rgba(0,0,0,.45)}
+[data-theme="light"]{--bg:#f5f4f0;--surface:#ffffff;--surface2:#eeecf5;--border:rgba(0,0,0,0.08);--border-hover:rgba(140,82,255,0.35);--ink:#0a0a0f;--ink2:#4a4958;--ink3:#b0afc0}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'DM Sans',sans-serif;font-size:14px;line-height:1.6;min-height:100vh;overflow-x:hidden;transition:background .35s,color .35s}
+body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");opacity:.025;pointer-events:none;z-index:9999}
+.shell{max-width:1280px;margin:0 auto;padding:0 32px}
+header{padding:56px 0 0;position:relative;overflow:hidden}
+.ripple-stage{position:absolute;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+@keyframes rippleOut{0%{transform:scale(0);opacity:.7}100%{transform:scale(5);opacity:0}}
+.rring{position:absolute;border-radius:50%;border:1.5px solid color-mix(in srgb,var(--g2) 45%,transparent)}
+.rring:nth-child(1){width:24px;height:24px;top:18%;left:6%;animation:rippleOut 3.2s cubic-bezier(.4,0,.2,1) infinite 0s}
+.rring:nth-child(2){width:32px;height:32px;top:55%;right:10%;animation:rippleOut 3.2s cubic-bezier(.4,0,.2,1) infinite 1.1s}
+.rring:nth-child(3){width:20px;height:20px;bottom:14%;left:22%;animation:rippleOut 3.2s cubic-bezier(.4,0,.2,1) infinite 2.1s}
+.rring:nth-child(4){width:28px;height:28px;top:30%;right:28%;animation:rippleOut 3.2s cubic-bezier(.4,0,.2,1) infinite .6s;border-color:color-mix(in srgb,var(--g1) 35%,transparent)}
+.header-inner{position:relative;z-index:2;display:grid;grid-template-columns:1fr auto;align-items:end;gap:24px;padding-bottom:28px;border-bottom:1px solid var(--border)}
+.brand-eyebrow{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:8px}
+@keyframes shimmer{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+.brand-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(56px,9vw,108px);line-height:.9;letter-spacing:.02em;background:var(--grad-text);background-size:300% 300%;animation:shimmer 6s ease infinite;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block}
+.brand-title-sub{font-family:'Bebas Neue',sans-serif;font-size:clamp(20px,3vw,34px);letter-spacing:.22em;color:transparent;-webkit-text-stroke:1px var(--ink2);display:block;margin-top:-2px}
+.brand-sub{font-size:12px;color:var(--ink2);font-weight:300;margin-top:10px;letter-spacing:.04em}
+.header-meta{display:flex;flex-direction:column;align-items:flex-end;gap:10px;padding-bottom:4px}
+.theme-btn{background:var(--surface);border:1px solid var(--border);color:var(--ink2);width:40px;height:40px;border-radius:10px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:17px;position:relative;transition:border-color .2s,transform .2s,box-shadow .2s;z-index:1}
+.theme-btn::before{content:'';position:absolute;inset:-4px;border-radius:14px;background:radial-gradient(circle at 30% 30%,color-mix(in srgb,var(--g1) 25%,transparent),transparent 60%),radial-gradient(circle at 70% 70%,color-mix(in srgb,var(--g2) 20%,transparent),transparent 60%);opacity:0;filter:blur(4px);z-index:-1;transition:opacity .2s}
+.theme-btn:hover::before{opacity:1}.theme-btn:hover{transform:translateY(-2px) scale(1.04);border-color:var(--border-hover);box-shadow:0 4px 16px color-mix(in srgb,var(--g1) 20%,transparent);color:var(--ink)}
+.ticker-wrap{overflow:hidden;border-bottom:1px solid var(--border);background:var(--surface);padding:9px 0;position:relative}
+.ticker-wrap::before,.ticker-wrap::after{content:'';position:absolute;top:0;bottom:0;width:72px;z-index:2;pointer-events:none}
+.ticker-wrap::before{left:0;background:linear-gradient(to right,var(--surface),transparent)}
+.ticker-wrap::after{right:0;background:linear-gradient(to left,var(--surface),transparent)}
+.ticker-track{display:flex;width:max-content;animation:ticker 70s linear infinite}
+.ticker-track:hover{animation-play-state:paused}
+@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.ticker-item{display:flex;align-items:center;gap:10px;padding:0 28px;white-space:nowrap;font-family:'DM Mono',monospace;font-size:10px;color:var(--ink2);border-right:1px solid var(--border);text-decoration:none;transition:color .15s;cursor:pointer}
+.ticker-item:hover{color:var(--ink)}.ticker-item.hot:hover .t-dot{box-shadow:0 0 8px color-mix(in srgb,var(--g1) 80%,transparent)}
+.t-dot{width:5px;height:5px;border-radius:50%;flex-shrink:0;background:var(--g2)}
+.ticker-item.hot .t-dot{background:var(--g1);box-shadow:0 0 6px color-mix(in srgb,var(--g1) 60%,transparent)}
+.controls-bar{position:sticky;top:0;z-index:100;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:12px 0;transition:background .35s}
+.controls-inner{max-width:1280px;margin:0 auto;padding:0 32px;display:flex;align-items:center;gap:14px}
+.search-box{flex-shrink:0;width:260px;position:relative}
+.search-box input{width:100%;background:var(--surface);border:1px solid var(--border);border-radius:9px;color:var(--ink);font-family:'DM Sans',sans-serif;font-size:13px;padding:8px 14px 8px 36px;outline:none;transition:border-color .2s,box-shadow .2s}
+.search-box input::placeholder{color:var(--ink3)}.search-box input:focus{border-color:var(--g1);box-shadow:0 0 0 3px color-mix(in srgb,var(--g1) 14%,transparent)}
+.search-icon{position:absolute;left:12px;top:50%;transform:translateY(-50%);color:var(--ink3);font-size:14px;pointer-events:none}
+.chips{display:flex;gap:6px;overflow-x:auto;flex:1;scrollbar-width:none;align-items:center}.chips::-webkit-scrollbar{display:none}
+.chip{flex-shrink:0;padding:6px 15px;border-radius:100px;border:1px solid var(--border);background:transparent;color:var(--ink2);font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;cursor:pointer;letter-spacing:.02em;white-space:nowrap;position:relative;transition:color .2s,border-color .2s,transform .2s,box-shadow .2s;z-index:1;overflow:hidden}
+.chip::before{content:'';position:absolute;inset:-1px;border-radius:100px;background:var(--grad);opacity:0;z-index:-1;transition:opacity .2s}
+.chip:hover{color:var(--ink);border-color:var(--border-hover);transform:translateY(-1px)}
+.chip.active{color:#fff;border-color:transparent;background:transparent;box-shadow:0 2px 14px color-mix(in srgb,var(--g1) 35%,transparent)}.chip.active::before{opacity:1}
+.main{display:grid;grid-template-columns:minmax(0,1fr) 218px;gap:28px;padding:36px 0 80px;align-items:start}
+.feed{display:grid;grid-template-columns:repeat(auto-fill,minmax(296px,1fr));gap:18px;align-items:start}
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;animation:fadeUp .55s cubic-bezier(.2,.9,.2,1) both;position:relative;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,.35);border-color:rgba(255,255,255,.13);overflow:visible}
+.card:nth-child(1){animation-delay:.04s}.card:nth-child(2){animation-delay:.09s}.card:nth-child(3){animation-delay:.14s}.card:nth-child(4){animation-delay:.19s}.card:nth-child(5){animation-delay:.24s}.card:nth-child(6){animation-delay:.29s}.card:nth-child(7){animation-delay:.34s}.card:nth-child(8){animation-delay:.39s}.card:nth-child(9){animation-delay:.44s}.card:nth-child(10){animation-delay:.49s}.card:nth-child(11){animation-delay:.54s}.card:nth-child(12){animation-delay:.59s}.card:nth-child(13){animation-delay:.64s}.card:nth-child(14){animation-delay:.69s}
+.card-head{display:flex;align-items:center;justify-content:space-between;padding:14px 16px 12px 16px;border-bottom:1px solid var(--border);background:var(--surface2);overflow:visible}
+.league-label{font-family:'Bebas Neue',sans-serif;font-size:19px;letter-spacing:.04em;line-height:1.3;padding-top:2px;display:flex;align-items:center;gap:8px}
+.league-emoji{font-style:normal;-webkit-text-fill-color:initial;background:none;font-size:20px;line-height:1;flex-shrink:0}
+.league-text{background:var(--grad-text);background-size:300% 300%;animation:shimmer 8s ease infinite;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.season-tag{font-family:'DM Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:.1em;padding:3px 7px;border-radius:3px;border:1px solid;white-space:nowrap}
+.season-tag.in{color:var(--g2);border-color:color-mix(in srgb,var(--g2) 30%,transparent)}.season-tag.off{color:var(--ink3);border-color:var(--border)}
+.card-items{display:flex;flex-direction:column;padding:8px;gap:2px;flex:1;position:relative;overflow:visible}
+@keyframes borderSpin{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+.item{display:flex;align-items:flex-start;gap:10px;padding:10px 12px 10px 16px;border-radius:8px;text-decoration:none;color:inherit;position:relative;background:var(--surface);border:1.5px solid transparent;transition:box-shadow .18s,transform .18s;z-index:0}
+.item::after{content:'';position:absolute;inset:-1.5px;border-radius:9px;background:linear-gradient(var(--angle,0deg),var(--g1),var(--g2),var(--g3),var(--g2),var(--g1));background-size:300% 300%;-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);mask-composite:exclude;padding:1.5px;opacity:.25;pointer-events:none;animation:borderSpin 2.5s linear infinite paused}
+.item:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 8px 24px rgba(0,0,0,.45);border-color:transparent}
+.item:hover::after{opacity:1;animation-play-state:running}.item:hover .item-text{color:var(--ink)}.item:hover .item-source{color:var(--g2)}.item:hover .item-arrow{opacity:1}
+.item-tag{flex-shrink:0;font-family:'DM Mono',monospace;font-size:9px;font-weight:500;text-transform:uppercase;letter-spacing:.08em;padding:3px 7px;border-radius:3px;background:color-mix(in srgb,var(--g1) 10%,transparent);color:var(--g2);border:1px solid color-mix(in srgb,var(--g2) 25%,transparent);margin-top:1px;white-space:nowrap;width:80px;text-align:center;display:inline-block}
+.item-body{flex:1;min-width:0}.item-text{font-size:13px;font-weight:500;color:var(--ink2);line-height:1.4;transition:color .15s}
+.item-source{font-family:'DM Mono',monospace;font-size:10px;color:var(--ink3);margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.item-arrow{flex-shrink:0;font-size:12px;opacity:0;color:var(--ink2);transition:opacity .15s;margin-top:2px}
+.sidebar{position:sticky;top:78px;display:flex;flex-direction:column;gap:18px}
+.sidebar-block{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:border-color .2s}.sidebar-block:hover{border-color:var(--border-hover)}
+.sidebar-head{display:flex;align-items:center;padding:11px 14px;border-bottom:1px solid var(--border);background:var(--surface2)}
+.sidebar-title{font-family:'DM Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:.14em;color:var(--ink2)}
+.sched-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);overflow:visible}
+.sched-link{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;padding:12px 6px;text-decoration:none;background:var(--surface);position:relative;transition:transform .18s,box-shadow .18s;z-index:0}
+.sched-link::after{content:'';position:absolute;inset:-1.5px;padding:1.5px;background:linear-gradient(var(--angle,0deg),var(--g1),var(--g2),var(--g3),var(--g2),var(--g1));background-size:300% 300%;-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);mask-composite:exclude;opacity:.25;pointer-events:none;animation:borderSpin 2.5s linear infinite paused}
+.sched-link:hover{transform:translateY(-3px) scale(1.08);box-shadow:0 8px 20px rgba(0,0,0,.45);z-index:5;background:var(--surface2)}
+.sched-link:hover::after{opacity:1;animation-play-state:running}.sched-link:hover .sched-label{color:var(--g2)}
+.sched-emoji{font-size:15px;line-height:1}.sched-label{font-family:'DM Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink3)}
+.stats-body{padding:14px;display:flex;flex-direction:column;gap:10px}
+.stat-total{display:flex;justify-content:space-between;align-items:center}
+.stat-label{font-family:'DM Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:.1em;color:var(--ink2)}
+.stat-num{font-family:'Bebas Neue',sans-serif;font-size:36px;line-height:1;background:var(--grad-text);background-size:300% 300%;animation:shimmer 6s ease infinite;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.stat-div{height:1px;background:var(--border)}
+#no-results{display:none;grid-column:1/-1;padding:80px 20px;text-align:center;font-family:'Bebas Neue',sans-serif;font-size:30px;letter-spacing:.06em;background:var(--grad-text);background-size:300% 300%;animation:shimmer 5s ease infinite;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+#toTop{position:fixed;bottom:26px;right:26px;width:46px;height:46px;border:none;border-radius:50%;background:var(--grad);background-size:200% 200%;animation:shimmer 4s ease infinite;color:#fff;font-size:18px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 18px color-mix(in srgb,var(--g1) 40%,transparent);opacity:0;pointer-events:none;transform:translateY(10px);transition:opacity .3s,transform .3s,box-shadow .2s;z-index:500}
+#toTop.show{opacity:1;pointer-events:auto;transform:translateY(0)}#toTop:hover{box-shadow:0 6px 24px color-mix(in srgb,var(--g1) 60%,transparent);transform:translateY(-3px)}
+footer{border-top:1px solid var(--border);padding:28px 32px;display:flex;align-items:center;justify-content:space-between;gap:16px;background:var(--surface)}
+.footer-brand{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:.05em;background:var(--grad-text);background-size:300% 300%;animation:shimmer 6s ease infinite;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.footer-note{font-family:'DM Mono',monospace;font-size:10px;color:var(--ink3);letter-spacing:.06em;text-align:right}
+@media(max-width:900px){.main{grid-template-columns:1fr}.sidebar{position:static;top:auto}}
+@media(max-width:640px){.shell,.controls-inner,footer{padding-left:16px;padding-right:16px}.header-inner{grid-template-columns:1fr}.header-meta{align-items:flex-start;flex-direction:row;flex-wrap:wrap}.feed{grid-template-columns:1fr}.brand-title{font-size:64px}.search-box{width:100%}.controls-inner{flex-wrap:wrap}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+</head>
+
+<body>
+
+<div class="shell">
+  <header>
+    <div class="ripple-stage"><div class="rring"></div><div class="rring"></div><div class="rring"></div><div class="rring"></div></div>
+    <div class="header-inner">
+      <div class="brand">
+        <div class="brand-eyebrow">// Weekly Digest — Issue 15</div>
+        <h1 class="brand-title">Ripple Sports</h1>
+        <span class="brand-title-sub">Insights</span>
+        <div class="brand-sub">MAR 20 – MAR 26 · 2026</div>
+      </div>
+      <div class="header-meta"><button class="theme-btn" id="themeToggle" aria-label="Toggle theme">◐</button></div>
+    </div>
+  </header>
+</div>
+
+<!-- ═══ TICKER ═══ -->
+<div class="ticker-wrap">
+  <div class="ticker-track">
+    <a href="https://www.wnba.com/news/wnba-wnbpa-tentative-cba-deal-2026" target="_blank" rel="noopener" class="ticker-item hot"><span class="t-dot"></span>WNBA signs historic 7-year CBA — $7M salary cap</a>
+    <a href="https://frontofficesports.com/fertittas-to-purchase-connecticut-sun-for-record-300-million/" target="_blank" rel="noopener" class="ticker-item hot"><span class="t-dot"></span>Fertittas buy Connecticut Sun for record $300M</a>
+    <a href="https://www.nfl.com/news/vikings-sign-kyler-murray-one-year-deal-release-cardinals" target="_blank" rel="noopener" class="ticker-item hot"><span class="t-dot"></span>Vikings sign Kyler Murray</a>
+    <a href="https://www.nfl.com/news/michael-pittman-jr-trade-steelers-colts" target="_blank" rel="noopener" class="ticker-item hot"><span class="t-dot"></span>Steelers acquire WR Michael Pittman Jr.</a>
+    <a href="https://www.mlb.com/news/when-is-mlb-opening-day-2026-date-times-matchups" target="_blank" rel="noopener" class="ticker-item hot"><span class="t-dot"></span>MLB Opening Day 2026 is here</a>
+    <a href="https://www.apple.com/gr/newsroom/2026/03/friday-night-baseball-returns-to-apple-tv-on-march-27-for-its-fifth-season/" target="_blank" rel="noopener" class="ticker-item"><span class="t-dot"></span>Apple &amp; MLB launch Friday Night Baseball S5</a>
+    <a href="https://www.skysports.com/f1/news/12433/13113948/carlos-sainz-signs-multi-year-deal-to-join-audi-f1-for-2026-season" target="_blank" rel="noopener" class="ticker-item"><span class="t-dot"></span>Carlos Sainz signs with Audi F1</a>
+    <a href="https://www.reuters.com/sports/soccer/west-ham-sack-manager-lopetegui-2026-03-25/" target="_blank" rel="noopener" class="ticker-item hot"><span class="t-dot"></span>West Ham sack Lopetegui</a>
+    <a href="https://frontofficesports.com/mls-new-calendar-world-cup/" target="_blank" rel="noopener" class="ticker-item"><span class="t-dot"></span>MLS shifts to fall-to-spring calendar</a>
+    <a href="https://www.nascar.com/news-media/2026/03/25/nascar-issues-severe-penalties-to-hendrick-motorsports/" target="_blank" rel="noopener" class="ticker-item"><span class="t-dot"></span>NASCAR hits Hendrick Motorsports with severe penalties</a>
+    <a href="https://frontofficesports.com/tiger-woods-boosts-tgl-finals-with-just-under-1-million-viewers/" target="_blank" rel="noopener" class="ticker-item"><span class="t-dot"></span>Tiger Woods boosts TGL finals — ~1M viewers</a>
+    <a href="https://www.wnba.com/news/wnba-wnbpa-tentative-cba-deal-2026" target="_blank" rel="noopener" class="ticker-item hot"><span class="t-dot"></span>WNBA signs historic 7-year CBA — $7M salary cap</a>
+    <a href="https://frontofficesports.com/fertittas-to-purchase-connecticut-sun-for-record-300-million/" target="_blank" rel="noopener" class="ticker-item hot"><span class="t-dot"></span>Fertittas buy Connecticut Sun for record $300M</a>
+    <a href="https://www.nfl.com/news/vikings-sign-kyler-murray-one-year-deal-release-cardinals" target="_blank" rel="noopener" class="ticker-item hot"><span class="t-dot"></span>Vikings sign Kyler Murray</a>
+    <a href="https://www.nfl.com/news/michael-pittman-jr-trade-steelers-colts" target="_blank" rel="noopener" class="ticker-item hot"><span class="t-dot"></span>Steelers acquire WR Michael Pittman Jr.</a>
+    <a href="https://www.mlb.com/news/when-is-mlb-opening-day-2026-date-times-matchups" target="_blank" rel="noopener" class="ticker-item hot"><span class="t-dot"></span>MLB Opening Day 2026 is here</a>
+    <a href="https://www.apple.com/gr/newsroom/2026/03/friday-night-baseball-returns-to-apple-tv-on-march-27-for-its-fifth-season/" target="_blank" rel="noopener" class="ticker-item"><span class="t-dot"></span>Apple &amp; MLB launch Friday Night Baseball S5</a>
+    <a href="https://www.skysports.com/f1/news/12433/13113948/carlos-sainz-signs-multi-year-deal-to-join-audi-f1-for-2026-season" target="_blank" rel="noopener" class="ticker-item"><span class="t-dot"></span>Carlos Sainz signs with Audi F1</a>
+    <a href="https://www.reuters.com/sports/soccer/west-ham-sack-manager-lopetegui-2026-03-25/" target="_blank" rel="noopener" class="ticker-item hot"><span class="t-dot"></span>West Ham sack Lopetegui</a>
+    <a href="https://frontofficesports.com/mls-new-calendar-world-cup/" target="_blank" rel="noopener" class="ticker-item"><span class="t-dot"></span>MLS shifts to fall-to-spring calendar</a>
+    <a href="https://www.nascar.com/news-media/2026/03/25/nascar-issues-severe-penalties-to-hendrick-motorsports/" target="_blank" rel="noopener" class="ticker-item"><span class="t-dot"></span>NASCAR hits Hendrick Motorsports with severe penalties</a>
+    <a href="https://frontofficesports.com/tiger-woods-boosts-tgl-finals-with-just-under-1-million-viewers/" target="_blank" rel="noopener" class="ticker-item"><span class="t-dot"></span>Tiger Woods boosts TGL finals — ~1M viewers</a>
+  </div>
+</div>
+
+<!-- ═══ CONTROLS ═══ -->
+<div class="controls-bar">
+  <div class="controls-inner">
+    <div class="search-box"><span class="search-icon">⌕</span><input id="search" type="search" placeholder="Search insights…" aria-label="Search insights" /></div>
+    <div class="chips" role="tablist">
+      <button class="chip active" data-filter="all" role="tab" aria-selected="true">All</button>
+      <button class="chip" data-filter="us-sports" role="tab" aria-selected="false">🏈 US Sports</button>
+      <button class="chip" data-filter="soccer" role="tab" aria-selected="false">⚽ Soccer</button>
+      <button class="chip" data-filter="motorsport" role="tab" aria-selected="false">🏎️ Motorsport</button>
+      <button class="chip" data-filter="general" role="tab" aria-selected="false">💼 Business</button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ MAIN ═══ -->
+<div class="shell">
+  <div class="main">
+    <div class="feed" id="feed">
+
+      <!-- NFL -->
+      <section class="card" data-cat="us-sports">
+        <div class="card-head"><div class="league-label"><span class="league-emoji">🏈</span><span class="league-text">NFL</span></div><div class="season-tag off">Off-season</div></div>
+        <div class="card-items">
+          <a href="https://www.nfl.com/news/vikings-sign-kyler-murray-one-year-deal-release-cardinals" target="_blank" rel="noopener" class="item"><span class="item-tag">🔥 Signing</span><div class="item-body"><div class="item-text">Vikings sign Kyler Murray</div><div class="item-source">nfl.com</div></div><span class="item-arrow">↗</span></a>
+          <a href="https://www.nfl.com/news/michael-pittman-jr-trade-steelers-colts" target="_blank" rel="noopener" class="item"><span class="item-tag">Trade</span><div class="item-body"><div class="item-text">Steelers acquire Pittman Jr.</div><div class="item-source">nfl.com</div></div><span class="item-arrow">↗</span></a>
+          <a href="https://www.foxsports.com/stories/nfl/2026-nfl-free-agency-trades-tracker-signings-updates-best-players-available" target="_blank" rel="noopener" class="item"><span class="item-tag">Signing</span><div class="item-body"><div class="item-text">Ravens sign Hendrickson — $112M deal</div><div class="item-source">foxsports.com</div></div><span class="item-arrow">↗</span></a>
+          <a href="https://www.espn.com/nfl/story/_/id/48155046/star-wr-mike-evans-leaving-buccaneers-sign-49ers" target="_blank" rel="noopener" class="item"><span class="item-tag">Signing</span><div class="item-body"><div class="item-text">49ers sign Mike Evans</div><div class="item-source">espn.com</div></div><span class="item-arrow">↗</span></a>
+          <a href="https://www.espn.com/nfl/story/_/id/48089128/carolina-panthers-2026-free-agency-tracker-offseason-moves-signings-contract-trades" target="_blank" rel="noopener" class="item"><span class="item-tag">Signing</span><div class="item-body"><div class="item-text">Panthers sign Phillips &amp; Lloyd</div><div class="item-source">espn.com</div></div><span class="item-arrow">↗</span></a>
+          <a href="https://www.foxsports.com/stories/nfl/2026-nfl-free-agency-trades-tracker-signings-updates-best-players-available" target="_blank" rel="noopener" class="item"><span class="item-tag">Signing</span><div class="item-body"><div class="item-text">Packers sign DT Hargrave — $23M</div><div class="item-source">foxsports.com</div></div><span class="item-arrow">↗</span></a>
+          <a href="https://www.neworleanssaints.com/news/morning-break-saints-continue-to-add-to-roster-ahead-of-2026-draft-new-orleans-news-headlines-3-27-2026" target="_blank" rel="noopener" class="item"><span class="item-tag">Signing</span><div class="item-body"><div class="item-text">Saints sign QB Zach Wilson</div><div class="item-source">neworleanssaints.com</div></div><span class="item-arrow">↗</span></a>
+          <a href="https://www.nfl.com/news/arch-manning-pro-day-texas-2026-nfl-draft-prospects" target="_blank" rel="noopener" class="item"><span class="item-tag">Draft</span><div class="item-body"><div class="item-text">Arch Manning Pro Day at Texas</div><div class="item-source">nfl.com</div></div><span class="item-arrow">↗</span></a>
+          <a href="https://frontofficesports.com/bettors-target-microbets-with-suits-against-fanduel-draftkings/" target="_blank" rel="noopener" class="item"><span class="item-tag">Legal</span><div class="item-body"><div class="item-text">Bettors sue FanDuel &amp; DraftKings</div><div class="item-source">frontofficesports.com</div></div><span class="item-arrow">↗</span></a>
+        </div>
+      </section>
+
+      <!-- WNBA -->
+      <section class="card" data-cat="us-sports">
+        <div class="card-head"><div class="league-label"><span class="league-emoji">🏀</span><span class="league-text">WNBA</span></div><div class="season-tag off">Off-season</div></div>
+        <div class="card-items">
+          <a href="https://www.wnba.com/news/board-of-governors-ratifies-cba-terms-2026" target="_blank" rel="noopener" class="item"><span class="item-tag">🔥 CBA</span><div class="item-body"><div class="item-text">Board ratifies historic 7-year CBA</div><div class="item-source">wnba.com</div></div><span class="item-arrow">↗</span></a>
+          <a href="https://cronkitenews.azpbs.org/2026/03/26/proposed-wnbas-cba-a-monumental-win-for-players/" target="_blank" rel="noopener" class="item"><span class="item-tag">Analysis</span><div class="item-body"><div class="item-text">New CBA bumps cap to $7M</div><div class="item-source">cronkitenews.azpbs.org</div></div><span class="item-arrow">↗</span></a>
+          <a href="https://frontofficesports.com/fertittas-to-purchase-connecticut-sun-for-record-300-million/" target="_blank" rel="noopener" class="item"><span class="item-tag">🔥 Sale</span><div class="item-body"><div class="item-text">Fertittas buy Sun for record $300M</div><div class="item-source">frontofficesports.com</div></div><span class="item-arrow">↗</span></a>
+          <a href="https://www.sportspro.com/news/wnba-portland-expansion-franchise-2026-moda-centre-raj-sports/" target="_blank" rel="noopener" class="item"><span class="item-tag">Expansion</span><div class="item-body"><div class="item-text">Portland franchise confirmed — $125M</div><div class="item-source">sportspro.com</div></div><span class="item-arrow">↗</span></a>
+          <a href="https://fever.wnba.com/news/how-the-2026-wnba-expansion-draft-works" target="_blank" rel="noopener" class="item"><span class="item-tag">Draft</span><div class="item-body"><div class="item-text">How the expansion draft works</div><div class="item-source">fever.wnba.com</div></div><span class="item-arrow">↗</span></a>
+        </div>
+      </section>
+
+      <!-- NBA -->
+      <section class="card" data-cat="us-sports">
+        <div class="card-head"><div class="league-label"><span class="league-emoji">🏀</span><span class="league-text">NBA</span></div><div class="season-tag in">In-season</div></div>
+        <div class="card-items">
+          <a href="https://www.sportsbusinessjournal.com/Articles/2026/03/23/kraken-create-one-roof-sports-entertainment-in-expected-pursuit-of-nba-expansion-team/" target="_blank" rel="noopener" class="item"><span class="item-tag">Expansion</span><div class="item-body"><div class="item-text">Kraken form One Roof — NBA expansion push</div><div class="item-source">sportsbusinessjournal.com</div></div><span class="item-arrow">↗</span></a>
+          <a href="https://sundayguardianlive.com/sports/nba-results-march-28-2026-victor-wembanyama-dominates-as-san-antonio-spurs-crush-milwaukee-bucks-jalen-green-explodes-for-31-in-big-win-jalen-duren-180018/" target="_blank" rel="noopener" class="item"><span class="item-tag">Game</span><div class="item-body"><div class="item-text">Wembanyama dominates — Spurs crush Bucks</div><div class="item-source">sundayguardianlive.com</div></div><span class="item-arrow">↗</span></a>
+          <a href="https://www.cbssports.com/nba/news/2026-nba-playoff-picture-standings-tiebreakers/" target="_blank" rel="noopener" class="item"><span class="item-tag">Playoffs</span><div class="item-body"><div class="item-text">Warriors locked into Play-In</div><div class="item-source">cbssports.com</div></div><span class="item-arrow">↗</span></a>
+          <a href="https://www.si.com/nba/kings/onsi/sacramento-kings-news/3-march-madness-stars-sacramento-kings-could-take-2026-nba-draft" target="_blank" rel="noopener" class="item"><span class="item-tag">Draft</span><div class="item-body"><div class="item-text">3 Madness stars Kings could target</div><div class="item-source">si.com</div></div><span class="item-arrow">↗</span></a>
+          <a href="https://www.sportsbusinessjournal.com/Daily/Issues/2026/03/23/Media/nba-meta-vr-broadcasts.aspx" target="_blank" rel="noopener" class="item"><span class="item-tag">Media</span><div class="item-body"><div class="item-text">NBA &amp; Meta expand VR Playoffs broadcasts</div><div class="item-source">sportsbusinessjournal.com</div></div><span class="item-arrow">↗</span></a>
+        </div>
+      </section>
+
+      <!-- MLB -->
+      <section class="card" data-cat="us-sports">
+        <div class="card-head"><div class="league-label"><span class="league-emoji">⚾</span><span class="league-text">MLB</span></div><div class="season-tag in">In-season</div></div>
+        <div class="card-items">
+          <a href="https://www.mlb.com/news/when-is-mlb-opening-day-2026-date-times-matchups" target="_blank" rel="noopener" class="item"><span class="item-tag">🔥 Opening Day</span><div class="item-body"><div class="item-text">MLB Opening Day 2026 arrives</div><div class="item-source">mlb.com</div></div><span class="item-arrow">↗</span></a>
+          <a href="https://www.livemint.com/us/mlb-opening-day-2026-full-schedule-must-watch-matchups-pitching-previews-and-key-storylines-baseball-11774356237967.html" target="_blank" rel="noopener" class="item"><span class="item-tag">Matchup</span><div class="item-body"><div class="item-text">Skenes vs Peralta — Opening Day duel</div><div class="item-source">livemint.com</div></div><span class="item-arrow">↗</span></a>
+          <a href="https://www.hindustantimes.com/sports/us-sports/mlb-opening-day-2026-date-time-how-to-watch-yankees-vs-giants-live-101774453205626.html" target="_blank" rel="noopener" class="item"><span class="item-tag">Netflix</span><div class="item-body"><div class="item-text">Yankees top Giants on Netflix Opening Night</div><div class="item-source">hindustantimes.com</div></div><span class="item-arrow">↗</span></a>
+          <a href="https://www.apple.com/gr/newsroom/2026/03/friday-night-baseball-returns-to-apple-tv-on-march-27-for-its-fifth-season/" target="_blank" rel="noopener" class="item"><span class="item-tag">Media</span><div class="item-body"><div class="item-text">Apple &amp; MLB launch Friday Night Baseball S5</div><div class="item-source">apple.com</div></div><span class="item-arrow">↗</span></a>
+          <a href="https://newsblog.drexel.edu/2026/03/27/qa-a-new-way-to-gamble-on-mlb-games/" target="_blank" rel="noopener" class="item"><span class="item-tag">Betting</span><div class="item-body"><div class="item-text">MLB partners with Polymarket</div><div class="item-source">drexel.edu</div></div><span class="item-arrow">↗</span></a>
+          <a href="https://www.sportsbusinessjournal.com/Articles/2026/03/23/mlb-boosts-roster-with-ford-other-sponsors/" target="_blank" rel="noopener" class="item"><span class="item-tag">Sponsors</span><div class="item-body"><div class="item-text">MLB adds Ford, Polymarket, Zillow &amp; more</div><div class="item-source">sportsbusinessjournal.com</div></div><span class="item-arrow">↗</span></a>
+          <a href="https://www.mlb.com/astros/tickets/world-baseball-classic" target="_blank" rel="noopener" class="item"><span class="item-tag">WBC</span><div class="item-body"><div class="item-text">Daikin Park to host WBC games</div><div class="item-source">mlb.com</div></div><span class="item-arrow">↗</span></a>
+          <a href="https://frontofficesports.com/brewers-reveal-main-street-sports-group-loss/" target="_blank" rel="noopener" class="item"><span class="item-tag">Business</span><div class="item-body"><div class="item-text">Brewers reveal $20M media model loss</div><div class="item-source">frontofficesports.com</div></div><span class="item-arrow">↗</span></a>
+        </div>
+      </section>
+
+      <!-- NHL -->
+      <section class="card" data-cat="us-sports">
+        <div class="card-head"><div class="league-label"><span class="league-emoji">🏒</span><span class="league-text">NHL</span></div><div class="season-tag in">In-season</div></div>
+        <div class="card-items">
+          <a href="https://www.espn.com/nhl/recap/_/gameId/401560124" target="_blank" rel="noopener" class="item"><span class="item-tag">Game</span><div class="item-body"><div class="item-text">Senators win — wild card race tightens</div><div class="item-source">espn.com</div></div><span class="item-arrow">↗</span></a>
+        </div>
+      </section>
+
+      <!-- Premier League -->
+      <section class="card" data-cat="soccer">
+        <div class="card-head"><div class="league-label"><span class="league-emoji">🏴󠁧󠁢󠁥󠁮󠁧󠁿</span><span class="league-text">Premier League</span></div><div class="season-tag in">In-season</div></div>
+        <div class="card-items">
+          <a href="https://www.reuters.com/sports/soccer/west-ham-sack-manager-lopetegui-2026-03-25/" target="_blank" rel="noopener" class="item"><span class="item-tag">🔥 Sacking</span><div class="item-body"><div class="item-text">West Ham sack Lopetegui</div><div class="item-source">reuters.com</div></div><span class="item-arrow">↗</span></a>
+          <a href="https://www.sportspro.com/news/sponsorship/aston-villa-betano-stadium-naming-rights-march-2026/" target="_blank" rel="noopener" class="item"><span class="item-tag">Stadium</span><div class="item-body"><div class="item-text">Aston Villa secure Betano naming rights</div><div class="item-source">sportspro.com</div></div><span class="item-arrow">↗</span></a>
+          <a href="https://www.premierleague.com/en/news/4622217/vote-for-march-2026s-premier-league-award-winners" target="_blank" rel="noopener" class="item"><span class="item-tag">Award</span><div class="item-body"><div class="item-text">March Manager &amp; Player of Month nominees</div><div class="item-source">premierleague.com</div></div><span class="item-arrow">↗</span></a>
+          <a href="https://www.sportsbusinessjournal.com/Daily/Issues/2026/03/20/Leagues-and-Governing-Bodies/premier-league-ticketing.aspx" target="_blank" rel="noopener" class="item"><span class="item-tag">Policy</span><div class="item-body"><div class="item-text">PL clamps down on dynamic ticket pricing</div><div class="item-source">sportsbusinessjournal.com</div></div><span class="item-arrow">↗</span></a>
+          <a href="https://www.skysports.com/football/tottenham-hotspur-vs-nottingham-forest/report/123456" target="_blank" rel="noopener" class="item"><span class="item-tag">Result</span><div class="item-body"><div class="item-text">Forest stun Spurs 3–0</div><div class="item-source">skysports.com</div></div><span class="item-arrow">↗</span></a>
+          <a href="https://www.espn.co.uk/football/report/_/gameId/687982" target="_blank" rel="noopener" class="item"><span class="item-tag">Result</span><div class="item-body"><div class="item-text">Sunderland edge Newcastle 2–1</div><div class="item-source">espn.co.uk</div></div><span class="item-arrow">↗</span></a>
+          <a href="https://www.reuters.com/sports/soccer/aston-villa-west-ham-match-report-2026-03-22/" target="_blank" rel="noopener" class="item"><span class="item-tag">Result</span><div class="item-body"><div class="item-text">Aston Villa 2–0 West Ham</div><div class="item-source">reuters.com</div></div><span class="item-arrow">↗</span></a>
+          <a href="https://www.skysports.com/football/news/11095/13523523/efl-play-offs-2026-schedule-fixtures-and-wembley-finals-for-championship-league-one-and-league-two" target="_blank" rel="noopener" class="item"><span class="item-tag">EFL</span><div class="item-body"><div class="item-text">EFL confirms 2026 Playoff schedule</div><div class="item-source">skysports.com</div></div><span class="item-arrow">↗</span></a>
+        </div>
+      </section>
+
+      <!-- Real Madrid -->
+      <section class="card" data-cat="soccer">
+        <div class="card-head"><div class="league-label"><span class="league-emoji">👑</span><span class="league-text">Real Madrid</span></div><div class="season-tag in">In-season</div></div>
+        <div class="card-items">
+          <a href="https://www.realmadrid.com/en-US/news/club/sponsors/real-madrid-and-adidas-unveil-125th-anniversary-kit-21-03-2026" target="_blank" rel="noopener" class="item"><span class="item-tag">Kit</span><div class="item-body"><div class="item-text">125th anniversary kit with Adidas revealed</div><div class="item-source">realmadrid.com</div></div><span class="item-arrow">↗</span></a>
+          <a href="https://www.realmadrid.com/en-US/news/football/first-team/camavinga-renews-contract-until-2032-26-03-2026" target="_blank" rel="noopener" class="item"><span class="item-tag">Contract</span><div class="item-body"><div class="item-text">Camavinga renews until 2032</div><div class="item-source">realmadrid.com</div></div><span class="item-arrow">↗</span></a>
+        </div>
+      </section>
+
+      <!-- MLS -->
+      <section class="card" data-cat="soccer">
+        <div class="card-head"><div class="league-label"><span class="league-emoji">⚽</span><span class="league-text">MLS</span></div><div class="season-tag in">In-season</div></div>
+        <div class="card-items">
+          <a href="https://frontofficesports.com/mls-new-calendar-world-cup/" target="_blank" rel="noopener" class="item"><span class="item-tag">Calendar</span><div class="item-body"><div class="item-text">Fall-to-spring shift "transformative" — Hunt</div><div class="item-source">frontofficesports.com</div></div><span class="item-arrow">↗</span></a>
+        </div>
+      </section>
+
+      <!-- NWSL -->
+      <section class="card" data-cat="soccer">
+        <div class="card-head"><div class="league-label"><span class="league-emoji">⚡</span><span class="league-text">NWSL</span></div><div class="season-tag in">In-season</div></div>
+        <div class="card-items">
+          <a href="https://www.nwslsoccer.com/news/nwsl-confirms-advanced-expansion-talks-with-austin-group" target="_blank" rel="noopener" class="item"><span class="item-tag">Expansion</span><div class="item-body"><div class="item-text">Advanced talks with Austin group confirmed</div><div class="item-source">nwslsoccer.com</div></div><span class="item-arrow">↗</span></a>
+        </div>
+      </section>
+
+      <!-- F1 -->
+      <section class="card" data-cat="motorsport">
+        <div class="card-head"><div class="league-label"><span class="league-emoji">🏎️</span><span class="league-text">Formula 1</span></div><div class="season-tag in">In-season</div></div>
+        <div class="card-items">
+          <a href="https://www.skysports.com/f1/news/12433/13113948/carlos-sainz-signs-multi-year-deal-to-join-audi-f1-for-2026-season" target="_blank" rel="noopener" class="item"><span class="item-tag">🔥 Signing</span><div class="item-body"><div class="item-text">Carlos Sainz signs with Audi F1</div><div class="item-source">skysports.com</div></div><span class="item-arrow">↗</span></a>
+          <a href="https://corp.formula1.com/formula-1-announces-multi-year-renewal-with-fanatec-ahead-of-f1-sim-racing-world-championship-2026/" target="_blank" rel="noopener" class="item"><span class="item-tag">Deal</span><div class="item-body"><div class="item-text">F1 renews multi-year deal with Fanatec</div><div class="item-source">formula1.com</div></div><span class="item-arrow">↗</span></a>
+          <a href="https://www.motorsportmagazine.com/articles/single-seaters/f1/fia-clamps-down-on-active-aero-loopholes-ahead-of-japanese-gp/" target="_blank" rel="noopener" class="item"><span class="item-tag">Regs</span><div class="item-body"><div class="item-text">FIA clamps down on active aero loopholes</div><div class="item-source">motorsportmagazine.com</div></div><span class="item-arrow">↗</span></a>
+        </div>
+      </section>
+
+      <!-- NASCAR -->
+      <section class="card" data-cat="motorsport">
+        <div class="card-head"><div class="league-label"><span class="league-emoji">🏁</span><span class="league-text">NASCAR</span></div><div class="season-tag in">In-season</div></div>
+        <div class="card-items">
+          <a href="https://www.nascar.com/news-media/2026/03/25/nascar-issues-severe-penalties-to-hendrick-motorsports/" target="_blank" rel="noopener" class="item"><span class="item-tag">Penalty</span><div class="item-body"><div class="item-text">Severe penalties hit Hendrick Motorsports</div><div class="item-source">nascar.com</div></div><span class="item-arrow">↗</span></a>
+          <a href="https://www.sportsbusinessjournal.com/Articles/2026/03/24/camping-world-returns-to-nascar-sponsorship-realm-with-san-diego-base-race-pact/" target="_blank" rel="noopener" class="item"><span class="item-tag">Sponsor</span><div class="item-body"><div class="item-text">Camping World returns — San Diego pact</div><div class="item-source">sportsbusinessjournal.com</div></div><span class="item-arrow">↗</span></a>
+        </div>
+      </section>
+
+      <!-- Business & Media -->
+      <section class="card" data-cat="general">
+        <div class="card-head"><div class="league-label"><span class="league-emoji">💼</span><span class="league-text">Business &amp; Media</span></div><div class="season-tag off">This Week</div></div>
+        <div class="card-items">
+          <a href="https://frontofficesports.com/congress-laws-prediction-markets-kalshi-polymarket/" target="_blank" rel="noopener" class="item"><span class="item-tag">Regulation</span><div class="item-body"><div class="item-text">Political backlash to prediction markets</div><div class="item-source">frontofficesports.com</div></div><span class="item-arrow">↗</span></a>
+          <a href="https://frontofficesports.com/browns-boost-stadium-investment-public-funding-questions/" target="_blank" rel="noopener" class="item"><span class="item-tag">Stadium</span><div class="item-body"><div class="item-text">Browns' $2.6B domed stadium funding model</div><div class="item-source">frontofficesports.com</div></div><span class="item-arrow">↗</span></a>
+          <a href="https://frontofficesports.com/jack-nicklaus-re-acquires-companies-after-lawsuit/" target="_blank" rel="noopener" class="item"><span class="item-tag">Legal</span><div class="item-body"><div class="item-text">Nicklaus re-acquires name after lawsuit</div><div class="item-source">frontofficesports.com</div></div><span class="item-arrow">↗</span></a>
+          <a href="https://frontofficesports.com/tiger-woods-boosts-tgl-finals-with-just-under-1-million-viewers/" target="_blank" rel="noopener" class="item"><span class="item-tag">Golf</span><div class="item-body"><div class="item-text">Tiger boosts TGL finals — ~1M viewers</div><div class="item-source">frontofficesports.com</div></div><span class="item-arrow">↗</span></a>
+          <a href="https://www.sportsbusinessjournal.com/video/id/QadDxedcFow/" target="_blank" rel="noopener" class="item"><span class="item-tag">Women's</span><div class="item-body"><div class="item-text">Business of Women's Sports: Soccer 2026</div><div class="item-source">sportsbusinessjournal.com</div></div><span class="item-arrow">↗</span></a>
+          <a href="https://business.x.com/en/blog/advanced-sports-video-ad-targeting-2026.html" target="_blank" rel="noopener" class="item"><span class="item-tag">Ad Tech</span><div class="item-body"><div class="item-text">X launches sports video ad targeting tools</div><div class="item-source">business.x.com</div></div><span class="item-arrow">↗</span></a>
+          <a href="https://www.sportsbusinessjournal.com/Journal/Issues/2026/03/23/In-Depth/q1-sponsorship-spending-record.aspx" target="_blank" rel="noopener" class="item"><span class="item-tag">Sponsorship</span><div class="item-body"><div class="item-text">Record Q1 sports sponsorship spend globally</div><div class="item-source">sportsbusinessjournal.com</div></div><span class="item-arrow">↗</span></a>
+          <a href="https://www.reuters.com/sports/soccer/fifa-unveils-turf-technology-2026-world-cup-2026-03-26/" target="_blank" rel="noopener" class="item"><span class="item-tag">World Cup</span><div class="item-body"><div class="item-text">FIFA unveils turf tech for 2026 World Cup</div><div class="item-source">reuters.com</div></div><span class="item-arrow">↗</span></a>
+        </div>
+      </section>
+
+      <div id="no-results">NO MATCHING RESULTS</div>
+    </div>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-block">
+        <div class="sidebar-head"><div class="sidebar-title">📅 Quick Schedules</div></div>
+        <div class="sched-grid">
+          <a href="https://www.nfl.com/schedules" target="_blank" rel="noopener" class="sched-link"><span class="sched-emoji">🏈</span><span class="sched-label">NFL</span></a>
+          <a href="https://www.nba.com/schedule" target="_blank" rel="noopener" class="sched-link"><span class="sched-emoji">🏀</span><span class="sched-label">NBA</span></a>
+          <a href="https://www.wnba.com/schedule" target="_blank" rel="noopener" class="sched-link"><span class="sched-emoji">🏀</span><span class="sched-label">WNBA</span></a>
+          <a href="https://www.mlb.com/schedule" target="_blank" rel="noopener" class="sched-link"><span class="sched-emoji">⚾</span><span class="sched-label">MLB</span></a>
+          <a href="https://www.nhl.com/schedule" target="_blank" rel="noopener" class="sched-link"><span class="sched-emoji">🏒</span><span class="sched-label">NHL</span></a>
+          <a href="https://www.premierleague.com/fixtures" target="_blank" rel="noopener" class="sched-link"><span class="sched-emoji">⚽</span><span class="sched-label">PL</span></a>
+          <a href="https://www.realmadrid.com/en-US/football/schedule" target="_blank" rel="noopener" class="sched-link"><span class="sched-emoji">⚽</span><span class="sched-label">RMA</span></a>
+          <a href="https://www.celticfc.com/fixtures" target="_blank" rel="noopener" class="sched-link"><span class="sched-emoji">🍀</span><span class="sched-label">Celtic</span></a>
+          <a href="https://www.mlssoccer.com/schedule/" target="_blank" rel="noopener" class="sched-link"><span class="sched-emoji">⚽</span><span class="sched-label">MLS</span></a>
+          <a href="https://www.nwslsoccer.com/schedule" target="_blank" rel="noopener" class="sched-link"><span class="sched-emoji">⚽</span><span class="sched-label">NWSL</span></a>
+          <a href="https://www.formula1.com/en/racing/2026.html" target="_blank" rel="noopener" class="sched-link"><span class="sched-emoji">🏎️</span><span class="sched-label">F1</span></a>
+          <a href="https://www.nascar.com/schedule" target="_blank" rel="noopener" class="sched-link"><span class="sched-emoji">🏁</span><span class="sched-label">NASCAR</span></a>
+          <a href="https://www.legavolleyfemminile.it/calendario" target="_blank" rel="noopener" class="sched-link"><span class="sched-emoji">🏐</span><span class="sched-label">LVF</span></a>
+          <a href="https://www.pgatour.com/schedule" target="_blank" rel="noopener" class="sched-link"><span class="sched-emoji">⛳</span><span class="sched-label">PGA</span></a>
+          <a href="https://www.lpga.com/tournaments/schedule" target="_blank" rel="noopener" class="sched-link"><span class="sched-emoji">⛳</span><span class="sched-label">LPGA</span></a>
+        </div>
+      </div>
+      <div class="sidebar-block">
+        <div class="sidebar-head"><div class="sidebar-title">📊 This Week</div></div>
+        <div class="stats-body">
+          <div class="stat-total"><div class="stat-label">Stories</div><div class="stat-num" id="count-total">—</div></div>
+          <div class="stat-div"></div>
+          <div id="cat-breakdown" style="display:flex;flex-direction:column;gap:8px;"></div>
+        </div>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<button id="toTop" aria-label="Back to top">↑</button>
+
+<footer>
+  <div class="footer-brand">Ripple Analytics</div>
+  <div class="footer-note">© 2026 Ripple Analytics Sports Insights<br>All rights reserved · Weekly digest</div>
+</footer>
+
+<script>
+document.getElementById('themeToggle').addEventListener('click',()=>{const c=document.documentElement.getAttribute('data-theme');document.documentElement.setAttribute('data-theme',c==='dark'?'light':'dark')});
+let angle=0;(function spin(){angle=(angle+1.2)%360;const a=angle+'deg';document.querySelectorAll('.item, .sched-link').forEach(e=>{e.style.setProperty('--angle',a)});requestAnimationFrame(spin)})();
+let activeFilter='all';
+function applyFilters(){const q=(document.getElementById('search').value||'').toLowerCase().trim();const all=Array.from(document.querySelectorAll('#feed .card'));let n=0;all.forEach(c=>{const cat=activeFilter==='all'||c.dataset.cat===activeFilter;const qo=!q||c.textContent.toLowerCase().includes(q);const s=cat&&qo;c.style.display=s?'':'none';if(s)n++});document.getElementById('no-results').style.display=n===0?'block':'none';updateStats()}
+document.getElementById('search').addEventListener('input',applyFilters);
+document.querySelectorAll('.chip').forEach(b=>{b.addEventListener('click',()=>{document.querySelectorAll('.chip').forEach(x=>{x.classList.remove('active');x.setAttribute('aria-selected','false')});b.classList.add('active');b.setAttribute('aria-selected','true');activeFilter=b.dataset.filter;applyFilters()})});
+const catMeta={'us-sports':{label:'US Sports',emoji:'🏈'},'soccer':{label:'Soccer',emoji:'⚽'},'motorsport':{label:'Motorsport',emoji:'🏎️'},'general':{label:'Business',emoji:'💼'}};
+function updateStats(){const v=Array.from(document.querySelectorAll('#feed .card')).filter(c=>c.style.display!=='none');const t=v.reduce((s,c)=>s+c.querySelectorAll('.item').length,0);document.getElementById('count-total').textContent=t||'—';const bd=document.getElementById('cat-breakdown');bd.innerHTML='';Object.entries(catMeta).forEach(([k,m])=>{const cc=v.filter(c=>c.dataset.cat===k);const cnt=cc.reduce((s,c)=>s+c.querySelectorAll('.item').length,0);if(!cnt)return;const p=t?Math.round(cnt/t*100):0;bd.innerHTML+=`<div><div style="display:flex;justify-content:space-between;margin-bottom:4px;"><span style="font-size:11px;color:var(--ink2);">${m.emoji} ${m.label}</span><span style="font-family:'DM Mono',monospace;font-size:10px;color:var(--ink3);">${cnt}</span></div><div style="height:2px;background:var(--border);border-radius:2px;overflow:hidden;"><div style="height:100%;width:${p}%;background:linear-gradient(90deg,var(--g1),var(--g2));border-radius:2px;transition:width .45s ease;"></div></div></div>`})}
+updateStats();
+const toTop=document.getElementById('toTop');window.addEventListener('scroll',()=>toTop.classList.toggle('show',window.scrollY>300),{passive:true});toTop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+</script>
+</body>
+</html>
