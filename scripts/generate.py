@@ -16,6 +16,35 @@ import sys
 from html import escape
 from datetime import datetime
 
+# ── Season auto-detection ─────────────────────────────────────────────────────
+SEASON_MONTHS = {
+    "NFL":            [9,10,11,12,1,2],
+    "WNBA":           [5,6,7,8,9,10],
+    "NBA":            [10,11,12,1,2,3,4,5,6],
+    "MLB":            [4,5,6,7,8,9,10],
+    "NHL":            [10,11,12,1,2,3,4,5,6],
+    "Premier League": [8,9,10,11,12,1,2,3,4,5],
+    "Real Madrid":    [8,9,10,11,12,1,2,3,4,5],
+    "MLS":            [2,3,4,5,6,7,8,9,10,11],
+    "NWSL":           [3,4,5,6,7,8,9,10,11],
+    "UCL":            [9,10,11,12,1,2,3,4,5],
+    "Formula 1":      [3,4,5,6,7,8,9,10,11],
+    "NASCAR":         [2,3,4,5,6,7,8,9,10,11],
+    "LVF Serie A":    [9,10,11,12,1,2,3,4,5],
+    "PGA Tour":       [1,2,3,4,5,6,7,8],
+    "FIFA World Cup": [6,7],
+    "MXGP":           [3,4,5,6,7,8,9,10],
+    "HYROX":          [1,2,3,4,5,9,10,11,12],
+    "Enhanced Games": [1,2,3,4,5,6,7,8,9,10,11,12],
+}
+
+def get_season(league: str) -> tuple:
+    month = datetime.now().month
+    months = SEASON_MONTHS.get(league)
+    if months is None:
+        return ("off", "This Week")
+    return ("in", "In-season") if month in months else ("off", "Off-season")
+
 # ── HTML helpers ─────────────────────────────────────────────────────────────
 
 def esc(s: str) -> str:
@@ -56,19 +85,35 @@ def render_story(s: dict) -> str:
     )
 
 def render_card(card: dict) -> str:
-    season_cls = "in" if card.get("season") == "in" else "off"
-    season_label = esc(card.get("season_label", "This Week"))
+    season, season_label = get_season(card.get("league", ""))
+    season_cls = season
     emoji = card.get("emoji", "")
     league = esc(card.get("league", ""))
     cat = esc(card.get("category", "general"))
     stories_html = "\n".join(render_story(s) for s in card.get("stories", []))
     return f"""      <!-- {card.get('league', '')} -->
       <section class="card" data-cat="{cat}">
-        <div class="card-head"><div class="league-label"><span class="league-emoji">{emoji}</span><span class="league-text">{league}</span></div><div class="season-tag {season_cls}">{season_label}</div></div>
+        <div class="card-head"><div class="league-label"><span class="league-emoji">{emoji}</span><span class="league-text">{league}</span></div><div class="season-tag {season_cls}">{esc(season_label)}</div></div>
         <div class="card-items">
 {stories_html}
         </div>
       </section>"""
+
+def render_editor_pick(pick: dict) -> str:
+    tag = pick.get("tag", "Story")
+    if pick.get("hot") and not tag.startswith("🔥"):
+        tag = f"🔥 {tag}"
+    src = pick.get("source") or domain(pick.get("url", ""))
+    return f"""      <!-- EDITOR'S PICK -->
+      <a href="{esc(pick['url'])}" target="_blank" rel="noopener" class="editor-pick">
+        <div class="editor-pick-label">⭐ Editor's Pick</div>
+        <div class="editor-pick-headline">{esc(pick['text'])}</div>
+        <div class="editor-pick-meta">
+          <span class="editor-pick-tag">{esc(tag)}</span>
+          <span class="editor-pick-source">{esc(src)}</span>
+          <span class="editor-pick-arrow">↗</span>
+        </div>
+      </a>"""
 
 # ── Full HTML template ────────────────────────────────────────────────────────
 
@@ -163,9 +208,21 @@ footer{border-top:1px solid var(--border);padding:28px 32px;display:flex;align-i
 .footer-note{font-family:'DM Mono',monospace;font-size:10px;color:var(--ink3);letter-spacing:.06em;text-align:right}
 @media(max-width:900px){.main{grid-template-columns:1fr}.sidebar{position:static;top:auto}}
 @media(max-width:640px){.shell,.controls-inner,footer{padding-left:16px;padding-right:16px}.header-inner{grid-template-columns:1fr}.header-meta{align-items:flex-start;flex-direction:row;flex-wrap:wrap}.feed{grid-template-columns:1fr}.brand-title{font-size:64px}.search-box{width:100%}.controls-inner{flex-wrap:wrap}}
-@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}"""
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+.editor-pick{grid-column:1/-1;background:linear-gradient(135deg,color-mix(in srgb,var(--g1) 8%,var(--surface)),var(--surface));border:1px solid color-mix(in srgb,var(--g1) 40%,transparent);border-radius:var(--radius);padding:24px 28px;display:flex;flex-direction:column;gap:14px;animation:fadeUp .4s cubic-bezier(.2,.9,.2,1) both;text-decoration:none;color:inherit;position:relative;transition:transform .2s,box-shadow .2s,border-color .2s}
+.editor-pick:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(0,0,0,.45);border-color:color-mix(in srgb,var(--g1) 60%,transparent)}
+.editor-pick-label{font-family:'DM Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:.18em;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.editor-pick-headline{font-family:'Bebas Neue',sans-serif;font-size:clamp(22px,3vw,32px);line-height:1.1;background:var(--grad-text);background-size:300% 300%;animation:shimmer 6s ease infinite;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.editor-pick-meta{display:flex;align-items:center;gap:12px}
+.editor-pick-tag{font-family:'DM Mono',monospace;font-size:9px;font-weight:500;text-transform:uppercase;letter-spacing:.08em;padding:3px 7px;border-radius:3px;background:color-mix(in srgb,var(--g1) 10%,transparent);color:var(--g2);border:1px solid color-mix(in srgb,var(--g2) 25%,transparent)}
+.editor-pick-source{font-family:'DM Mono',monospace;font-size:10px;color:var(--ink3)}
+.editor-pick-arrow{font-size:12px;color:var(--ink3);margin-left:auto}
+.issue-nav{display:flex;justify-content:space-between;align-items:center;padding:24px 0 0;border-top:1px solid var(--border);grid-column:1/-1;margin-top:8px}
+.issue-nav-btn{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--ink2);font-family:'DM Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:.1em;padding:10px 18px;border:1px solid var(--border);border-radius:8px;transition:all .2s}
+.issue-nav-btn:hover{color:var(--ink);border-color:var(--g2);transform:translateY(-2px)}
+.issue-nav-placeholder{width:120px}"""
 
-JS = """document.getElementById('themeToggle').addEventListener('click',()=>{const c=document.documentElement.getAttribute('data-theme');document.documentElement.setAttribute('data-theme',c==='dark'?'light':'dark')});
+JS = """(()=>{const t=localStorage.getItem('ripple-theme')||'dark';document.documentElement.setAttribute('data-theme',t)})();document.getElementById('themeToggle').addEventListener('click',()=>{const c=document.documentElement.getAttribute('data-theme');const n=c==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',n);localStorage.setItem('ripple-theme',n)});
 let angle=0;(function spin(){angle=(angle+1.2)%360;const a=angle+'deg';document.querySelectorAll('.item, .sched-link').forEach(e=>{e.style.setProperty('--angle',a)});requestAnimationFrame(spin)})();
 let activeFilter='all';
 function applyFilters(){const q=(document.getElementById('search').value||'').toLowerCase().trim();const all=Array.from(document.querySelectorAll('#feed .card'));let n=0;all.forEach(c=>{const cat=activeFilter==='all'||c.dataset.cat===activeFilter;const qo=!q||c.textContent.toLowerCase().includes(q);const s=cat&&qo;c.style.display=s?'':'none';if(s)n++});document.getElementById('no-results').style.display=n===0?'block':'none';updateStats()}
@@ -200,7 +257,21 @@ def build_html(data: dict) -> str:
     date_range  = f"{date_from} – {date_to} · {year}"
 
     ticker_html = render_ticker(data.get("ticker", []))
-    cards_html  = "\n\n".join(render_card(c) for c in data.get("cards", []))
+
+    parts = []
+    if data.get("editor_pick"):
+        parts.append(render_editor_pick(data["editor_pick"]))
+    parts += [render_card(c) for c in data.get("cards", [])]
+
+    # Prev/next navigation
+    prev_num = issue_num - 1
+    next_num = issue_num + 1
+    prev_html = f'<a href="issue-{prev_num}.html" class="issue-nav-btn">← Issue {prev_num}</a>' if prev_num >= 1 else '<div class="issue-nav-placeholder"></div>'
+    next_html = f'<a href="issue-{next_num}.html" class="issue-nav-btn">Issue {next_num} →</a>' if os.path.exists(f"issue-{next_num}.html") else '<div class="issue-nav-placeholder"></div>'
+    nav_html = f'      <div class="issue-nav">{prev_html}{next_html}</div>'
+    parts.append(nav_html)
+
+    cards_html = "\n\n".join(parts)
 
     return f"""<!DOCTYPE html>
 <html lang="en" data-theme="dark">
@@ -394,6 +465,13 @@ def main():
 
     issue_num = data["issue_number"]
     out_filename = f"issue-{issue_num}.html"
+
+    if os.path.exists(out_filename):
+        print(f"  ⚠ {out_filename} already exists!")
+        answer = input("  Overwrite? (y/n): ").strip().lower()
+        if answer != "y":
+            print("  Aborted.")
+            sys.exit(0)
 
     print(f"Generating Issue {issue_num}...")
 

@@ -48,6 +48,11 @@ FEEDS = [
     ("Business & Media","💼","general","https://frontofficesports.com/feed/"),
     ("Business & Media","💼","general","https://www.sportspro.com/feed/"),
     ("Business & Media","💼","general","https://www.cbssports.com/rss/headlines/"),
+    # Business & Media — additional
+    ("Business & Media","💼","general","https://sportico.com/feed/"),
+    ("Business & Media","💼","general","https://boardroom.tv/feed/"),
+    ("Business & Media","💼","general","https://awfulannouncing.com/feed"),
+    ("Business & Media","💼","general","https://bleacherreport.com/articles/feed"),
 ]
 
 # ── League keyword detection ─────────────────────────────────────────────────

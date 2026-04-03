@@ -67,7 +67,7 @@ body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', system-
 .section-body { display: flex; flex-direction: column; }
 
 /* ─── Story row ─── */
-.story { display: grid; grid-template-columns: 28px 80px 1fr 100px 80px 28px 36px;
+.story { display: grid; grid-template-columns: 28px 80px 1fr 100px 80px 28px 28px 36px;
   gap: 12px; align-items: center; padding: 10px 18px;
   border-bottom: 1px solid var(--border); transition: background .15s; }
 .story:last-child { border-bottom: none; }
@@ -103,6 +103,12 @@ body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', system-
 .story-link { cursor: pointer; background: none; border: none; color: var(--ink3);
   font-size: 14px; padding: 4px; border-radius: 4px; transition: color .15s; text-decoration: none; display: flex; align-items: center; }
 .story-link:hover { color: var(--g2); }
+
+/* Editor pick star */
+.story-star { cursor: pointer; background: none; border: none; color: var(--ink3);
+  font-size: 15px; padding: 4px; border-radius: 4px; transition: color .15s; }
+.story-star:hover { color: var(--g3); }
+.story-star.picked { color: var(--g3); }
 
 /* Drop btn */
 .story-drop { cursor: pointer; background: none; border: none; color: var(--ink3);
@@ -336,6 +342,7 @@ function renderStoryRow(s) {
       🔥 Hot
     </label>
     <a href="${esc(s.url || '#')}" target="_blank" class="story-link" title="Open article">↗</a>
+    <button class="story-star ${s.editor_pick ? 'picked' : ''}" onclick="toggleEditorPick(${s._idx})" title="Set as Editor's Pick">⭐</button>
     <button class="story-drop" onclick="toggleApprove(${s._idx}, !stories[${s._idx}].approved)"
       title="Toggle drop">✕</button>`;
   return row;
@@ -357,6 +364,15 @@ function toggleApprove(idx, val) {
 }
 function updateField(idx, field, val) {
   stories[idx][field] = val;
+}
+function toggleEditorPick(idx) {
+  // Clear all other picks
+  stories.forEach((s, i) => { s.editor_pick = (i === idx) ? !s.editor_pick : false; });
+  // Re-render all star buttons
+  document.querySelectorAll('.story-star').forEach((btn, i) => {
+    const storyIdx = parseInt(btn.closest('.story')?.dataset.idx);
+    if (!isNaN(storyIdx)) btn.classList.toggle('picked', !!stories[storyIdx].editor_pick);
+  });
 }
 function approveAll() { stories.forEach((_,i) => toggleApprove(i, true)); }
 function dropAll()    { stories.forEach((_,i) => toggleApprove(i, false)); }
@@ -414,6 +430,16 @@ function buildIssueJSON() {
 
   const approved = stories.filter(s => s.approved);
 
+  // Build editor pick
+  const pickedStory = stories.find(s => s.editor_pick && s.approved);
+  const editor_pick = pickedStory ? {
+    tag:    pickedStory.suggested_tag || pickedStory.tag || 'Story',
+    hot:    !!pickedStory.hot,
+    text:   pickedStory.text,
+    url:    pickedStory.url,
+    source: pickedStory.source,
+  } : null;
+
   // Build ticker from hot stories
   const ticker = approved
     .filter(s => s.hot)
@@ -453,7 +479,7 @@ function buildIssueJSON() {
       };
     });
 
-  return { issue_number: issueNum, date_from: dateFrom, date_to: dateTo, year, ticker, cards };
+  return { issue_number: issueNum, date_from: dateFrom, date_to: dateTo, year, editor_pick, ticker, cards };
 }
 
 function exportIssue() {

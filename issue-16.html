@@ -108,6 +108,18 @@ footer{border-top:1px solid var(--border);padding:28px 32px;display:flex;align-i
 @media(max-width:900px){.main{grid-template-columns:1fr}.sidebar{position:static;top:auto}}
 @media(max-width:640px){.shell,.controls-inner,footer{padding-left:16px;padding-right:16px}.header-inner{grid-template-columns:1fr}.header-meta{align-items:flex-start;flex-direction:row;flex-wrap:wrap}.feed{grid-template-columns:1fr}.brand-title{font-size:64px}.search-box{width:100%}.controls-inner{flex-wrap:wrap}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+.editor-pick{grid-column:1/-1;background:linear-gradient(135deg,color-mix(in srgb,var(--g1) 8%,var(--surface)),var(--surface));border:1px solid color-mix(in srgb,var(--g1) 40%,transparent);border-radius:var(--radius);padding:24px 28px;display:flex;flex-direction:column;gap:14px;animation:fadeUp .4s cubic-bezier(.2,.9,.2,1) both;text-decoration:none;color:inherit;position:relative;transition:transform .2s,box-shadow .2s,border-color .2s}
+.editor-pick:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(0,0,0,.45);border-color:color-mix(in srgb,var(--g1) 60%,transparent)}
+.editor-pick-label{font-family:'DM Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:.18em;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.editor-pick-headline{font-family:'Bebas Neue',sans-serif;font-size:clamp(22px,3vw,32px);line-height:1.1;background:var(--grad-text);background-size:300% 300%;animation:shimmer 6s ease infinite;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.editor-pick-meta{display:flex;align-items:center;gap:12px}
+.editor-pick-tag{font-family:'DM Mono',monospace;font-size:9px;font-weight:500;text-transform:uppercase;letter-spacing:.08em;padding:3px 7px;border-radius:3px;background:color-mix(in srgb,var(--g1) 10%,transparent);color:var(--g2);border:1px solid color-mix(in srgb,var(--g2) 25%,transparent)}
+.editor-pick-source{font-family:'DM Mono',monospace;font-size:10px;color:var(--ink3)}
+.editor-pick-arrow{font-size:12px;color:var(--ink3);margin-left:auto}
+.issue-nav{display:flex;justify-content:space-between;align-items:center;padding:24px 0 0;border-top:1px solid var(--border);grid-column:1/-1;margin-top:8px}
+.issue-nav-btn{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--ink2);font-family:'DM Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:.1em;padding:10px 18px;border:1px solid var(--border);border-radius:8px;transition:all .2s}
+.issue-nav-btn:hover{color:var(--ink);border-color:var(--g2);transform:translateY(-2px)}
+.issue-nav-placeholder{width:120px}
 </style>
 </head>
 
@@ -292,7 +304,7 @@ footer{border-top:1px solid var(--border);padding:28px 32px;display:flex;align-i
 
       <!-- Soccer -->
       <section class="card" data-cat="soccer">
-        <div class="card-head"><div class="league-label"><span class="league-emoji">⚽</span><span class="league-text">Soccer</span></div><div class="season-tag in">In-season</div></div>
+        <div class="card-head"><div class="league-label"><span class="league-emoji">⚽</span><span class="league-text">Soccer</span></div><div class="season-tag off">This Week</div></div>
         <div class="card-items">
           <a href="https://www.espn.com/soccer/story/_/id/48384852/gennaro-gattuso-steps-italy-boss-world-cup-failure" target="_blank" rel="noopener" class="item"><span class="item-tag">🔥 Coaching</span><div class="item-body"><div class="item-text">Gattuso leaves Italy job after WC failure</div><div class="item-source">espn.com</div></div><span class="item-arrow">↗</span></a>
           <a href="https://www.espn.com/soccer/story/_/id/48376425/lionel-messi-cristiano-ronaldo-world-cup-stars-feature-lego" target="_blank" rel="noopener" class="item"><span class="item-tag">🔥 Partnership</span><div class="item-body"><div class="item-text">LEGO launches World Cup star mini-figures</div><div class="item-source">espn.com</div></div><span class="item-arrow">↗</span></a>
@@ -343,13 +355,15 @@ footer{border-top:1px solid var(--border);padding:28px 32px;display:flex;align-i
 
       <!-- FIFA World Cup -->
       <section class="card" data-cat="customers">
-        <div class="card-head"><div class="league-label"><span class="league-emoji">🌍</span><span class="league-text">FIFA World Cup</span></div><div class="season-tag in">Summer 2026</div></div>
+        <div class="card-head"><div class="league-label"><span class="league-emoji">🌍</span><span class="league-text">FIFA World Cup</span></div><div class="season-tag off">Off-season</div></div>
         <div class="card-items">
           <a href="https://www.espn.com/soccer/story/_/id/48352807/world-cup-2026-kit-ranking-canada-mexico-united-states-argentina-australia-brazil-england-france-germany-portugal-spain" target="_blank" rel="noopener" class="item"><span class="item-tag">Kits</span><div class="item-body"><div class="item-text">World Cup 2026 kit rankings so far</div><div class="item-source">espn.com</div></div><span class="item-arrow">↗</span></a>
           <a href="https://www.espn.com/soccer/story/_/id/48376425/lionel-messi-cristiano-ronaldo-world-cup-stars-feature-lego" target="_blank" rel="noopener" class="item"><span class="item-tag">Brands</span><div class="item-body"><div class="item-text">Messi &amp; Ronaldo headline LEGO World Cup range</div><div class="item-source">espn.com</div></div><span class="item-arrow">↗</span></a>
           <a href="https://www.sportspro.com/broadcast-ott/fifa-world-cup-drinks-break-itv-march-2026/" target="_blank" rel="noopener" class="item"><span class="item-tag">Media</span><div class="item-body"><div class="item-text">ITV drops in-game ads during World Cup drinks breaks</div><div class="item-source">sportspro.com</div></div><span class="item-arrow">↗</span></a>
         </div>
       </section>
+
+      <div class="issue-nav"><a href="issue-15.html" class="issue-nav-btn">← Issue 15</a><div class="issue-nav-placeholder"></div></div>
 
       <div id="no-results">NO MATCHING RESULTS</div>
     </div>
@@ -396,7 +410,7 @@ footer{border-top:1px solid var(--border);padding:28px 32px;display:flex;align-i
 </footer>
 
 <script>
-document.getElementById('themeToggle').addEventListener('click',()=>{const c=document.documentElement.getAttribute('data-theme');document.documentElement.setAttribute('data-theme',c==='dark'?'light':'dark')});
+(()=>{const t=localStorage.getItem('ripple-theme')||'dark';document.documentElement.setAttribute('data-theme',t)})();document.getElementById('themeToggle').addEventListener('click',()=>{const c=document.documentElement.getAttribute('data-theme');const n=c==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',n);localStorage.setItem('ripple-theme',n)});
 let angle=0;(function spin(){angle=(angle+1.2)%360;const a=angle+'deg';document.querySelectorAll('.item, .sched-link').forEach(e=>{e.style.setProperty('--angle',a)});requestAnimationFrame(spin)})();
 let activeFilter='all';
 function applyFilters(){const q=(document.getElementById('search').value||'').toLowerCase().trim();const all=Array.from(document.querySelectorAll('#feed .card'));let n=0;all.forEach(c=>{const cat=activeFilter==='all'||c.dataset.cat===activeFilter;const qo=!q||c.textContent.toLowerCase().includes(q);const s=cat&&qo;c.style.display=s?'':'none';if(s)n++});document.getElementById('no-results').style.display=n===0?'block':'none';updateStats()}

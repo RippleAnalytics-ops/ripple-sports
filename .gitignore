@@ -1,0 +1,6 @@
+.DS_Store
+**/.DS_Store
+issues/upcoming/
+__pycache__/
+*.pyc
+.sandbox/
