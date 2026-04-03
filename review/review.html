@@ -457,11 +457,12 @@ function buildIssueJSON() {
     const lg = s.league || 'Business & Media';
     if (!cardMap[lg]) cardMap[lg] = [];
     cardMap[lg].push({
-      tag:    s.suggested_tag || s.tag || 'News',
-      hot:    !!s.hot,
-      text:   s.text,
-      url:    s.url,
-      source: s.source,
+      tag:     s.suggested_tag || s.tag || 'News',
+      hot:     !!s.hot,
+      text:    s.text,
+      url:     s.url,
+      source:  s.source,
+      summary: s.summary || '',
     });
   });
 
