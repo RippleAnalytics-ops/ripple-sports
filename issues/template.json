@@ -1,0 +1,96 @@
+{
+  "issue_number": 16,
+  "date_from": "Apr 3",
+  "date_to": "Apr 9",
+  "year": 2026,
+
+  "ticker": [
+    { "text": "Headline for big story here", "url": "https://example.com", "hot": true },
+    { "text": "Another major story this week", "url": "https://example.com", "hot": true },
+    { "text": "Regular ticker item", "url": "https://example.com", "hot": false }
+  ],
+
+  "cards": [
+    {
+      "league": "NFL",
+      "emoji": "🏈",
+      "category": "us-sports",
+      "season": "off",
+      "season_label": "Off-season",
+      "stories": [
+        { "tag": "🔥 Signing", "hot": true,  "text": "Short punchy headline here", "url": "https://nfl.com/...", "source": "nfl.com" },
+        { "tag": "Trade",      "hot": false, "text": "Another story headline",     "url": "https://espn.com/...", "source": "espn.com" }
+      ]
+    },
+    {
+      "league": "WNBA",
+      "emoji": "🏀",
+      "category": "us-sports",
+      "season": "off",
+      "season_label": "Off-season",
+      "stories": [
+        { "tag": "Draft", "hot": false, "text": "Story headline", "url": "https://wnba.com/...", "source": "wnba.com" }
+      ]
+    },
+    {
+      "league": "NBA",
+      "emoji": "🏀",
+      "category": "us-sports",
+      "season": "in",
+      "season_label": "In-season",
+      "stories": [
+        { "tag": "Playoffs", "hot": false, "text": "Playoff story here", "url": "https://nba.com/...", "source": "nba.com" }
+      ]
+    },
+    {
+      "league": "MLB",
+      "emoji": "⚾",
+      "category": "us-sports",
+      "season": "in",
+      "season_label": "In-season",
+      "stories": [
+        { "tag": "Game", "hot": false, "text": "MLB story here", "url": "https://mlb.com/...", "source": "mlb.com" }
+      ]
+    },
+    {
+      "league": "NHL",
+      "emoji": "🏒",
+      "category": "us-sports",
+      "season": "in",
+      "season_label": "In-season",
+      "stories": [
+        { "tag": "Game", "hot": false, "text": "NHL story here", "url": "https://nhl.com/...", "source": "nhl.com" }
+      ]
+    },
+    {
+      "league": "Premier League",
+      "emoji": "⚽",
+      "category": "soccer",
+      "season": "in",
+      "season_label": "In-season",
+      "stories": [
+        { "tag": "Match", "hot": false, "text": "PL story here", "url": "https://premierleague.com/...", "source": "premierleague.com" }
+      ]
+    },
+    {
+      "league": "Formula 1",
+      "emoji": "🏎️",
+      "category": "motorsport",
+      "season": "in",
+      "season_label": "In-season",
+      "stories": [
+        { "tag": "Race", "hot": false, "text": "F1 story here", "url": "https://formula1.com/...", "source": "formula1.com" }
+      ]
+    },
+    {
+      "league": "Business & Media",
+      "emoji": "💼",
+      "category": "general",
+      "season": "off",
+      "season_label": "This Week",
+      "stories": [
+        { "tag": "Business", "hot": false, "text": "Business story here", "url": "https://frontofficesports.com/...", "source": "frontofficesports.com" }
+      ]
+    }
+  ]
+}

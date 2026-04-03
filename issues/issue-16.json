@@ -1,0 +1,740 @@
+{
+  "issue_number": 16,
+  "date_from": "Mar 27",
+  "date_to": "Apr 3",
+  "year": 2026,
+  "ticker": [
+    {
+      "text": "Ujiri joins Toronto Tempo WNBA ownership group",
+      "url": "https://www.espn.com/wnba/story/_/id/48354693/masai-ujiri-joins-ownership-group-wnba-toronto-tempo",
+      "hot": true
+    },
+    {
+      "text": "WNBA expansion draft: Portland, Toronto pick Friday",
+      "url": "https://www.espn.com/wnba/story/_/id/48382011/wnba-expansion-draft-2026-portland-fire-toronto-tempo-unprotected-players",
+      "hot": true
+    },
+    {
+      "text": "NBA investigates Clippers over Kawhi contract",
+      "url": "https://www.espn.com/nba/story/_/id/48369328/the-latest-kawhi-leonard-steve-ballmer-nba-investigation-aspiration-la-clippers",
+      "hot": true
+    },
+    {
+      "text": "Blazers new owner Dundon urges bigger goals",
+      "url": "https://www.espn.com/nba/story/_/id/48381848/blazers-dundon-more-aggressive-urges-bigger-goals",
+      "hot": true
+    },
+    {
+      "text": "Luka Doncic exits with hamstring, faces MRI",
+      "url": "https://www.espn.com/nba/story/_/id/48382849/luka-doncic-exits-lakers-game-okc-hamstring-strain",
+      "hot": true
+    },
+    {
+      "text": "Pirates call up No. 1 prospect Konnor Griffin",
+      "url": "https://www.espn.com/mlb/story/_/id/48377716/pirates-call-no-1-prospect-konnor-griffin-home-opener",
+      "hot": true
+    },
+    {
+      "text": "NBA stars Kerr, Nash own LaLiga's Mallorca",
+      "url": "https://www.espn.com/soccer/story/_/id/47650854/nba-greats-kerr-nash-ups-downs-owning-spanish-soccer-team-mallorca",
+      "hot": true
+    },
+    {
+      "text": "Chelsea bench Fernández over Madrid comments",
+      "url": "https://www.espn.com/soccer/story/_/id/48384441/enzo-fernandez-dropped-chelsea-comment-living-madrid",
+      "hot": true
+    },
+    {
+      "text": "Four PL clubs chase Villa star Rogers",
+      "url": "https://www.espn.com/soccer/story/_/id/48383498/transfer-rumors-news-four-premier-league-clubs-want-aston-villa-star-morgan-rogers",
+      "hot": true
+    },
+    {
+      "text": "Gattuso leaves Italy job after WC failure",
+      "url": "https://www.espn.com/soccer/story/_/id/48384852/gennaro-gattuso-steps-italy-boss-world-cup-failure",
+      "hot": true
+    },
+    {
+      "text": "LEGO launches World Cup star mini-figures",
+      "url": "https://www.espn.com/soccer/story/_/id/48376425/lionel-messi-cristiano-ronaldo-world-cup-stars-feature-lego",
+      "hot": true
+    },
+    {
+      "text": "World Cup 2026 kits ranked so far",
+      "url": "https://www.espn.com/soccer/story/_/id/48352807/world-cup-2026-kit-ranking-canada-mexico-united-states-argentina-australia-brazil-england-france-germany-portugal-spain",
+      "hot": true
+    },
+    {
+      "text": "Verstappen hints at leaving F1 over rules",
+      "url": "https://www.espn.com/racing/f1/story/_/id/48347648/why-new-rules-max-verstappen-brink-walking-away-f1",
+      "hot": true
+    },
+    {
+      "text": "Audi F1 boss reveals why Wheatley quit",
+      "url": "https://www.autosport.com/f1/news/audi-f1-boss-may-have-revealed-why-wheatley-quit/10810407/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-ALL&utm_term=News&utm_content=uk",
+      "hot": true
+    },
+    {
+      "text": "Alpine denies Colapinto sabotage in open letter",
+      "url": "https://www.autosport.com/f1/news/alpine-f1-team-denies-franco-colapinto-sabotage-claims/10810532/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-ALL&utm_term=News&utm_content=uk",
+      "hot": true
+    },
+    {
+      "text": "Leclerc sees \"huge gains\" ahead for Ferrari",
+      "url": "https://www.autosport.com/f1/news/leclerc-ferrari-f1-car-huge-gains/10810619/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-ALL&utm_term=News&utm_content=uk",
+      "hot": true
+    },
+    {
+      "text": "Red Bull 'paying price' for 2025 title push",
+      "url": "https://www.autosport.com/f1/news/red-bull-now-paying-the-price-for-f1-2025-title-charge-but-it-has-no-regrets/10810404/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-ALL&utm_term=News&utm_content=uk",
+      "hot": true
+    },
+    {
+      "text": "Ford reveals first WEC LMDh prototype test plan",
+      "url": "https://www.autosport.com/wec/news/ford-reveals-plans-for-first-test-for-its-new-wec-lmdh-prototype/10810030/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-ALL&utm_term=News&utm_content=uk",
+      "hot": true
+    },
+    {
+      "text": "Raiders sign Kirk Cousins in free agency",
+      "url": "https://www.cbssports.com/nfl/news/raiders-kirk-cousins-final-four-preview-picks-wnba-expansion-mock-draft/",
+      "hot": true
+    },
+    {
+      "text": "WNBA draft eligibility rules debate heats up",
+      "url": "https://frontofficesports.com/future-of-wnba-draft-eligibility-rules-looms-at-womens-final-four/",
+      "hot": true
+    },
+    {
+      "text": "Edwards, Cunningham ineligible under 65-game rule",
+      "url": "https://frontofficesports.com/cunningham-edwards-nba-season-awards-65-game-rule-eligibility/",
+      "hot": true
+    },
+    {
+      "text": "Dončić exits blowout with hamstring injury",
+      "url": "https://www.cbssports.com/nba/news/luka-doncic-hamstring-injury-lakers-thunder/",
+      "hot": true
+    },
+    {
+      "text": "MLB Opening Day ticket prices hit record highs",
+      "url": "https://frontofficesports.com/mlb-opening-day-prices-soar/",
+      "hot": true
+    },
+    {
+      "text": "Gattuso resigns after Italy's third World Cup miss",
+      "url": "https://www.cbssports.com/soccer/news/gennaro-gattuso-resigns-italy-world-cup/",
+      "hot": true
+    }
+  ],
+  "cards": [
+    {
+      "league": "NFL",
+      "emoji": "🏈",
+      "category": "us-sports",
+      "season": "off",
+      "season_label": "Off-season",
+      "stories": [
+        {
+          "tag": "Signing",
+          "hot": false,
+          "text": "Raiders make Linderbaum highest-paid interior OL",
+          "url": "https://www.espn.com/nfl/story/_/id/48377798/las-vegas-raiders-lineman-tyler-linderbaum-2026-offense-spytek-kubiak",
+          "source": "espn.com"
+        },
+        {
+          "tag": "Draft",
+          "hot": false,
+          "text": "NFL draft: 12 prospects earn true Round 1 grade",
+          "url": "https://www.espn.com/nfl/draft2026/story/_/id/47455728/2026-nfl-draft-board-prospects-first-round-grades-comps",
+          "source": "espn.com"
+        },
+        {
+          "tag": "Draft",
+          "hot": false,
+          "text": "NFL draft buzz: McCoy pro day, QB3 debate",
+          "url": "https://www.espn.com/nfl/draft2026/story/_/id/48377191/2026-nfl-draft-latest-buzz-rumors-news-mocks-sleepers-mccoy-nussmeier-beck",
+          "source": "espn.com"
+        },
+        {
+          "tag": "News",
+          "hot": false,
+          "text": "Inside friction between Hurts and Eagles offense",
+          "url": "https://www.espn.com/nfl/story/_/id/48224913/the-crossroad-awaits-quarterback-jalen-hurts-philadelphia-eagles-offense-aj-brown-2026",
+          "source": "espn.com"
+        },
+        {
+          "tag": "🔥 Signing",
+          "hot": true,
+          "text": "Raiders sign Kirk Cousins in free agency",
+          "url": "https://www.cbssports.com/nfl/news/raiders-kirk-cousins-final-four-preview-picks-wnba-expansion-mock-draft/",
+          "source": "cbssports.com"
+        },
+        {
+          "tag": "Signing",
+          "hot": false,
+          "text": "Top NFL free agents still seeking deals",
+          "url": "https://www.cbssports.com/nfl/news/2026-nfl-free-agency-landing-spots-aaron-rodgers/",
+          "source": "cbssports.com"
+        },
+        {
+          "tag": "Signing",
+          "hot": false,
+          "text": "Pickens, Lamar extensions loom as April questions",
+          "url": "https://www.cbssports.com/nfl/news/non-draft-nfl-questions-george-pickens-lamar-jackson-aaron-rodgers/",
+          "source": "cbssports.com"
+        },
+        {
+          "tag": "Business",
+          "hot": false,
+          "text": "Kirk Cousins now among NFL's richest ever",
+          "url": "https://www.cbssports.com/nfl/news/qb-kirk-cousins-raiders-career-earnings/",
+          "source": "cbssports.com"
+        },
+        {
+          "tag": "Draft",
+          "hot": false,
+          "text": "Jets favored to take Arvell Reese at No. 2",
+          "url": "https://www.cbssports.com/betting/news/jets-2026-nfl-draft-odds-ohio-state-pass-rusher-arvell-reese-favored-pick-at-no-2-taking-big-action-there/",
+          "source": "cbssports.com"
+        }
+      ]
+    },
+    {
+      "league": "WNBA",
+      "emoji": "🏀",
+      "category": "us-sports",
+      "season": "off",
+      "season_label": "Off-season",
+      "stories": [
+        {
+          "tag": "🔥 Expansion",
+          "hot": true,
+          "text": "Ujiri joins Toronto Tempo WNBA ownership group",
+          "url": "https://www.espn.com/wnba/story/_/id/48354693/masai-ujiri-joins-ownership-group-wnba-toronto-tempo",
+          "source": "espn.com"
+        },
+        {
+          "tag": "🔥 Draft",
+          "hot": true,
+          "text": "WNBA expansion draft: Portland, Toronto pick Friday",
+          "url": "https://www.espn.com/wnba/story/_/id/48382011/wnba-expansion-draft-2026-portland-fire-toronto-tempo-unprotected-players",
+          "source": "espn.com"
+        }
+      ]
+    },
+    {
+      "league": "NBA",
+      "emoji": "🏀",
+      "category": "us-sports",
+      "season": "in",
+      "season_label": "In-season",
+      "stories": [
+        {
+          "tag": "🔥 Legal",
+          "hot": true,
+          "text": "NBA investigates Clippers over Kawhi contract",
+          "url": "https://www.espn.com/nba/story/_/id/48369328/the-latest-kawhi-leonard-steve-ballmer-nba-investigation-aspiration-la-clippers",
+          "source": "espn.com"
+        },
+        {
+          "tag": "🔥 Business",
+          "hot": true,
+          "text": "Blazers new owner Dundon urges bigger goals",
+          "url": "https://www.espn.com/nba/story/_/id/48381848/blazers-dundon-more-aggressive-urges-bigger-goals",
+          "source": "espn.com"
+        },
+        {
+          "tag": "🔥 Injury",
+          "hot": true,
+          "text": "Luka Doncic exits with hamstring, faces MRI",
+          "url": "https://www.espn.com/nba/story/_/id/48382849/luka-doncic-exits-lakers-game-okc-hamstring-strain",
+          "source": "espn.com"
+        },
+        {
+          "tag": "Award",
+          "hot": false,
+          "text": "Edwards misses game, now ineligible for awards",
+          "url": "https://www.espn.com/nba/story/_/id/48381324/timberwolves-rest-anthony-edwards-vs-pistons-manage-knee-pain",
+          "source": "espn.com"
+        },
+        {
+          "tag": "Draft",
+          "hot": false,
+          "text": "NBA draft debate: Peterson or Dybantsa No. 1?",
+          "url": "https://www.espn.com/nba/story/_/id/48358749/nba-draft-2026-dybantsa-peterson-boozer-wagler-scouts-execs-top-5",
+          "source": "espn.com"
+        },
+        {
+          "tag": "Award",
+          "hot": false,
+          "text": "MVP straw poll: Wemby closes gap on SGA",
+          "url": "https://www.espn.com/nba/story/_/id/48380547/nba-mvp-award-straw-poll-sga-wemby-luka-jokic-lead-final-2025-26-update",
+          "source": "espn.com"
+        },
+        {
+          "tag": "News",
+          "hot": false,
+          "text": "Wizards apologize for botched April Fools' stunt",
+          "url": "https://www.espn.com/nba/story/_/id/48378756/wizards-apologize-april-fools-stunt-say-bit-was-scripted",
+          "source": "espn.com"
+        },
+        {
+          "tag": "Game",
+          "hot": false,
+          "text": "Rookie Knueppel sets Hornets 3-point season record",
+          "url": "https://www.espn.com/nba/story/_/id/48381909/rookie-kon-knueppel-sets-hornets-season-3-point-record",
+          "source": "espn.com"
+        },
+        {
+          "tag": "Playoffs",
+          "hot": false,
+          "text": "NBA playoff watch: Wolves, Sixers solidify spots",
+          "url": "https://www.espn.com/nba/story/_/id/48287649/nba-playoff-watch-2026-standings-schedules-projections-clinchings",
+          "source": "espn.com"
+        },
+        {
+          "tag": "🔥 Business",
+          "hot": true,
+          "text": "NBA stars Kerr, Nash own LaLiga's Mallorca",
+          "url": "https://www.espn.com/soccer/story/_/id/47650854/nba-greats-kerr-nash-ups-downs-owning-spanish-soccer-team-mallorca",
+          "source": "espn.com"
+        },
+        {
+          "tag": "🔥 Draft",
+          "hot": true,
+          "text": "WNBA draft eligibility rules debate heats up",
+          "url": "https://frontofficesports.com/future-of-wnba-draft-eligibility-rules-looms-at-womens-final-four/",
+          "source": "frontofficesports.com"
+        },
+        {
+          "tag": "🔥 Award",
+          "hot": true,
+          "text": "Edwards, Cunningham ineligible under 65-game rule",
+          "url": "https://frontofficesports.com/cunningham-edwards-nba-season-awards-65-game-rule-eligibility/",
+          "source": "frontofficesports.com"
+        },
+        {
+          "tag": "🔥 Injury",
+          "hot": true,
+          "text": "Dončić exits blowout with hamstring injury",
+          "url": "https://www.cbssports.com/nba/news/luka-doncic-hamstring-injury-lakers-thunder/",
+          "source": "cbssports.com"
+        },
+        {
+          "tag": "Playoffs",
+          "hot": false,
+          "text": "Rockets, Cavaliers clinch NBA playoff spots",
+          "url": "https://www.cbssports.com/nba/news/2026-nba-playoff-picture-standings-tiebreakers/",
+          "source": "cbssports.com"
+        },
+        {
+          "tag": "Game",
+          "hot": false,
+          "text": "Peja's son Andrej powers Illinois to Final Four",
+          "url": "https://www.cbssports.com/college-basketball/news/andrej-stojakovic-nba-legend-pejas-stojakovic-llinois/",
+          "source": "cbssports.com"
+        }
+      ]
+    },
+    {
+      "league": "MLB",
+      "emoji": "⚾",
+      "category": "us-sports",
+      "season": "in",
+      "season_label": "In-season",
+      "stories": [
+        {
+          "tag": "🔥 Signing",
+          "hot": true,
+          "text": "Pirates call up No. 1 prospect Konnor Griffin",
+          "url": "https://www.espn.com/mlb/story/_/id/48377716/pirates-call-no-1-prospect-konnor-griffin-home-opener",
+          "source": "espn.com"
+        },
+        {
+          "tag": "Signing",
+          "hot": false,
+          "text": "Trevor Bauer returns to U.S. with indie Ducks",
+          "url": "https://www.espn.com/mlb/story/_/id/48378454/trevor-bauer-signs-long-island-ducks-us-return",
+          "source": "espn.com"
+        },
+        {
+          "tag": "Game",
+          "hot": false,
+          "text": "Skenes rebounds, earns first win of 2026 season",
+          "url": "https://www.espn.com/mlb/story/_/id/48372316/pirates-paul-skenes-bounces-back-vs-reds-first-win-2026",
+          "source": "espn.com"
+        },
+        {
+          "tag": "News",
+          "hot": false,
+          "text": "Royals' Jensen scratched after oversleeping",
+          "url": "https://www.espn.com/mlb/story/_/id/48381778/royals-catcher-carter-jensen-scratched-oversleeping",
+          "source": "espn.com"
+        },
+        {
+          "tag": "🔥 Business",
+          "hot": true,
+          "text": "MLB Opening Day ticket prices hit record highs",
+          "url": "https://frontofficesports.com/mlb-opening-day-prices-soar/",
+          "source": "frontofficesports.com"
+        }
+      ]
+    },
+    {
+      "league": "NHL",
+      "emoji": "🏒",
+      "category": "us-sports",
+      "season": "in",
+      "season_label": "In-season",
+      "stories": [
+        {
+          "tag": "Playoffs",
+          "hot": false,
+          "text": "NHL playoff watch: Flyers' path to postseason",
+          "url": "https://www.espn.com/nhl/story/_/id/48380648/nhl-playoffs-bracket-standings-2026-wild-card-bracket-games-matchups",
+          "source": "espn.com"
+        }
+      ]
+    },
+    {
+      "league": "Premier League",
+      "emoji": "⚽",
+      "category": "soccer",
+      "season": "in",
+      "season_label": "In-season",
+      "stories": [
+        {
+          "tag": "🔥 Discipline",
+          "hot": true,
+          "text": "Chelsea bench Fernández over Madrid comments",
+          "url": "https://www.espn.com/soccer/story/_/id/48384441/enzo-fernandez-dropped-chelsea-comment-living-madrid",
+          "source": "espn.com"
+        },
+        {
+          "tag": "🔥 Transfer",
+          "hot": true,
+          "text": "Four PL clubs chase Villa star Rogers",
+          "url": "https://www.espn.com/soccer/story/_/id/48383498/transfer-rumors-news-four-premier-league-clubs-want-aston-villa-star-morgan-rogers",
+          "source": "espn.com"
+        },
+        {
+          "tag": "News",
+          "hot": false,
+          "text": "Arteta defends Arsenal international withdrawals",
+          "url": "https://www.bbc.com/sport/football/articles/czjwkz3nwvxo?at_medium=RSS&at_campaign=rss",
+          "source": "bbc.com"
+        },
+        {
+          "tag": "Game",
+          "hot": false,
+          "text": "UWCL: Chelsea falter, Madrid capitulate at Barça",
+          "url": "https://www.espn.com/soccer/story/_/id/48383733/uwcl-talking-points-chelsea-season-failure-madrid-capitulate-barcelona",
+          "source": "espn.com"
+        },
+        {
+          "tag": "Injury",
+          "hot": false,
+          "text": "Liverpool's Alisson facing lengthy injury layoff",
+          "url": "https://www.skysports.com/football/live-blog/11095/13025501/liverpool-transfer-news-rumours-and-gossip-live-updates-and-latest-on-deals-signings-loans-and-contracts",
+          "source": "skysports.com"
+        },
+        {
+          "tag": "Game",
+          "hot": false,
+          "text": "Salah faces Man City in final FA Cup clash",
+          "url": "https://www.cbssports.com/soccer/news/manchester-city-liverpool-mohamed-salahs-fa-cup-quarterfinal/",
+          "source": "cbssports.com"
+        }
+      ]
+    },
+    {
+      "league": "Real Madrid",
+      "emoji": "⚽",
+      "category": "soccer",
+      "season": "in",
+      "season_label": "In-season",
+      "stories": [
+        {
+          "tag": "Injury",
+          "hot": false,
+          "text": "Kane may miss Bayern-Real Madrid clash",
+          "url": "https://www.espn.com/soccer/story/_/id/48383927/bayern-munich-harry-kane-injury-doubt-real-madrid-clash-vincent-kompany",
+          "source": "espn.com"
+        },
+        {
+          "tag": "Game",
+          "hot": false,
+          "text": "Barcelona obliterate Real Madrid in UWCL quarters",
+          "url": "https://www.cbssports.com/soccer/news/uwcl-scores-barcelona-real-madrid-ol-lyonnes-overtime-semifinal/",
+          "source": "cbssports.com"
+        }
+      ]
+    },
+    {
+      "league": "Soccer",
+      "emoji": "⚽",
+      "category": "soccer",
+      "season": "in",
+      "season_label": "In-season",
+      "stories": [
+        {
+          "tag": "🔥 Coaching",
+          "hot": true,
+          "text": "Gattuso leaves Italy job after WC failure",
+          "url": "https://www.espn.com/soccer/story/_/id/48384852/gennaro-gattuso-steps-italy-boss-world-cup-failure",
+          "source": "espn.com"
+        },
+        {
+          "tag": "🔥 Partnership",
+          "hot": true,
+          "text": "LEGO launches World Cup star mini-figures",
+          "url": "https://www.espn.com/soccer/story/_/id/48376425/lionel-messi-cristiano-ronaldo-world-cup-stars-feature-lego",
+          "source": "espn.com"
+        },
+        {
+          "tag": "🔥 Kits",
+          "hot": true,
+          "text": "World Cup 2026 kits ranked so far",
+          "url": "https://www.espn.com/soccer/story/_/id/48352807/world-cup-2026-kit-ranking-canada-mexico-united-states-argentina-australia-brazil-england-france-germany-portugal-spain",
+          "source": "espn.com"
+        },
+        {
+          "tag": "News",
+          "hot": false,
+          "text": "Flick urges Rashford to step up at Barça",
+          "url": "https://www.espn.com/soccer/story/_/id/48385051/barcelona-coach-hansi-flick-urges-marcus-rashford-step-raphinha-injury",
+          "source": "espn.com"
+        },
+        {
+          "tag": "News",
+          "hot": false,
+          "text": "Guardiola dodges Man City future questions",
+          "url": "https://www.espn.com/soccer/story/_/id/48385065/manchester-city-pep-guardiola-sidesteps-questions-future",
+          "source": "espn.com"
+        },
+        {
+          "tag": "News",
+          "hot": false,
+          "text": "Man City eye treble to send Pep high",
+          "url": "https://www.espn.com/soccer/story/_/id/48373803/manchester-city-three-games-restore-their-crown",
+          "source": "espn.com"
+        },
+        {
+          "tag": "Game",
+          "hot": false,
+          "text": "Barça face Atlético triple-header showdown",
+          "url": "https://www.espn.com/soccer/story/_/id/48349555/atletico-madrid-tripleheader-miami-dolphins-define-barcelona-season",
+          "source": "espn.com"
+        },
+        {
+          "tag": "Injury",
+          "hot": false,
+          "text": "Colombia star James hospitalized with dehydration",
+          "url": "https://www.espn.com/soccer/story/_/id/48381336/colombia-james-rodriguez-hospital-minnesota-illness",
+          "source": "espn.com"
+        },
+        {
+          "tag": "News",
+          "hot": false,
+          "text": "Spurs boss De Zerbi apologizes for Greenwood remarks",
+          "url": "https://www.espn.com/soccer/story/_/id/48378332/roberto-de-zerbi-sorry-tottenham-hotspur-mason-greenwood-comments",
+          "source": "espn.com"
+        },
+        {
+          "tag": "Award",
+          "hot": false,
+          "text": "Fernandes wins sixth PL Player of Month",
+          "url": "https://www.skysports.com/football/live-blog/11095/13025492/man-utd-transfer-news-rumours-and-gossip-live-updates-and-latest-on-deals-signings-loans-and-contracts",
+          "source": "skysports.com"
+        },
+        {
+          "tag": "News",
+          "hot": false,
+          "text": "USMNT World Cup squad taking shape after March",
+          "url": "https://www.espn.com/soccer/story/_/id/48359122/usmnt-2026-world-cup-big-board-6-march-international-losses-belgium-portugal-cemented-mauricio-pochettino-squad",
+          "source": "espn.com"
+        },
+        {
+          "tag": "News",
+          "hot": false,
+          "text": "Wilson returns to USWNT after giving birth",
+          "url": "https://www.espn.com/soccer/story/_/id/48379513/sophia-wilson-moms-uswnt-return-alex-morgan-crystal-dunn",
+          "source": "espn.com"
+        },
+        {
+          "tag": "Game",
+          "hot": false,
+          "text": "Millwall leapfrog Boro into Championship second",
+          "url": "https://www.skysports.com/football/middlesbrough-vs-millwall/report/534791",
+          "source": "skysports.com"
+        }
+      ]
+    },
+    {
+      "league": "Formula 1",
+      "emoji": "🏎️",
+      "category": "motorsport",
+      "season": "in",
+      "season_label": "In-season",
+      "stories": [
+        {
+          "tag": "🔥 News",
+          "hot": true,
+          "text": "Verstappen hints at leaving F1 over rules",
+          "url": "https://www.espn.com/racing/f1/story/_/id/48347648/why-new-rules-max-verstappen-brink-walking-away-f1",
+          "source": "espn.com"
+        },
+        {
+          "tag": "News",
+          "hot": true,
+          "text": "Audi F1 boss reveals why Wheatley quit",
+          "url": "https://www.autosport.com/f1/news/audi-f1-boss-may-have-revealed-why-wheatley-quit/10810407/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-ALL&utm_term=News&utm_content=uk",
+          "source": "autosport.com"
+        },
+        {
+          "tag": "News",
+          "hot": true,
+          "text": "Alpine denies Colapinto sabotage in open letter",
+          "url": "https://www.autosport.com/f1/news/alpine-f1-team-denies-franco-colapinto-sabotage-claims/10810532/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-ALL&utm_term=News&utm_content=uk",
+          "source": "autosport.com"
+        },
+        {
+          "tag": "News",
+          "hot": true,
+          "text": "Leclerc sees \"huge gains\" ahead for Ferrari",
+          "url": "https://www.autosport.com/f1/news/leclerc-ferrari-f1-car-huge-gains/10810619/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-ALL&utm_term=News&utm_content=uk",
+          "source": "autosport.com"
+        },
+        {
+          "tag": "News",
+          "hot": true,
+          "text": "Red Bull 'paying price' for 2025 title push",
+          "url": "https://www.autosport.com/f1/news/red-bull-now-paying-the-price-for-f1-2025-title-charge-but-it-has-no-regrets/10810404/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-ALL&utm_term=News&utm_content=uk",
+          "source": "autosport.com"
+        },
+        {
+          "tag": "🔥 Business",
+          "hot": true,
+          "text": "Ford reveals first WEC LMDh prototype test plan",
+          "url": "https://www.autosport.com/wec/news/ford-reveals-plans-for-first-test-for-its-new-wec-lmdh-prototype/10810030/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-ALL&utm_term=News&utm_content=uk",
+          "source": "autosport.com"
+        },
+        {
+          "tag": "News",
+          "hot": false,
+          "text": "Audi finds no quick engine fix via ADUO",
+          "url": "https://www.autosport.com/f1/news/much-aduo-about-nothing-why-miracles-are-not-possible-to-fix-audis-f1-problems-quickly/10810256/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-ALL&utm_term=News&utm_content=uk",
+          "source": "autosport.com"
+        },
+        {
+          "tag": "Expansion",
+          "hot": false,
+          "text": "Honda plans six MotoGP bikes next season",
+          "url": "https://www.autosport.com/motogp/news/honda-plans-to-field-six-bikes-in-motogp-next-year/10809989/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-ALL&utm_term=News&utm_content=uk",
+          "source": "autosport.com"
+        },
+        {
+          "tag": "News",
+          "hot": false,
+          "text": "F1 Academy adds races after Saudi cancellation",
+          "url": "https://www.espn.com/f1/story/_/id/48371025/f1-academy-races-austin-montreal-saudi-arabia-cancellation",
+          "source": "espn.com"
+        },
+        {
+          "tag": "News",
+          "hot": false,
+          "text": "Verstappen preps for Nürburgring 24 Hours race",
+          "url": "https://www.autosport.com/endurance/news/verstappen-lines-up-more-preparation-races-for-nurburgring-24-hours/10810513/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-ALL&utm_term=News&utm_content=uk",
+          "source": "autosport.com"
+        }
+      ]
+    },
+    {
+      "league": "Business & Media",
+      "emoji": "💼",
+      "category": "general",
+      "season": "off",
+      "season_label": "This Week",
+      "stories": [
+        {
+          "tag": "🔥 Coaching",
+          "hot": true,
+          "text": "Gattuso resigns after Italy's third World Cup miss",
+          "url": "https://www.cbssports.com/soccer/news/gennaro-gattuso-resigns-italy-world-cup/",
+          "source": "cbssports.com"
+        },
+        {
+          "tag": "Legal",
+          "hot": false,
+          "text": "Virginia QB Morris denied seventh year of eligibility",
+          "url": "https://www.cbssports.com/college-football/news/chandler-morris-virginia-eligibility-denied-seventh-season/",
+          "source": "cbssports.com"
+        },
+        {
+          "tag": "Game",
+          "hot": false,
+          "text": "No. 1 prospect Konnor Griffin debuts for Pirates",
+          "url": "https://www.cbssports.com/mlb/news/orioles-vs-pirates-picks-pittsburgh-solid-play-in-home-opener-konnor-griffins-big-league-debut-friday/",
+          "source": "cbssports.com"
+        },
+        {
+          "tag": "Media",
+          "hot": false,
+          "text": "Final Four TV schedule set for March Madness",
+          "url": "https://www.cbssports.com/college-basketball/news/final-four-2026-tv-schedule-channels-announcers-where-to-watch-march-madness-ncaa-tournament/",
+          "source": "cbssports.com"
+        },
+        {
+          "tag": "Business",
+          "hot": false,
+          "text": "Golf brands exploit unauthorized Masters merch loophole",
+          "url": "https://frontofficesports.com/how-golf-apparel-companies-pull-off-unofficial-masters-merch/",
+          "source": "frontofficesports.com"
+        },
+        {
+          "tag": "Game",
+          "hot": false,
+          "text": "Auburn, Tulsa meet in NIT championship game",
+          "url": "https://www.cbssports.com/college-basketball/news/nit-scores-schedule-bracket-auburn-tulsa-2026-championship/",
+          "source": "cbssports.com"
+        },
+        {
+          "tag": "Game",
+          "hot": false,
+          "text": "South Carolina enters Final Four as rare underdog",
+          "url": "https://www.cbssports.com/womens-college-basketball/news/south-carolina-uconn-womens-final-four/",
+          "source": "cbssports.com"
+        }
+      ]
+    },
+    {
+      "league": "FIFA World Cup",
+      "emoji": "🌍",
+      "category": "customers",
+      "season": "in",
+      "season_label": "Summer 2026",
+      "stories": [
+        {
+          "tag": "Kits",
+          "hot": false,
+          "text": "World Cup 2026 kit rankings so far",
+          "url": "https://www.espn.com/soccer/story/_/id/48352807/world-cup-2026-kit-ranking-canada-mexico-united-states-argentina-australia-brazil-england-france-germany-portugal-spain",
+          "source": "espn.com"
+        },
+        {
+          "tag": "Brands",
+          "hot": false,
+          "text": "Messi & Ronaldo headline LEGO World Cup range",
+          "url": "https://www.espn.com/soccer/story/_/id/48376425/lionel-messi-cristiano-ronaldo-world-cup-stars-feature-lego",
+          "source": "espn.com"
+        },
+        {
+          "tag": "Media",
+          "hot": false,
+          "text": "ITV drops in-game ads during World Cup drinks breaks",
+          "url": "https://www.sportspro.com/broadcast-ott/fifa-world-cup-drinks-break-itv-march-2026/",
+          "source": "sportspro.com"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Ripple Sports — Issue Review</title>
+<style>
+:root {
+  --bg: #0a0a0f; --surface: #111118; --surface2: #16161f;
+  --border: rgba(255,255,255,0.08); --ink: #f0eff5; --ink2: #8a899a; --ink3: #3e3d50;
+  --g1: #8C52FF; --g2: #2BA8FF; --g3: #F7C948;
+  --grad: linear-gradient(135deg,var(--g1),var(--g2),var(--g3));
+  --radius: 12px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 14px; min-height: 100vh; }
+
+/* ─── Top bar ─── */
+.topbar { background: var(--surface); border-bottom: 1px solid var(--border);
+  padding: 14px 28px; display: flex; align-items: center; gap: 20px; flex-wrap: wrap; position: sticky; top: 0; z-index: 100; }
+.topbar h1 { font-size: 15px; font-weight: 700; background: var(--grad);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.topbar-actions { display: flex; gap: 10px; align-items: center; margin-left: auto; flex-wrap: wrap; }
+
+/* ─── Buttons ─── */
+.btn { padding: 8px 18px; border-radius: 8px; border: none; cursor: pointer;
+  font-size: 13px; font-weight: 600; transition: all .2s; }
+.btn-primary { background: linear-gradient(135deg,var(--g1),var(--g2)); color: #fff; }
+.btn-primary:hover { opacity: .85; transform: translateY(-1px); }
+.btn-outline { background: transparent; border: 1px solid var(--border); color: var(--ink2); }
+.btn-outline:hover { border-color: var(--g2); color: var(--ink); }
+.btn-danger { background: rgba(255,80,80,.15); border: 1px solid rgba(255,80,80,.3); color: #ff7070; }
+.btn-danger:hover { background: rgba(255,80,80,.25); }
+
+/* ─── File picker ─── */
+.dropzone { border: 2px dashed var(--border); border-radius: var(--radius); padding: 60px 40px;
+  text-align: center; cursor: pointer; transition: border-color .2s; margin: 32px; }
+.dropzone:hover { border-color: var(--g2); }
+.dropzone h2 { font-size: 18px; margin-bottom: 8px; }
+.dropzone p { color: var(--ink2); font-size: 13px; margin-bottom: 20px; }
+#file-input { display: none; }
+
+/* ─── Metadata form ─── */
+.meta-bar { display: flex; gap: 16px; padding: 16px 28px; background: var(--surface2);
+  border-bottom: 1px solid var(--border); flex-wrap: wrap; align-items: center; }
+.meta-field { display: flex; flex-direction: column; gap: 4px; }
+.meta-field label { font-size: 10px; text-transform: uppercase; letter-spacing: .1em; color: var(--ink3); }
+.meta-field input { background: var(--surface); border: 1px solid var(--border); border-radius: 7px;
+  color: var(--ink); padding: 7px 12px; font-size: 13px; width: 160px; outline: none; }
+.meta-field input:focus { border-color: var(--g1); }
+
+/* ─── Stats ─── */
+.stats-row { display: flex; gap: 24px; padding: 12px 28px; background: var(--bg);
+  border-bottom: 1px solid var(--border); flex-wrap: wrap; }
+.stat-pill { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--ink2); }
+.stat-pill strong { color: var(--ink); font-size: 18px; font-weight: 700; }
+.stat-pill span.label { font-size: 11px; }
+
+/* ─── Category sections ─── */
+.main { padding: 24px 28px; display: flex; flex-direction: column; gap: 28px; }
+.section { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+.section-head { display: flex; align-items: center; gap: 12px; padding: 14px 18px;
+  background: var(--surface2); border-bottom: 1px solid var(--border); }
+.section-head h2 { font-size: 15px; font-weight: 700; flex: 1; }
+.section-count { font-size: 11px; color: var(--ink3); font-variant-numeric: tabular-nums; }
+.section-body { display: flex; flex-direction: column; }
+
+/* ─── Story row ─── */
+.story { display: grid; grid-template-columns: 28px 80px 1fr 100px 80px 28px 36px;
+  gap: 12px; align-items: center; padding: 10px 18px;
+  border-bottom: 1px solid var(--border); transition: background .15s; }
+.story:last-child { border-bottom: none; }
+.story:hover { background: var(--surface2); }
+.story.dropped { opacity: .35; }
+.story.dropped .story-text { text-decoration: line-through; }
+
+/* Checkbox */
+.story-check input[type=checkbox] { width: 16px; height: 16px; accent-color: var(--g1); cursor: pointer; }
+
+/* Tag pill */
+.story-tag input { background: rgba(140,82,255,.1); border: 1px solid rgba(43,168,255,.25);
+  border-radius: 4px; color: var(--g2); font-size: 10px; font-weight: 600; text-transform: uppercase;
+  letter-spacing: .06em; padding: 3px 7px; width: 80px; text-align: center; outline: none; }
+.story-tag input:focus { border-color: var(--g1); }
+
+/* Headline */
+.story-text input { background: transparent; border: none; border-bottom: 1px solid transparent;
+  color: var(--ink); font-size: 13px; font-weight: 500; width: 100%; outline: none;
+  padding: 2px 0; transition: border-color .15s; }
+.story-text input:focus { border-bottom-color: var(--g2); }
+
+/* Source */
+.story-source { font-size: 10px; color: var(--ink3); font-family: monospace;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+/* Hot toggle */
+.story-hot { display: flex; align-items: center; gap: 5px; font-size: 11px; color: var(--ink3); cursor: pointer; }
+.story-hot input[type=checkbox] { accent-color: var(--g1); }
+.story-hot.is-hot { color: var(--g1); }
+
+/* Open link btn */
+.story-link { cursor: pointer; background: none; border: none; color: var(--ink3);
+  font-size: 14px; padding: 4px; border-radius: 4px; transition: color .15s; text-decoration: none; display: flex; align-items: center; }
+.story-link:hover { color: var(--g2); }
+
+/* Drop btn */
+.story-drop { cursor: pointer; background: none; border: none; color: var(--ink3);
+  font-size: 16px; padding: 4px; border-radius: 4px; transition: color .15s; }
+.story-drop:hover { color: #ff7070; }
+
+/* ─── Empty/loading ─── */
+.empty { text-align: center; padding: 80px 40px; color: var(--ink3); }
+
+/* ─── Export modal ─── */
+.modal-bg { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.75);
+  z-index: 200; align-items: center; justify-content: center; }
+.modal-bg.open { display: flex; }
+.modal { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 28px; width: 580px; max-width: 95vw; display: flex; flex-direction: column; gap: 16px; }
+.modal h3 { font-size: 16px; }
+.modal textarea { background: var(--surface2); border: 1px solid var(--border); border-radius: 8px;
+  color: var(--ink); font-family: monospace; font-size: 11px; padding: 12px; width: 100%;
+  height: 300px; resize: vertical; outline: none; }
+.modal-actions { display: flex; gap: 10px; justify-content: flex-end; }
+
+/* ─── Toast ─── */
+.toast { position: fixed; bottom: 24px; right: 24px; background: var(--surface);
+  border: 1px solid var(--g2); border-radius: 10px; padding: 12px 20px; font-size: 13px;
+  color: var(--g2); z-index: 300; opacity: 0; transform: translateY(8px);
+  transition: all .3s; pointer-events: none; }
+.toast.show { opacity: 1; transform: translateY(0); }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Top bar -->
+<div class="topbar">
+  <h1>Ripple Sports — Issue Review</h1>
+  <div class="topbar-actions">
+    <span id="counter" style="color:var(--ink2);font-size:13px;">No file loaded</span>
+    <button class="btn btn-outline" onclick="document.getElementById('file-input').click()">📂 Load JSON</button>
+    <button class="btn btn-primary" onclick="exportIssue()">⬇ Export Issue JSON</button>
+    <input type="file" id="file-input" accept=".json" onchange="loadFile(event)"/>
+  </div>
+</div>
+
+<!-- Dropzone (shown when no file loaded) -->
+<div class="dropzone" id="dropzone" onclick="document.getElementById('file-input').click()"
+  ondragover="event.preventDefault()" ondrop="handleDrop(event)">
+  <h2>Drop curated_stories.json here</h2>
+  <p>Or run: <code>python scripts/collect.py</code> then <code>python scripts/curate.py</code></p>
+  <button class="btn btn-primary" onclick="event.stopPropagation();document.getElementById('file-input').click()">
+    Choose File
+  </button>
+</div>
+
+<!-- Main editor (hidden until file loaded) -->
+<div id="editor" style="display:none">
+  <!-- Metadata -->
+  <div class="meta-bar">
+    <div class="meta-field">
+      <label>Issue Number</label>
+      <input type="number" id="meta-issue" placeholder="16" min="1"/>
+    </div>
+    <div class="meta-field">
+      <label>Date From (e.g. Apr 3)</label>
+      <input type="text" id="meta-from" placeholder="Apr 3"/>
+    </div>
+    <div class="meta-field">
+      <label>Date To (e.g. Apr 9)</label>
+      <input type="text" id="meta-to" placeholder="Apr 9"/>
+    </div>
+    <div class="meta-field">
+      <label>Year</label>
+      <input type="number" id="meta-year" value="2026" min="2020"/>
+    </div>
+    <div style="margin-left:auto;display:flex;gap:10px;align-items:flex-end">
+      <button class="btn btn-outline" onclick="approveAll()">✓ Approve All</button>
+      <button class="btn btn-danger" onclick="dropAll()">✗ Drop All</button>
+    </div>
+  </div>
+
+  <!-- Stats -->
+  <div class="stats-row">
+    <div class="stat-pill"><strong id="stat-approved">0</strong><span class="label">Approved</span></div>
+    <div class="stat-pill"><strong id="stat-dropped">0</strong><span class="label">Dropped</span></div>
+    <div class="stat-pill"><strong id="stat-hot">0</strong><span class="label">Hot (ticker)</span></div>
+    <div class="stat-pill"><strong id="stat-total">0</strong><span class="label">Total</span></div>
+  </div>
+
+  <!-- Story sections -->
+  <div class="main" id="sections"></div>
+</div>
+
+<!-- Export modal -->
+<div class="modal-bg" id="modal">
+  <div class="modal">
+    <h3>Issue JSON — copy or download</h3>
+    <textarea id="modal-json" readonly></textarea>
+    <div class="modal-actions">
+      <button class="btn btn-outline" onclick="document.getElementById('modal').classList.remove('open')">Close</button>
+      <button class="btn btn-outline" onclick="copyJson()">Copy</button>
+      <button class="btn btn-primary" onclick="downloadJson()">⬇ Download</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+let stories = [];
+let rawData = null;
+
+// ── File loading ──────────────────────────────────────────────────────────────
+function handleDrop(e) {
+  e.preventDefault();
+  const file = e.dataTransfer.files[0];
+  if (file) readFile(file);
+}
+function loadFile(e) {
+  const file = e.target.files[0];
+  if (file) readFile(file);
+}
+function readFile(file) {
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    try {
+      rawData = JSON.parse(e.target.result);
+      stories = rawData.stories || [];
+      // Default all to approved if not set
+      stories.forEach(s => { if (s.approved === null || s.approved === undefined) s.approved = true; });
+      renderEditor();
+    } catch(err) {
+      alert('Invalid JSON file: ' + err.message);
+    }
+  };
+  reader.readAsText(file);
+}
+
+// ── Rendering ─────────────────────────────────────────────────────────────────
+const CAT_LABELS = {
+  'us-sports':  '🏈 US Sports',
+  'soccer':     '⚽ Soccer',
+  'motorsport': '🏎️ Motorsport',
+  'general':    '💼 Business & Media',
+  'customers':  '🏆 Customers',
+};
+const CAT_ORDER = ['us-sports', 'soccer', 'motorsport', 'general', 'customers'];
+
+function renderEditor() {
+  document.getElementById('dropzone').style.display = 'none';
+  document.getElementById('editor').style.display = 'block';
+
+  // Prefill metadata from raw data
+  if (rawData) {
+    const wd = rawData.week_start ? new Date(rawData.week_start + 'T00:00:00') : new Date();
+    const we = rawData.week_end   ? new Date(rawData.week_end   + 'T00:00:00') : new Date();
+    const fmt = d => d.toLocaleDateString('en-US', {month:'short',day:'numeric'});
+    document.getElementById('meta-from').value = fmt(wd);
+    document.getElementById('meta-to').value   = fmt(we);
+    document.getElementById('meta-year').value = wd.getFullYear();
+  }
+
+  const sectionsEl = document.getElementById('sections');
+  sectionsEl.innerHTML = '';
+
+  // Group by category then league
+  const grouped = {};
+  CAT_ORDER.forEach(c => grouped[c] = {});
+  stories.forEach((s, idx) => {
+    const cat = s.category || 'general';
+    if (!grouped[cat]) grouped[cat] = {};
+    const lg = s.league || 'Other';
+    if (!grouped[cat][lg]) grouped[cat][lg] = [];
+    grouped[cat][lg].push({ ...s, _idx: idx });
+  });
+
+  CAT_ORDER.forEach(cat => {
+    const leagues = grouped[cat];
+    if (!Object.keys(leagues).length) return;
+
+    const section = document.createElement('div');
+    section.className = 'section';
+
+    const head = document.createElement('div');
+    head.className = 'section-head';
+    head.innerHTML = `<h2>${CAT_LABELS[cat] || cat}</h2><span class="section-count" id="cnt-${cat}"></span>`;
+    section.appendChild(head);
+
+    const body = document.createElement('div');
+    body.className = 'section-body';
+
+    Object.entries(leagues).forEach(([league, leagueStories]) => {
+      // League sub-header
+      const lh = document.createElement('div');
+      lh.style.cssText = 'padding:8px 18px 4px;font-size:11px;color:var(--ink3);text-transform:uppercase;letter-spacing:.08em;border-bottom:1px solid var(--border);background:rgba(255,255,255,.02)';
+      lh.textContent = league;
+      body.appendChild(lh);
+
+      leagueStories.forEach(s => {
+        body.appendChild(renderStoryRow(s));
+      });
+    });
+
+    section.appendChild(body);
+    sectionsEl.appendChild(section);
+  });
+
+  updateStats();
+}
+
+function renderStoryRow(s) {
+  const row = document.createElement('div');
+  row.className = 'story' + (s.approved ? '' : ' dropped');
+  row.dataset.idx = s._idx;
+
+  row.innerHTML = `
+    <div class="story-check">
+      <input type="checkbox" ${s.approved ? 'checked' : ''} onchange="toggleApprove(${s._idx}, this.checked)"/>
+    </div>
+    <div class="story-tag">
+      <input type="text" value="${esc(s.suggested_tag || s.tag || 'News')}"
+        onchange="updateField(${s._idx}, 'suggested_tag', this.value)" placeholder="Tag"/>
+    </div>
+    <div class="story-text">
+      <input type="text" value="${esc(s.text || '')}"
+        onchange="updateField(${s._idx}, 'text', this.value)" placeholder="Headline…"/>
+    </div>
+    <div class="story-source" title="${esc(s.url || '')}">
+      ${esc(s.source || '')}
+    </div>
+    <label class="story-hot ${s.hot ? 'is-hot' : ''}">
+      <input type="checkbox" ${s.hot ? 'checked' : ''} onchange="updateField(${s._idx}, 'hot', this.checked);this.closest('.story-hot').classList.toggle('is-hot',this.checked)"/>
+      🔥 Hot
+    </label>
+    <a href="${esc(s.url || '#')}" target="_blank" class="story-link" title="Open article">↗</a>
+    <button class="story-drop" onclick="toggleApprove(${s._idx}, !stories[${s._idx}].approved)"
+      title="Toggle drop">✕</button>`;
+  return row;
+}
+
+function esc(s) {
+  return String(s).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;');
+}
+
+// ── Story updates ─────────────────────────────────────────────────────────────
+function toggleApprove(idx, val) {
+  stories[idx].approved = val;
+  const row = document.querySelector(`.story[data-idx="${idx}"]`);
+  if (row) row.classList.toggle('dropped', !val);
+  // sync checkbox
+  const cb = row?.querySelector('.story-check input');
+  if (cb) cb.checked = val;
+  updateStats();
+}
+function updateField(idx, field, val) {
+  stories[idx][field] = val;
+}
+function approveAll() { stories.forEach((_,i) => toggleApprove(i, true)); }
+function dropAll()    { stories.forEach((_,i) => toggleApprove(i, false)); }
+
+function updateStats() {
+  const approved = stories.filter(s => s.approved).length;
+  const dropped  = stories.filter(s => !s.approved).length;
+  const hot      = stories.filter(s => s.approved && s.hot).length;
+  document.getElementById('stat-approved').textContent = approved;
+  document.getElementById('stat-dropped').textContent  = dropped;
+  document.getElementById('stat-hot').textContent      = hot;
+  document.getElementById('stat-total').textContent    = stories.length;
+  document.getElementById('counter').textContent       = `${approved} approved · ${hot} hot`;
+
+  // Update per-section counts
+  CAT_ORDER.forEach(cat => {
+    const el = document.getElementById(`cnt-${cat}`);
+    if (!el) return;
+    const n = stories.filter(s => s.category === cat && s.approved).length;
+    el.textContent = `${n} approved`;
+  });
+}
+
+// ── Export ────────────────────────────────────────────────────────────────────
+const LEAGUE_META = {
+  'NFL':            { emoji: '🏈', category: 'us-sports', season: 'off', season_label: 'Off-season' },
+  'WNBA':           { emoji: '🏀', category: 'us-sports', season: 'off', season_label: 'Off-season' },
+  'NBA':            { emoji: '🏀', category: 'us-sports', season: 'in',  season_label: 'In-season'  },
+  'MLB':            { emoji: '⚾', category: 'us-sports', season: 'in',  season_label: 'In-season'  },
+  'NHL':            { emoji: '🏒', category: 'us-sports', season: 'in',  season_label: 'In-season'  },
+  'Premier League': { emoji: '⚽', category: 'soccer',    season: 'in',  season_label: 'In-season'  },
+  'Real Madrid':    { emoji: '⚽', category: 'soccer',    season: 'in',  season_label: 'In-season'  },
+  'MLS':            { emoji: '⚽', category: 'soccer',    season: 'in',  season_label: 'In-season'  },
+  'NWSL':           { emoji: '⚽', category: 'soccer',    season: 'in',  season_label: 'In-season'  },
+  'UCL':            { emoji: '⚽', category: 'soccer',    season: 'in',  season_label: 'In-season'  },
+  'Soccer':         { emoji: '⚽', category: 'soccer',    season: 'in',  season_label: 'In-season'  },
+  'Formula 1':      { emoji: '🏎️',category: 'motorsport',season: 'in',  season_label: 'In-season'  },
+  'NASCAR':         { emoji: '🏁', category: 'motorsport',season: 'in',  season_label: 'In-season'  },
+  'Business & Media':   { emoji: '💼', category: 'general',   season: 'off', season_label: 'This Week' },
+  'LVF Serie A':        { emoji: '🏐', category: 'customers', season: 'in',  season_label: 'In-season' },
+  'Enhanced Games':     { emoji: '⚡', category: 'customers', season: 'in',  season_label: 'In-season' },
+  'HYROX':              { emoji: '🏋️', category: 'customers', season: 'in',  season_label: 'In-season' },
+  'MXGP':               { emoji: '🏍️', category: 'customers', season: 'in',  season_label: 'In-season' },
+  'PGA Tour':           { emoji: '⛳', category: 'customers', season: 'in',  season_label: 'In-season' },
+  'FIFA World Cup':     { emoji: '🌍', category: 'customers', season: 'in',  season_label: 'In-season' },
+  'Sphere':             { emoji: '🔮', category: 'customers', season: 'in',  season_label: 'This Week' },
+  'Parella Motorsports':{ emoji: '🏁', category: 'customers', season: 'in',  season_label: 'In-season' },
+};
+
+function buildIssueJSON() {
+  const issueNum = parseInt(document.getElementById('meta-issue').value) || 16;
+  const dateFrom = document.getElementById('meta-from').value || 'Apr 3';
+  const dateTo   = document.getElementById('meta-to').value   || 'Apr 9';
+  const year     = parseInt(document.getElementById('meta-year').value) || 2026;
+
+  const approved = stories.filter(s => s.approved);
+
+  // Build ticker from hot stories
+  const ticker = approved
+    .filter(s => s.hot)
+    .map(s => ({ text: s.text, url: s.url, hot: true }));
+
+  // Group into cards
+  const cardMap = {};
+  const LEAGUE_ORDER = ['NFL','WNBA','NBA','MLB','NHL',
+    'Premier League','Real Madrid','MLS','NWSL','UCL','Soccer',
+    'Formula 1','NASCAR','Business & Media',
+    'LVF Serie A','Enhanced Games','HYROX','MXGP','PGA Tour',
+    'FIFA World Cup','Sphere','Parella Motorsports'];
+
+  approved.forEach(s => {
+    const lg = s.league || 'Business & Media';
+    if (!cardMap[lg]) cardMap[lg] = [];
+    cardMap[lg].push({
+      tag:    s.suggested_tag || s.tag || 'News',
+      hot:    !!s.hot,
+      text:   s.text,
+      url:    s.url,
+      source: s.source,
+    });
+  });
+
+  const cards = LEAGUE_ORDER
+    .filter(lg => cardMap[lg]?.length)
+    .map(lg => {
+      const meta = LEAGUE_META[lg] || { emoji: '📰', category: 'general', season: 'off', season_label: 'This Week' };
+      return {
+        league:       lg,
+        emoji:        meta.emoji,
+        category:     meta.category,
+        season:       meta.season,
+        season_label: meta.season_label,
+        stories:      cardMap[lg],
+      };
+    });
+
+  return { issue_number: issueNum, date_from: dateFrom, date_to: dateTo, year, ticker, cards };
+}
+
+function exportIssue() {
+  const issueJson = buildIssueJSON();
+  const jsonStr = JSON.stringify(issueJson, null, 2);
+  document.getElementById('modal-json').value = jsonStr;
+  document.getElementById('modal').classList.add('open');
+}
+
+function copyJson() {
+  const ta = document.getElementById('modal-json');
+  navigator.clipboard.writeText(ta.value).then(() => showToast('Copied to clipboard!'));
+}
+
+function downloadJson() {
+  const issueNum = document.getElementById('meta-issue').value || '16';
+  const jsonStr  = document.getElementById('modal-json').value;
+  const blob = new Blob([jsonStr], { type: 'application/json' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = `issue-${issueNum}.json`;
+  a.click();
+  showToast(`issue-${issueNum}.json downloaded`);
+}
+
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 3000);
+}
+
+// Close modal on background click
+document.getElementById('modal').addEventListener('click', function(e) {
+  if (e.target === this) this.classList.remove('open');
+});
+</script>
+</body>
+</html>
