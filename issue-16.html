@@ -5,8 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Ripple Sports Insights — Issue 16</title>
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ME70MTR6PB">let _tt;document.querySelectorAll('.item[data-summary]').forEach(el=>{const tip=document.createElement('div');tip.className='item-tip';tip.innerHTML='<p>'+el.dataset.summary+'</p><span>'+(el.dataset.source||'')+'</span>';el.appendChild(tip);el.addEventListener('mouseenter',()=>{_tt=setTimeout(()=>{tip.style.display='block'},300)});el.addEventListener('mouseleave',()=>{clearTimeout(_tt);tip.style.display='none'})});
-</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ME70MTR6PB"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -443,5 +442,6 @@ function updateStats(){const v=Array.from(document.querySelectorAll('#feed .card
 updateStats();
 const toTop=document.getElementById('toTop');window.addEventListener('scroll',()=>toTop.classList.toggle('show',window.scrollY>300),{passive:true});toTop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
 </script>
+<script>let _tt;document.querySelectorAll('.item[data-summary]').forEach(el=>{const tip=document.createElement('div');tip.className='item-tip';tip.innerHTML='<p>'+el.dataset.summary+'</p><span>'+(el.dataset.source||'')+'</span>';el.appendChild(tip);el.addEventListener('mouseenter',()=>{_tt=setTimeout(()=>{tip.style.display='block'},300)});el.addEventListener('mouseleave',()=>{clearTimeout(_tt);tip.style.display='none'})});</script>
 </body>
 </html>
