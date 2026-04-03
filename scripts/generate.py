@@ -318,6 +318,12 @@ def update_index(data: dict, issue_filename: str):
         html = f.read()
 
     issue_num  = data["issue_number"]
+
+    # Don't insert a duplicate card if this issue already exists in index.html
+    if f'href="issue-{issue_num}.html"' in html:
+        # Just update the existing card's story count and tags
+        print(f"  ✓ index.html already has Issue {issue_num} — skipping duplicate insert")
+        return
     date_from  = data["date_from"].upper()
     date_to    = data["date_to"].upper()
     year       = data["year"]
