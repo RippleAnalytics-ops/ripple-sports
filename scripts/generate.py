@@ -122,7 +122,7 @@ def render_editor_pick(pick: dict) -> str:
 # ── Full HTML template ────────────────────────────────────────────────────────
 
 CSS = """:root{--bg:#0a0a0f;--surface:#111118;--surface2:#16161f;--border:rgba(255,255,255,0.07);--border-hover:rgba(255,255,255,0.16);--ink:#f0eff5;--ink2:#8a899a;--ink3:#3e3d50;--g1:#8C52FF;--g2:#2BA8FF;--g3:#F7C948;--grad:linear-gradient(135deg,var(--g1),var(--g2),var(--g3));--grad-text:linear-gradient(-45deg,var(--g1),var(--g2),var(--g3),var(--g2));--radius:14px;--shadow-hover:0 16px 40px rgba(0,0,0,.45)}
-[data-theme="light"]{--bg:#f5f4f0;--surface:#ffffff;--surface2:#eeecf5;--border:rgba(0,0,0,0.08);--border-hover:rgba(140,82,255,0.35);--ink:#0a0a0f;--ink2:#4a4958;--ink3:#b0afc0}
+[data-theme="light"]{--bg:#dddce8;--surface:#edeaf8;--surface2:#e4e1f2;--border:rgba(0,0,0,0.09);--border-hover:rgba(140,82,255,0.35);--ink:#0a0a0f;--ink2:#44435a;--ink3:#9090a8}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--ink);font-family:'DM Sans',sans-serif;font-size:14px;line-height:1.6;min-height:100vh;overflow-x:hidden;transition:background .35s,color .35s}
 body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");opacity:.025;pointer-events:none;z-index:9999}
@@ -221,10 +221,15 @@ footer{border-top:1px solid var(--border);padding:28px 32px;display:flex;align-i
 .editor-pick-tag{font-family:'DM Mono',monospace;font-size:9px;font-weight:500;text-transform:uppercase;letter-spacing:.08em;padding:3px 7px;border-radius:3px;background:color-mix(in srgb,var(--g1) 10%,transparent);color:var(--g2);border:1px solid color-mix(in srgb,var(--g2) 25%,transparent)}
 .editor-pick-source{font-family:'DM Mono',monospace;font-size:10px;color:var(--ink3)}
 .editor-pick-arrow{font-size:12px;color:var(--ink3);margin-left:auto}
-.item-tip{display:none;position:absolute;bottom:calc(100% + 10px);left:0;right:0;background:var(--surface2);border:1px solid var(--border-hover);border-radius:10px;padding:13px 15px;z-index:200;box-shadow:0 8px 28px rgba(0,0,0,.55);pointer-events:none}
-.item-tip p{font-size:12px;color:var(--ink2);line-height:1.5;margin:0 0 6px}
-.item-tip span{font-family:'DM Mono',monospace;font-size:9px;color:var(--ink3)}
-.item-tip::after{content:'';position:absolute;bottom:-5px;left:20px;width:8px;height:8px;background:var(--surface2);border-right:1px solid var(--border-hover);border-bottom:1px solid var(--border-hover);transform:rotate(45deg)}
+.item-tip{visibility:hidden;opacity:0;transform:translateY(6px) scale(.97);transition:opacity .18s ease,transform .18s ease,visibility 0s linear .18s;position:absolute;bottom:calc(100% + 10px);left:-8px;right:-8px;background:rgba(14,14,22,.95);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.13);border-radius:13px;padding:14px 16px 12px;z-index:300;box-shadow:0 20px 56px rgba(0,0,0,.7),0 0 0 1px rgba(140,82,255,.15);pointer-events:none}
+.item-tip.visible{visibility:visible;opacity:1;transform:translateY(0) scale(1);transition:opacity .18s ease,transform .18s ease,visibility 0s}
+.item-tip p{font-size:12px;color:rgba(240,239,245,.82);line-height:1.6;margin:0 0 9px}
+.item-tip .tip-src{font-family:'DM Mono',monospace;font-size:9px;color:rgba(140,82,255,.9);text-transform:uppercase;letter-spacing:.1em}
+.item-tip::after{content:'';position:absolute;bottom:-5px;left:20px;width:8px;height:8px;background:rgba(14,14,22,.95);border-right:1px solid rgba(255,255,255,.13);border-bottom:1px solid rgba(255,255,255,.13);transform:rotate(45deg)}
+[data-theme="light"] .item-tip{background:rgba(237,234,248,.97);border-color:rgba(140,82,255,.2);box-shadow:0 12px 40px rgba(0,0,0,.18),0 0 0 1px rgba(140,82,255,.1)}
+[data-theme="light"] .item-tip p{color:var(--ink2)}
+[data-theme="light"] .item-tip .tip-src{color:var(--g1)}
+[data-theme="light"] .item-tip::after{background:rgba(237,234,248,.97);border-color:rgba(140,82,255,.2)}
 .issue-nav{display:flex;justify-content:space-between;align-items:center;padding:24px 0 0;border-top:1px solid var(--border);grid-column:1/-1;margin-top:8px}
 .issue-nav-btn{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--ink2);font-family:'DM Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:.1em;padding:10px 18px;border:1px solid var(--border);border-radius:8px;transition:all .2s}
 .issue-nav-btn:hover{color:var(--ink);border-color:var(--g2);transform:translateY(-2px)}
@@ -240,7 +245,7 @@ const catMeta={'us-sports':{label:'US Sports',emoji:'🏈'},'soccer':{label:'Soc
 function updateStats(){const v=Array.from(document.querySelectorAll('#feed .card')).filter(c=>c.style.display!=='none');const t=v.reduce((s,c)=>s+c.querySelectorAll('.item').length,0);document.getElementById('count-total').textContent=t||'—';const bd=document.getElementById('cat-breakdown');bd.innerHTML='';Object.entries(catMeta).forEach(([k,m])=>{const cc=v.filter(c=>c.dataset.cat===k);const cnt=cc.reduce((s,c)=>s+c.querySelectorAll('.item').length,0);if(!cnt)return;const p=t?Math.round(cnt/t*100):0;bd.innerHTML+=`<div><div style="display:flex;justify-content:space-between;margin-bottom:4px;"><span style="font-size:11px;color:var(--ink2);">${m.emoji} ${m.label}</span><span style="font-family:'DM Mono',monospace;font-size:10px;color:var(--ink3);">${cnt}</span></div><div style="height:2px;background:var(--border);border-radius:2px;overflow:hidden;"><div style="height:100%;width:${p}%;background:linear-gradient(90deg,var(--g1),var(--g2));border-radius:2px;transition:width .45s ease;"></div></div></div>`})}
 updateStats();
 const toTop=document.getElementById('toTop');window.addEventListener('scroll',()=>toTop.classList.toggle('show',window.scrollY>300),{passive:true});toTop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
-let _tt;document.querySelectorAll('.item[data-summary]').forEach(el=>{const tip=document.createElement('div');tip.className='item-tip';tip.innerHTML='<p>'+el.dataset.summary+'</p><span>'+( el.dataset.source||'')+'</span>';el.appendChild(tip);el.addEventListener('mouseenter',()=>{_tt=setTimeout(()=>{tip.style.display='block'},300)});el.addEventListener('mouseleave',()=>{clearTimeout(_tt);tip.style.display='none'})});"""
+let _tt;document.querySelectorAll('.item[data-summary]').forEach(el=>{const tip=document.createElement('div');tip.className='item-tip';tip.innerHTML='<p>'+el.dataset.summary+'</p><span class="tip-src">'+(el.dataset.source||'')+'</span>';el.appendChild(tip);el.addEventListener('mouseenter',()=>{_tt=setTimeout(()=>tip.classList.add('visible'),300)});el.addEventListener('mouseleave',()=>{clearTimeout(_tt);tip.classList.remove('visible')})});"""
 
 SCHEDULES_HTML = """          <a href="https://www.nfl.com/schedules" target="_blank" rel="noopener" class="sched-link"><span class="sched-emoji">🏈</span><span class="sched-label">NFL</span></a>
           <a href="https://www.nba.com/schedule" target="_blank" rel="noopener" class="sched-link"><span class="sched-emoji">🏀</span><span class="sched-label">NBA</span></a>
