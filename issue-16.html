@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 <title>Ripple Sports Insights — Issue 16</title>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-ME70MTR6PB"></script>
@@ -493,7 +494,8 @@ footer{border-top:1px solid var(--border);padding:28px 32px;display:flex;align-i
 </footer>
 
 <script>
-document.getElementById('themeToggle').addEventListener('click',()=>{const c=document.documentElement.getAttribute('data-theme');document.documentElement.setAttribute('data-theme',c==='dark'?'light':'dark')});
+(function(){const t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)})();
+document.getElementById('themeToggle').addEventListener('click',()=>{const c=document.documentElement.getAttribute('data-theme');const n=c==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',n);localStorage.setItem('theme',n)});
 let angle=0;(function spin(){angle=(angle+1.2)%360;const a=angle+'deg';document.querySelectorAll('.item, .sched-link').forEach(e=>{e.style.setProperty('--angle',a)});requestAnimationFrame(spin)})();
 let activeFilter='all';
 let allCards=[];
