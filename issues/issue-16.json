@@ -1,0 +1,1414 @@
+{
+  "issue_number": 16,
+  "date_from": "Mar 28",
+  "date_to": "Apr 4",
+  "year": 2026,
+  "ticker": [
+    {
+      "text": "Kirk Cousins agrees to sign with Raiders",
+      "url": "https://www.espn.com/nfl/story/_/id/48376719/kirk-cousins-agrees-sign-contract-raiders-agent-says",
+      "hot": true,
+      "league": "NFL"
+    },
+    {
+      "text": "NFL approves new rules at annual meeting",
+      "url": "https://www.giants.com/news/nfl-announces-new-rules-for-2026-annual-league-meeting-phoenix-onside-kick-kickoff",
+      "hot": true,
+      "league": "NFL"
+    },
+    {
+      "text": "Rams WR Puka Nacua continues rehab program",
+      "url": "https://www.espn.com/nfl/story/_/id/48373078/los-angeles-rams-wide-receiver-puka-nacua-rehab-attorney-says",
+      "hot": true,
+      "league": "NFL"
+    },
+    {
+      "text": "Sun relocate to Houston by 2027",
+      "url": "https://www.espn.com/wnba/story/_/id/48346867/sun-reach-deal-rockets-owner-moving-houston-2027",
+      "hot": true,
+      "league": "WNBA"
+    },
+    {
+      "text": "WNBA expansion draft targets revealed for 2026",
+      "url": "https://www.espn.com/wnba/story/_/id/48382011/wnba-expansion-draft-2026-portland-fire-toronto-tempo-unprotected-players",
+      "hot": true,
+      "league": "WNBA"
+    },
+    {
+      "text": "Masai Ujiri joins WNBA Toronto Tempo ownership",
+      "url": "https://www.espn.com/wnba/story/_/id/48354693/masai-ujiri-joins-ownership-group-wnba-toronto-tempo",
+      "hot": true,
+      "league": "WNBA"
+    },
+    {
+      "text": "Trail Blazers sale to Tom Dundon approved",
+      "url": "https://pr.nba.com/trail-blazers-sale-tom-dundon/",
+      "hot": true,
+      "league": "NBA"
+    },
+    {
+      "text": "NBA Europe league draws team bids",
+      "url": "https://www.sportspro.com/news/nba-europe-league-teams-bids-fiba-euroleague-april-2026/",
+      "hot": true,
+      "league": "NBA"
+    },
+    {
+      "text": "Lakers' Luka Doncic suspended by NBA",
+      "url": "https://pr.nba.com/lakers-luka-doncic-suspended/",
+      "hot": true,
+      "league": "NBA"
+    },
+    {
+      "text": "MLB 2026 draft sets first $10M bonus",
+      "url": "https://frontofficesports.com/mlb-2026-draft-slot-values-set-first-10-million-bonus-possible/",
+      "hot": true,
+      "league": "MLB"
+    },
+    {
+      "text": "Dodgers unveil historic blue road jersey",
+      "url": "https://www.mlb.com/dodgers/news/dodgers-reveal-blue-road-jersey-for-first-time-in-history",
+      "hot": true,
+      "league": "MLB"
+    },
+    {
+      "text": "Main Street Sports Network ends operations",
+      "url": "https://www.espn.com/espn/story/_/id/48388773/nba-nhl-teams-told-main-street-sports-network-end-operations",
+      "hot": true,
+      "league": "NHL"
+    },
+    {
+      "text": "MacKinnon first to reach 50 goals",
+      "url": "https://www.espn.com/nhl/story/_/id/48374288/avalanche-forward-nathan-mackinnon-first-reach-50-goals-season",
+      "hot": true,
+      "league": "NHL"
+    },
+    {
+      "text": "Stars investigate apparent Nazi salute by fan",
+      "url": "https://www.espn.com/nhl/story/_/id/48379324/dallas-arena-looking-apparent-nazi-salute-stars-fans",
+      "hot": true,
+      "league": "NHL"
+    },
+    {
+      "text": "Executive order limits athletes to one transfer",
+      "url": "https://www.espn.com/college-sports/story/_/id/48387866/executive-order-limits-ncaa-athletes-five-years-one-transfer",
+      "hot": true,
+      "league": "College Football"
+    }
+  ],
+  "cards": [
+    {
+      "league": "NFL",
+      "emoji": "🏈",
+      "category": "us-sports",
+      "season": "off",
+      "season_label": "Off-season",
+      "stories": [
+        {
+          "tag": "🔥 Signing",
+          "hot": false,
+          "text": "Jaguars sign Walker to $110M extension",
+          "url": "https://www.espn.com/nfl/story/_/id/48388833/jaguars-sign-travon-walker-4-year-110-million-extension",
+          "source": "espn.com",
+          "league": "NFL",
+          "summary": "The Jaguars signed defensive end Travon Walker to a four-year, $110 million contract extension, his agency announced Friday."
+        },
+        {
+          "tag": "🔥 Signing",
+          "hot": true,
+          "text": "Kirk Cousins agrees to sign with Raiders",
+          "url": "https://www.espn.com/nfl/story/_/id/48376719/kirk-cousins-agrees-sign-contract-raiders-agent-says",
+          "source": "espn.com",
+          "league": "NFL",
+          "summary": "Kirk Cousins has agreed to a contract with the Raiders, the veteran quarterback's agent announced."
+        },
+        {
+          "tag": "🔥 Signing",
+          "hot": false,
+          "text": "Vikings sign Kyler Murray in free agency",
+          "url": "https://www.vikings.com/news/kyler-murray-quarterback-film-breakdown-review-free-agency-2026",
+          "source": "vikings.com",
+          "league": "NFL",
+          "summary": ""
+        },
+        {
+          "tag": "Legal",
+          "hot": false,
+          "text": "Chiefs' Rashee Rice faces no NFL discipline",
+          "url": "https://www.espn.com/nfl/story/_/id/48389126/chiefs-wr-rashee-rice-faces-no-nfl-discipline-abuse-allegations",
+          "source": "espn.com",
+          "league": "NFL",
+          "summary": "The NFL announced Friday that it concluded its own investigation into Chiefs receiver Rashee Rice, stating that he \"has not engaged in conduct that violates the personal conduct policy.\""
+        },
+        {
+          "tag": "🔥 Rules",
+          "hot": true,
+          "text": "NFL approves new rules at annual meeting",
+          "url": "https://www.giants.com/news/nfl-announces-new-rules-for-2026-annual-league-meeting-phoenix-onside-kick-kickoff",
+          "source": "giants.com",
+          "league": "NFL",
+          "summary": "NFL clubs adopted the following rules change proposals, bylaws and resolutions today at the Annual League Meeting in Phoenix."
+        },
+        {
+          "tag": "Draft",
+          "hot": false,
+          "text": "Fifth-year option tracker: 2023 first-rounders",
+          "url": "https://www.espn.com/nfl/story/_/id/48358999/fifth-year-option-tracker-nfl-players-2023-first-round-draft-class",
+          "source": "espn.com",
+          "league": "NFL",
+          "summary": "The deadline for teams to pick up the fifth-year option on rookie contracts is May 1. Which players have had their options picked up?"
+        },
+        {
+          "tag": "Stadium",
+          "hot": false,
+          "text": "Bears plan stadium decision by early summer",
+          "url": "https://www.chicagobears.com/news/bears-plan-to-make-stadium-decision-by-late-spring-or-early-summer",
+          "source": "chicagobears.com",
+          "league": "NFL",
+          "summary": "Chairman George H. McCaskey and President/CEO Kevin Warren provided a stadium update this week at the NFL owners meetings, discussing the two possible sites the Bears are considering."
+        },
+        {
+          "tag": "Draft",
+          "hot": false,
+          "text": "Draft buzz: McCoy, Nussmeier, Beck latest intel",
+          "url": "https://www.espn.com/nfl/draft2026/story/_/id/48377191/2026-nfl-draft-latest-buzz-rumors-news-mocks-sleepers-mccoy-nussmeier-beck",
+          "source": "espn.com",
+          "league": "NFL",
+          "summary": "How did Jermod McCoy perform at his pro day? Our NFL draft experts weigh in with new intel three weeks out."
+        },
+        {
+          "tag": "Analysis",
+          "hot": false,
+          "text": "2026 free agency grades: best and worst deals",
+          "url": "https://www.espn.com/nfl/story/_/id/47911726/2026-nfl-free-agency-grades-signings-trades-latest-best-worst-deals-draft-outlook",
+          "source": "espn.com",
+          "league": "NFL",
+          "summary": "We're handing out report cards on big moves, including the Raiders' Kirk Cousins signing."
+        },
+        {
+          "tag": "Injury",
+          "hot": true,
+          "text": "Rams WR Puka Nacua continues rehab program",
+          "url": "https://www.espn.com/nfl/story/_/id/48373078/los-angeles-rams-wide-receiver-puka-nacua-rehab-attorney-says",
+          "source": "espn.com",
+          "league": "NFL",
+          "summary": "Rams wide receiver Puka Nacua has checked in to rehab, his attorney told The California Post. Last month, a woman in Los Angeles filed a lawsuit against Nacua alleging he made an \"unprovoked antisemit"
+        }
+      ]
+    },
+    {
+      "league": "NBA",
+      "emoji": "🏀",
+      "category": "us-sports",
+      "season": "in",
+      "season_label": "In-season",
+      "stories": [
+        {
+          "tag": "🔥 Business",
+          "hot": true,
+          "text": "Trail Blazers sale to Tom Dundon approved",
+          "url": "https://pr.nba.com/trail-blazers-sale-tom-dundon/",
+          "source": "pr.nba.com",
+          "league": "NBA",
+          "summary": "The NBA Board of Governors has approved the sale of the controlling interest in the Portland Trail Blazers to an investor group led by Tom Dundon, who will serve as the Trail Blazers’ Governor."
+        },
+        {
+          "tag": "🔥 Game",
+          "hot": false,
+          "text": "Rookie Cooper Flagg drops 51 points",
+          "url": "https://www.espn.com/nba/story/_/id/48391619/rookie-cooper-flagg-51-point-night-mavericks-loss",
+          "source": "espn.com",
+          "league": "NBA",
+          "summary": "Mavericks forward Cooper Flagg became the youngest player in NBA history to have a 50-point game, as the rookie scored 51 in a 138-127 home loss to the Magic."
+        },
+        {
+          "tag": "🔥 Expansion",
+          "hot": true,
+          "text": "NBA Europe league draws team bids",
+          "url": "https://www.sportspro.com/news/nba-europe-league-teams-bids-fiba-euroleague-april-2026/",
+          "source": "sportspro.com",
+          "league": "NBA",
+          "summary": "New competition reportedly draws major interest from more than 120 prospective investors."
+        },
+        {
+          "tag": "🔥 Expansion",
+          "hot": false,
+          "text": "WNBA expansion draft: Portland, Toronto picks",
+          "url": "https://www.espn.com/wnba/story/_/id/48388409/wnba-2026-expansion-draft-breaking-portland-toronto-picks",
+          "source": "espn.com",
+          "league": "NBA",
+          "summary": "The biggest (and, in some cases, surprising) picks for the Fire and Tempo had a few things in common."
+        },
+        {
+          "tag": "🔥 Legal",
+          "hot": false,
+          "text": "NBA investigates Bucks over Giannis health",
+          "url": "https://www.espn.com/nba/story/_/id/48391034/nba-investigating-bucks-giannis-says-healthy",
+          "source": "espn.com",
+          "league": "NBA",
+          "summary": "The NBA is investigating the Bucks' handling of Giannis Antetokounmpo, sources told ESPN's Shams Charania, after the star forward told reporters that he is being held out despite being healthy enough"
+        },
+        {
+          "tag": "Legal",
+          "hot": false,
+          "text": "Clippers face NBA probe over Kawhi",
+          "url": "https://www.espn.com/nba/story/_/id/48369328/the-latest-kawhi-leonard-steve-ballmer-nba-investigation-aspiration-la-clippers",
+          "source": "espn.com",
+          "league": "NBA",
+          "summary": "What was actually in Leonard's contract? What do league insiders think of it? Here's what we know about the allegations -- and where the investigation stands."
+        },
+        {
+          "tag": "Legal",
+          "hot": true,
+          "text": "Lakers' Luka Doncic suspended by NBA",
+          "url": "https://pr.nba.com/lakers-luka-doncic-suspended/",
+          "source": "pr.nba.com",
+          "league": "NBA",
+          "summary": "Los Angeles Lakers guard Luka Dončić has been suspended one game without pay for receiving his 16th technical foul of the 2025-26 season."
+        },
+        {
+          "tag": "Game",
+          "hot": false,
+          "text": "Parker, Delle Donne make WNBA Hall",
+          "url": "https://www.espn.com/wnba/story/_/id/48359003/sources-wnba-candace-parker-elena-delle-donne-make-hof",
+          "source": "espn.com",
+          "league": "NBA",
+          "summary": "Former WNBA MVPs and champions Candace Parker and Elena Delle Donne, along with former NBA star Amar'e Stoudemire and current coach Doc Rivers, will be inducted into the Basketball Hall of Fame in the"
+        },
+        {
+          "tag": "Signing",
+          "hot": false,
+          "text": "WNBA free agency: ranking 55 best agents",
+          "url": "https://www.espn.com/wnba/story/_/id/48372462/wnba-free-agency-2026-ranking-55-best-free-agents-mvp-starters-all-stars",
+          "source": "espn.com",
+          "league": "NBA",
+          "summary": "More than 100 players are WNBA free agents. We break down what factors are at play in the decision-making process."
+        },
+        {
+          "tag": "Draft",
+          "hot": false,
+          "text": "2026 NBA draft: scouts rank top five",
+          "url": "https://www.espn.com/nba/story/_/id/48358749/nba-draft-2026-dybantsa-peterson-boozer-wagler-scouts-execs-top-5",
+          "source": "espn.com",
+          "league": "NBA",
+          "summary": "Fit over talent? Versatility over production? NBA scouts and execs break down the conversations happening at the top of the draft."
+        },
+        {
+          "tag": "Game",
+          "hot": false,
+          "text": "MVP straw poll: SGA, Wemby lead race",
+          "url": "https://www.espn.com/nba/story/_/id/48380547/nba-mvp-award-straw-poll-sga-wemby-luka-jokic-lead-final-2025-26-update",
+          "source": "espn.com",
+          "league": "NBA",
+          "summary": "Can Wemby's late push unseat SGA? Tim Bontemps polls 100 NBA insiders for the latest MVP snapshot. Plus, a look at the race for top rookie."
+        },
+        {
+          "tag": "Legal",
+          "hot": false,
+          "text": "Visa loopholes enable college player payments",
+          "url": "https://frontofficesports.com/visa-loopholes-enable-international-college-basketball-players-payments/",
+          "source": "frontofficesports.com",
+          "league": "NBA",
+          "summary": "Schools have scrambled to find a way to compensate international players."
+        },
+        {
+          "tag": "Business",
+          "hot": false,
+          "text": "65-game rule shapes NBA award eligibility",
+          "url": "https://frontofficesports.com/cunningham-edwards-nba-season-awards-65-game-rule-eligibility/",
+          "source": "frontofficesports.com",
+          "league": "NBA",
+          "summary": "Luka Dončić was injured Thursday after playing his 64th game."
+        },
+        {
+          "tag": "Business",
+          "hot": false,
+          "text": "Inside Clippers' Intuit Dome wall experience",
+          "url": "https://www.espn.com/nba/story/_/id/48350302/inside-clippers-wall-swell-intuit-dome-experience",
+          "source": "espn.com",
+          "league": "NBA",
+          "summary": "Built to disrupt, the Intuit Dome's most intense section affects games in real time by turning fans into participants -- and opponents into targets."
+        },
+        {
+          "tag": "Expansion",
+          "hot": false,
+          "text": "Australia's Puoch joins Portland Fire expansion",
+          "url": "https://www.espn.com/nbl/story/_/id/48392043/australian-nyadiew-puoch-ready-wnba-plunge-expansion-side-portland-fire",
+          "source": "espn.com",
+          "league": "NBA",
+          "summary": "Two years after she was first drafted into the WNBA Nyadiew Puoch says she's finally ready to make her debut after she was drafted by expansion side Portland Fire."
+        },
+        {
+          "tag": "Business",
+          "hot": false,
+          "text": "WNBA draft eligibility rules face scrutiny",
+          "url": "https://frontofficesports.com/future-of-wnba-draft-eligibility-rules-looms-at-womens-final-four/",
+          "source": "frontofficesports.com",
+          "league": "NBA",
+          "summary": "Not everyone is jumping to usher in a new era of eligibility."
+        },
+        {
+          "tag": "Game",
+          "hot": false,
+          "text": "Coaches push back on LeBron Memphis remark",
+          "url": "https://www.espn.com/nba/story/_/id/48390014/2-nba-head-coaches-push-back-lebron-james-memphis-remark",
+          "source": "espn.com",
+          "league": "NBA",
+          "summary": "A pair of NBA head coaches defended Memphis and its culture following criticism by Lakers star LeBron James that the Grizzlies should relocate."
+        }
+      ]
+    },
+    {
+      "league": "MLB",
+      "emoji": "⚾",
+      "category": "us-sports",
+      "season": "in",
+      "season_label": "In-season",
+      "stories": [
+        {
+          "tag": "🔥 Business",
+          "hot": true,
+          "text": "MLB 2026 draft sets first $10M bonus",
+          "url": "https://frontofficesports.com/mlb-2026-draft-slot-values-set-first-10-million-bonus-possible/",
+          "source": "frontofficesports.com",
+          "league": "MLB",
+          "summary": "Bonus values in the upcoming event reach unprecedented levels."
+        },
+        {
+          "tag": "Business",
+          "hot": true,
+          "text": "Dodgers unveil historic blue road jersey",
+          "url": "https://www.mlb.com/dodgers/news/dodgers-reveal-blue-road-jersey-for-first-time-in-history",
+          "source": "mlb.com",
+          "league": "MLB",
+          "summary": ""
+        },
+        {
+          "tag": "Game",
+          "hot": false,
+          "text": "McLean carries perfect game into sixth",
+          "url": "https://www.mlb.com/news/nolan-mclean-takes-perfect-game-into-sixth-against-giants",
+          "source": "mlb.com",
+          "league": "MLB",
+          "summary": ""
+        },
+        {
+          "tag": "Game",
+          "hot": false,
+          "text": "Baldwin ties Hank Aaron record for Braves",
+          "url": "https://www.mlb.com/braves/news/drake-baldwin-ties-hank-aaron-record-in-braves-win",
+          "source": "mlb.com",
+          "league": "MLB",
+          "summary": ""
+        },
+        {
+          "tag": "Game",
+          "hot": false,
+          "text": "Ohtani belts first home run of 2026",
+          "url": "https://www.espn.com/mlb/story/_/id/48387338/shohei-ohtani-eases-slow-start-hits-first-home-run-2026",
+          "source": "espn.com",
+          "league": "MLB",
+          "summary": "Shohei Ohtani hit a three-run homer in the third inning against the Nationals for his first RBIs of the season."
+        },
+        {
+          "tag": "Game",
+          "hot": false,
+          "text": "Yelich pinch-hit HR sparks Brewers comeback",
+          "url": "https://www.mlb.com/brewers/news/christian-yelich-hits-first-career-pinch-hit-homer-to-lift-brewers-in-big-comeback",
+          "source": "mlb.com",
+          "league": "MLB",
+          "summary": ""
+        },
+        {
+          "tag": "Injury",
+          "hot": false,
+          "text": "Wheeler makes rehab start after surgery",
+          "url": "https://www.mlb.com/phillies/news/zack-wheeler-makes-first-minor-league-rehab-start-after-surgery",
+          "source": "mlb.com",
+          "league": "MLB",
+          "summary": ""
+        },
+        {
+          "tag": "Signing",
+          "hot": false,
+          "text": "Brewers discuss Cooper Pratt extension talks",
+          "url": "https://www.mlb.com/brewers/news/brewers-discuss-cooper-pratt-extension",
+          "source": "mlb.com",
+          "league": "MLB",
+          "summary": ""
+        }
+      ]
+    },
+    {
+      "league": "WNBA",
+      "emoji": "🏀",
+      "category": "us-sports",
+      "season": "off",
+      "season_label": "Off-season",
+      "stories": [
+        {
+          "tag": "🔥 Expansion",
+          "hot": true,
+          "text": "Sun relocate to Houston by 2027",
+          "url": "https://www.espn.com/wnba/story/_/id/48346867/sun-reach-deal-rockets-owner-moving-houston-2027",
+          "source": "espn.com",
+          "league": "WNBA",
+          "summary": "The Connecticut Sun have reached an agreement to sell the team to Rockets owner Tilman Fertitta and will move to Houston in 2027."
+        },
+        {
+          "tag": "🔥 Signing",
+          "hot": false,
+          "text": "Stewart, Ionescu commit to re-sign with Liberty",
+          "url": "https://www.espn.com/wnba/story/_/id/48371687/breanna-stewart-sabrina-ionescu-say-re-sign-liberty",
+          "source": "espn.com",
+          "league": "WNBA",
+          "summary": "Breanna Stewart and Sabrina Ionescu both announced that they will re-sign with the Liberty."
+        },
+        {
+          "tag": "Expansion",
+          "hot": true,
+          "text": "WNBA expansion draft targets revealed for 2026",
+          "url": "https://www.espn.com/wnba/story/_/id/48382011/wnba-expansion-draft-2026-portland-fire-toronto-tempo-unprotected-players",
+          "source": "espn.com",
+          "league": "WNBA",
+          "summary": "Portland and Toronto are on the clock to start building out their rosters. These players could be picks Friday."
+        },
+        {
+          "tag": "Business",
+          "hot": true,
+          "text": "Masai Ujiri joins WNBA Toronto Tempo ownership",
+          "url": "https://www.espn.com/wnba/story/_/id/48354693/masai-ujiri-joins-ownership-group-wnba-toronto-tempo",
+          "source": "espn.com",
+          "league": "WNBA",
+          "summary": "Former Raptors president Masai Ujiri has joined the ownership group of the city's new WNBA franchise."
+        },
+        {
+          "tag": "Signing",
+          "hot": false,
+          "text": "A'ja Wilson voices commitment to Aces",
+          "url": "https://www.espn.com/wnba/story/_/id/48386794/aja-wilson-voices-commitment-aces-not-leaving-vegas",
+          "source": "espn.com",
+          "league": "WNBA",
+          "summary": "A'ja Wilson, four-time MVP and three-time WNBA champion with the Aces, said she is \"not leaving Vegas\" when it comes time to sign a new deal."
+        },
+        {
+          "tag": "Signing",
+          "hot": false,
+          "text": "Awa Fam signs Project B ahead WNBA draft",
+          "url": "https://www.espn.com/wnba/story/_/id/48367672/awa-fam-signs-project-b-league-ahead-wnba-draft",
+          "source": "espn.com",
+          "league": "WNBA",
+          "summary": "Potential WNBA lottery pick Awa Fam has signed on to play in Project B -- the new overseas five-on-five basketball competition."
+        }
+      ]
+    },
+    {
+      "league": "NHL",
+      "emoji": "🏒",
+      "category": "us-sports",
+      "season": "in",
+      "season_label": "In-season",
+      "stories": [
+        {
+          "tag": "🔥 Media",
+          "hot": true,
+          "text": "Main Street Sports Network ends operations",
+          "url": "https://www.espn.com/espn/story/_/id/48388773/nba-nhl-teams-told-main-street-sports-network-end-operations",
+          "source": "espn.com",
+          "league": "NHL",
+          "summary": "Main Street Sports Group, the flailing regional sports network, has informed NBA and NHL teams it will cease operations at end of their respective seasons."
+        },
+        {
+          "tag": "🔥 Game",
+          "hot": true,
+          "text": "MacKinnon first to reach 50 goals",
+          "url": "https://www.espn.com/nhl/story/_/id/48374288/avalanche-forward-nathan-mackinnon-first-reach-50-goals-season",
+          "source": "espn.com",
+          "league": "NHL",
+          "summary": "Colorado's Nathan MacKinnon became the first NHL player this season to reach 50 goals when his liner from up top beat Vancouver goaltender Kevin Lankinen early in the first period on Wednesday night."
+        },
+        {
+          "tag": "🔥 Legal",
+          "hot": true,
+          "text": "Stars investigate apparent Nazi salute by fan",
+          "url": "https://www.espn.com/nhl/story/_/id/48379324/dallas-arena-looking-apparent-nazi-salute-stars-fans",
+          "source": "espn.com",
+          "league": "NHL",
+          "summary": "The American Airlines Center has launched an investigation into four Stars fans doing what appears to be a Nazi salute during a December game."
+        },
+        {
+          "tag": "Game",
+          "hot": false,
+          "text": "Wild clinch playoff berth, eye first run since 2015",
+          "url": "https://www.espn.com/nhl/story/_/id/48382748/wild-clinch-nhl-playoff-berth-seek-advance-1st-2015",
+          "source": "espn.com",
+          "league": "NHL",
+          "summary": "The Wild have clinched a spot in the NHL playoffs, giving them another chance to advance in the postseason for the first time since 2015."
+        },
+        {
+          "tag": "Legal",
+          "hot": false,
+          "text": "Pronger reviews Matthews hit suspension policies",
+          "url": "https://www.espn.com/nhl/story/_/id/48358211/nhl-2025-26-chris-pronger-auston-matthews-hit-suspensions-department-player-safety",
+          "source": "espn.com",
+          "league": "NHL",
+          "summary": "The Hall of Fame defenseman gives his take on the latest hot topics around hockey."
+        },
+        {
+          "tag": "Draft",
+          "hot": false,
+          "text": "NHL ranks top 2025-26 prospects all teams",
+          "url": "https://www.espn.com/nhl/story/_/id/48287536/nhl-2025-26-ranking-top-prospects-all-32-teams-hagens-iginla-martone",
+          "source": "espn.com",
+          "league": "NHL",
+          "summary": "Scouting notes on the top young players set to make an impact for each club -- possibly quite soon."
+        },
+        {
+          "tag": "Game",
+          "hot": false,
+          "text": "NHL playoff bracket and wild-card matchups set",
+          "url": "https://www.espn.com/nhl/story/_/id/48385776/nhl-playoffs-bracket-standings-2026-wild-card-bracket-games-matchups",
+          "source": "espn.com",
+          "league": "NHL",
+          "summary": "More playoff spots (and eliminations) can be clinched around the league. Here's what to watch in each contest."
+        },
+        {
+          "tag": "Feature",
+          "hot": false,
+          "text": "Bussi's journey inspires Hurricanes locker room",
+          "url": "https://www.espn.com/nhl/story/_/id/48369864/nhl-2025-26-brandon-bussi-carolina-hurricanes-goalie-brother-autism",
+          "source": "espn.com",
+          "league": "NHL",
+          "summary": "The 27-year-old goalie has had a record-breaking debut season for the Hurricanes, and his brother remains in his mindset."
+        },
+        {
+          "tag": "Game",
+          "hot": false,
+          "text": "NCAA Frozen Four bracket and schedule released",
+          "url": "https://www.espn.com/college-sports/story/_/id/48251748/2026-ncaa-men-hockey-tournament-frozen-four-schedule-results",
+          "source": "espn.com",
+          "league": "NHL",
+          "summary": "With the men's hockey tournament heating up, we've got all the results, analysis and highlights."
+        },
+        {
+          "tag": "Fantasy",
+          "hot": false,
+          "text": "Fantasy hockey waiver wire top pickups surge",
+          "url": "https://www.espn.com/fantasy/hockey/story/_/id/48347794/espn-nhl-fantasy-hockey-waiver-wire-free-agents-pickups-goalies-forwards-defensemen",
+          "source": "espn.com",
+          "league": "NHL",
+          "summary": "The essential Monday guide to fantasy hockey pickups, with who to add and how to get set for the week ahead."
+        },
+        {
+          "tag": "Business",
+          "hot": false,
+          "text": "NHL news roundup: latest league developments",
+          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQMEhHNjNpdFZVcHdaTEFTQWJ3QkxkWG9KWURDNkFyU1Z5TU1UYS0yclkyaEVzZnptNGFQWk1CVkxTcnQ3aWh2dUpMRVFNdWpYbmJYUnU3bzktQ29IUlpXcVBZVU45YTBwY0xSWHh3M2JHSlJ0MExaTlNIZWNwdml4TVJvaFFWd0pEOVBYUmhIRXJqdVk?oc=5",
+          "source": "Sports Media Watch",
+          "league": "NHL",
+          "summary": "News: NHL media rights, Paramount-WBD, Angels and more Sports Media Watch"
+        }
+      ]
+    },
+    {
+      "league": "College Football",
+      "emoji": "🏈",
+      "category": "us-sports",
+      "season": "off",
+      "season_label": "Off-season",
+      "stories": [
+        {
+          "tag": "🔥 Legal",
+          "hot": true,
+          "text": "Executive order limits athletes to one transfer",
+          "url": "https://www.espn.com/college-sports/story/_/id/48387866/executive-order-limits-ncaa-athletes-five-years-one-transfer",
+          "source": "espn.com",
+          "league": "College Football",
+          "summary": "An executive order signed by President Donald Trump on Friday aims to limit NCAA athletes to a five-year playing window and how often they can transfer between schools."
+        },
+        {
+          "tag": "Business",
+          "hot": false,
+          "text": "Big 12 Yormark, Texas Tech booster clash",
+          "url": "https://www.espn.com/college-football/story/_/id/48378058/big-12-yormark-texas-tech-booster-bicker-friday-games",
+          "source": "espn.com",
+          "league": "College Football",
+          "summary": "Big 12 commissioner Brett Yormark and Texas Tech booster Cody Campbell traded barbs this week over a scheduled Friday night game between the Red Raiders and Houston next season."
+        },
+        {
+          "tag": "Signing",
+          "hot": false,
+          "text": "TCU extends coach Sonny Dykes long-term",
+          "url": "https://www.espn.com/college-football/story/_/id/48386299/tcu-coach-sonny-dykes-getting-multiyear-extension-sources-say",
+          "source": "espn.com",
+          "league": "College Football",
+          "summary": "Sonny Dykes, who has gone 36-17 in four seasons as TCU coach, has agreed to a multiyear extension."
+        },
+        {
+          "tag": "Business",
+          "hot": false,
+          "text": "Florida Swamp gets major stadium facelift",
+          "url": "https://www.espn.com/college-football/story/_/id/48379145/facelift-florida-swamp-affect-stadium-capacity",
+          "source": "espn.com",
+          "league": "College Football",
+          "summary": "The Gators' makeover for \"The Swamp\" won't affect attendance or ambiance inside one of the SEC's rowdiest venues, athletic director Scott Stricklin said."
+        }
+      ]
+    },
+    {
+      "league": "Premier League",
+      "emoji": "⚽",
+      "category": "soccer",
+      "season": "in",
+      "season_label": "In-season",
+      "stories": [
+        {
+          "tag": "🔥 Game",
+          "hot": true,
+          "text": "Liverpool thrash Man City in FA Cup",
+          "url": "https://www.skysports.com/football/manchester-city-vs-liverpool/report/555131",
+          "source": "skysports.com",
+          "league": "Premier League",
+          "summary": "Erling Haaland scored a hat-trick as Manchester City dismantled Liverpool 4-0 in an extraordinary FA Cup quarter-final at the Etihad Stadium."
+        },
+        {
+          "tag": "🔥 Controversy",
+          "hot": false,
+          "text": "Chelsea drop Enzo over Real Madrid comments",
+          "url": "https://www.skysports.com/football/news/11095/13527515/enzo-fernandez-chelsea-drop-midfielder-for-port-vale-and-man-city-games-over-real-madrid-comments",
+          "source": "skysports.com",
+          "league": "Premier League",
+          "summary": "Liam Rosenior says Real Madrid target Enzo Fernandez will not play in Chelsea's next two matches because of comments he made about his future."
+        },
+        {
+          "tag": "Game",
+          "hot": false,
+          "text": "VAR review: City deserved another Liverpool penalty",
+          "url": "https://www.espn.com/soccer/story/_/id/48394448/var-review-man-city-had-another-penalty-liverpool-thrashing",
+          "source": "espn.com",
+          "league": "Premier League",
+          "summary": "Man City thrashed Liverpool 4-0 in the FA Cup, but were they hard done by to not get another penalty?"
+        },
+        {
+          "tag": "Award",
+          "hot": false,
+          "text": "Bruno Fernandes wins PL Player of Month",
+          "url": "https://www.manutd.com/en/news/detail/bruno-fernandes-wins-premier-league-player-of-the-month-for-march",
+          "source": "manutd.com",
+          "league": "Premier League",
+          "summary": "Bruno has clinched the division-wide award for the sixth time, after an incredibly productive month."
+        },
+        {
+          "tag": "Game",
+          "hot": false,
+          "text": "Arteta: Carabao Cup loss makes Arsenal better",
+          "url": "https://www.skysports.com/football/news/11095/13527477/arsenals-carabao-cup-final-defeat-to-manchester-city-will-only-make-us-better-says-manager-mikel-arteta",
+          "source": "skysports.com",
+          "league": "Premier League",
+          "summary": "Arsenal must learn the lessons from their Carabao Cup final loss to Man City and use that pain to help get them over the line in this season's Premier League title race, says manager Mikel Arteta."
+        },
+        {
+          "tag": "Transfer",
+          "hot": false,
+          "text": "Liverpool transfer latest: rumours and updates",
+          "url": "https://www.skysports.com/football/live-blog/11095/13025501/liverpool-transfer-news-rumours-and-gossip-live-updates-and-latest-on-deals-signings-loans-and-contracts",
+          "source": "skysports.com",
+          "league": "Premier League",
+          "summary": ""
+        },
+        {
+          "tag": "Transfer",
+          "hot": false,
+          "text": "Arsenal transfer window: latest rumours tracker",
+          "url": "https://www.skysports.com/football/live-blog/11095/13025486/arsenal-transfer-news-rumours-and-gossip-live-updates-and-latest-on-deals-signings-loans-and-contracts",
+          "source": "skysports.com",
+          "league": "Premier League",
+          "summary": ""
+        },
+        {
+          "tag": "Analysis",
+          "hot": false,
+          "text": "PL set-piece goals table: Arsenal leads pack",
+          "url": "https://www.espn.com/soccer/story/_/id/48374122/premier-league-standings-set-piece-goals-table-arsenal-liverpool-united-chelsea",
+          "source": "espn.com",
+          "league": "Premier League",
+          "summary": "We crunched the numbers on what the Premier League standings would look like without set-piece goals. Here's how Arsenal, Liverpool, Man United, Chelsea, Man City and others would place."
+        },
+        {
+          "tag": "Game",
+          "hot": false,
+          "text": "Chelsea UWCL exit caps disappointing season",
+          "url": "https://www.espn.com/soccer/story/_/id/48383733/uwcl-talking-points-chelsea-season-failure-madrid-capitulate-barcelona",
+          "source": "espn.com",
+          "league": "Premier League",
+          "summary": "Emily Keogh, Tom Hamilton and Sam Marsden answer some of our burning questions after the Women's Champions League quarterfinals."
+        },
+        {
+          "tag": "Business",
+          "hot": false,
+          "text": "Brighton confirm board changes end of season",
+          "url": "https://www.brightonandhovealbion.com/media-article/board-changes-confirmed-for-end-of-the-season",
+          "source": "brightonandhovealbion.com",
+          "league": "Brighton & Hove Albion",
+          "summary": "Ray Bloom and Peter Godfrey to retire from main board at end of the season"
+        }
+      ]
+    },
+    {
+      "league": "La Liga",
+      "emoji": "⚽",
+      "category": "soccer",
+      "season": "in",
+      "season_label": "In-season",
+      "stories": [
+        {
+          "tag": "Game",
+          "hot": false,
+          "text": "Lookman eyes Atletico-Barcelona La Liga clash",
+          "url": "https://www.cbssports.com/soccer/news/atletico-madrid-barcelona-ademola-lookman-10-days/",
+          "source": "cbssports.com",
+          "league": "La Liga",
+          "summary": "Lookman joined Atleti in January in the midst of a unique season which sees Diego Simeone's men face Barcelona six times across three competitions"
+        },
+        {
+          "tag": "🔥 Legal",
+          "hot": true,
+          "text": "Spain fans face probe over xenophobic chants",
+          "url": "https://www.theguardian.com/football/2026/apr/01/spain-fans-islamophobic-and-xenophobic-chants-egypt-police-investigate",
+          "source": "theguardian.com",
+          "league": "La Liga",
+          "summary": "Police investigate chants heard at Barcelona friendly Spain’s coach and justice minister condemn behaviour Lamine Yamal has criticised chants by Spain fans du"
+        }
+      ]
+    },
+    {
+      "league": "Serie A",
+      "emoji": "⚽",
+      "category": "soccer",
+      "season": "in",
+      "season_label": "In-season",
+      "stories": [
+        {
+          "tag": "🔥 Stadium",
+          "hot": true,
+          "text": "UEFA warns Italy: fix stadiums or lose Euro 2032",
+          "url": "https://www.theguardian.com/football/2026/apr/02/uefa-president-ceferin-warns-italy-it-could-lose-euro-2032-without-action-on-stadiums",
+          "source": "theguardian.com",
+          "league": "Serie A",
+          "summary": "Exit could spell end of Gennaro Gattuso’s tenure Ceferin: ‘Infrastructure is among the worst in Europe’ The crisis engulfing Italian football has deepened wit"
+        },
+        {
+          "tag": "Game",
+          "hot": false,
+          "text": "Napoli-Milan: Conte's last chance in Serie A",
+          "url": "https://www.cbssports.com/soccer/news/where-to-watch-serie-a-live-stream-schedule-antonio-conte-and-napolis-last-chance-vs-ac-milan/",
+          "source": "cbssports.com",
+          "league": "Serie A",
+          "summary": "The Azzurri will host AC Milan for a crucial match ahead of the last weeks of action"
+        },
+        {
+          "tag": "🔥 Game",
+          "hot": true,
+          "text": "Italy miss another World Cup; Türkiye qualify",
+          "url": "https://www.juventus.com/en/news/articles/men-s-international-recap-yilfiz-and-turkiye-qualify-italy-miss-another-world-cup-01-04-26",
+          "source": "juventus.com",
+          "league": "Juventus",
+          "summary": "The last day of international matches for this window took place on Tuesday, with a lot of Bianconeri in action on the day. It was a night that Italy will want, but be unable, to forget as the Azzurri"
+        }
+      ]
+    },
+    {
+      "league": "Scottish Premiership",
+      "emoji": "⚽",
+      "category": "soccer",
+      "season": "in",
+      "season_label": "In-season",
+      "stories": [
+        {
+          "tag": "Game",
+          "hot": false,
+          "text": "Celtic latest: Scottish Premiership title race heats",
+          "url": "https://www.bbc.com/sport/football/articles/cwywd7lrpg9o?at_medium=RSS&at_campaign=rss",
+          "source": "bbc.com",
+          "league": "Scottish Premiership",
+          "summary": "Scotland coach Steve Clarke's contract talks on hold as Hibernian look into longer Dan Barlaser stay."
+        },
+        {
+          "tag": "Game",
+          "hot": false,
+          "text": "Scottish Premiership: Celtic Rangers updates roll",
+          "url": "https://www.bbc.com/sport/football/articles/cj0vz9j53gzo?at_medium=RSS&at_campaign=rss",
+          "source": "bbc.com",
+          "league": "Scottish Premiership",
+          "summary": "Rangers are reportedly close to securing Dundee's Luke Graham for next season, while injury places doubts over the future of Celtic's Julian Araujo and Dundee United's Kristijan Trapanovski."
+        }
+      ]
+    },
+    {
+      "league": "MLS",
+      "emoji": "⚽",
+      "category": "soccer",
+      "season": "in",
+      "season_label": "In-season",
+      "stories": [
+        {
+          "tag": "🔥 Stadium",
+          "hot": true,
+          "text": "Messi headlines Inter Miami stadium debut",
+          "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOX1VkLUg2aGd3d3FIQUZSc1hBb0o4NXpVS01VdXRqYUFGZnNzVmJXVlhwYTFaYlhTRkthV1BKRnhDQUJEeGtUNU1NVFdnWnR3WFNPdjUtMlRuOUN2akQxMFdzOFlUVXdldzN1bDM4YWRMQnFfS2RzSjZzbXVHaDRMckZaYUhnbW84dW5teDlGVGlEb0FSamt5Rl9DaEg3Ylp2aldMOU93bzVLUFRxREpMRVRJeG9vQVJ2SEE?oc=5",
+          "source": "MSN",
+          "league": "MLS",
+          "summary": "Beckham, Messi link up as Inter Miami set to debut brand-new stadium MSN"
+        },
+        {
+          "tag": "🔥 Business",
+          "hot": false,
+          "text": "Beckham's Miami vision reaches new chapter",
+          "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQeVBlV0dZMS1NWWJsRDM3MEhkRW0yeWlFc2o1UmFqTjhLZFNJQ0ctTkI1cHlNNl91Zjkyd3BxUlpMWE56bXlZeFhBOVZ0cjhtZUVkZWY3UDljTHozNVBhT1Jpek9pcTZ4VFI3ZFNOWmZzcFY2WkhGOERSQWRvVS02M1k4ZHJoU2FkVnFiOUhxTFVPaWFqV2ppWVRsYkdBbG0wQ1gtNFpsWk9laDhmQW50bA?oc=5",
+          "source": "news.google.com",
+          "league": "MLS",
+          "summary": ""
+        },
+        {
+          "tag": "🔥 Expansion",
+          "hot": false,
+          "text": "MLS eyes Egypt expansion with Salah talks",
+          "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOOFBxbHFxaFZtT1plN1ktdkNEQWlNSFhJcTNrLWlmVVhGNExlSkJjYUxFUUxzUHJtX21KWDY2Z2NKT0VqQzRQNC13U1JYNFVCdncxeHBVRmx1SV9JcGJneVBDOWhsRzh2QTc5bzE3VHMyWkhFVEFpUHpVSmJnVHlaaU83N2hxZkZKeWhVNjFGazA2WmFWT3QyUGs0LUhTalNPZ0dvRjJJMU1wTTNRa0VTdTA4bw?oc=5",
+          "source": "news.google.com",
+          "league": "MLS",
+          "summary": ""
+        },
+        {
+          "tag": "🔥 Signing",
+          "hot": false,
+          "text": "Salah weighs MLS move after Liverpool exit",
+          "url": "https://www.theguardian.com/football/2026/mar/30/mohamed-salah-mls-saudi-pro-league-liverpool-egypt",
+          "source": "theguardian.com",
+          "league": "MLS",
+          "summary": "‘You won’t remember Salah more than I remember Messi’ Forward urged to consider Saudi Arabia or Europe Egypt’s national team director, Ibrahim Hassan, has cau"
+        },
+        {
+          "tag": "Game",
+          "hot": false,
+          "text": "LA Galaxy surge atop MLS standings",
+          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQZkx5a1VKQkExd042SUYzNnZBTV9BOXB5ZkJlMUYzdVBETmxmTXA5NzZzTlpiaG1mSjdJZXVSU0d0R1dLVmhsZ19HWTZsd0RpUkFxeDJwUUtWaW05d2NCVHE0Mjd2eGxhSzFBTy1lVEM4UHJ0LWY0c3NsSDNLb0pjVTludWEzUGU5YXhBYmRFMFFVd1BhOWFEc25WbUc1TWlNRWcwbm5YYw?oc=5",
+          "source": "Inter Miami CF",
+          "league": "MLS",
+          "summary": "Inter Miami CF Signs Academy Graduate Cesar Abadia as Homegrown Player Inter Miami CF"
+        },
+        {
+          "tag": "Signing",
+          "hot": false,
+          "text": "LAFC targets major summer reinforcements",
+          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1nS19YRlkzRkJ1TWU0YXpiSmEzc0p0cnRiOFROak5aVVNWTUFibzBub3RhUThrU3ZWY19xZTJ6TTVRZXNWaUhEVURTT0V2c1JmTzF5b0dRNlVMX0xfOUhPcV9wVWUxTC1uZ3ZRVU5XdzFhUFlEazBrZzNrdHdZQ1U?oc=5",
+          "source": "MLSsoccer.com",
+          "league": "MLS",
+          "summary": "LAFC sign homegrown defender Christian Díaz MLSsoccer.com"
+        },
+        {
+          "tag": "National Team",
+          "hot": false,
+          "text": "USMNT World Cup roster projection: 26 picks",
+          "url": "https://www.nytimes.com/athletic/7165917/2026/04/02/usmnt-world-cup-roster-projection-26-players-march/",
+          "source": "nytimes.com",
+          "league": "MLS",
+          "summary": "World Cup roster battles are intensifying for Mauricio Pochettino's side, coming out of two March defeats"
+        },
+        {
+          "tag": "Game",
+          "hot": false,
+          "text": "USMNT beats Portugal in World Cup tuneup",
+          "url": "https://www.nytimes.com/athletic/7162351/2026/03/31/usmnt-portugal-friendly-score-result-pulisic-pochettino/",
+          "source": "nytimes.com",
+          "league": "MLS",
+          "summary": "The U.S. made multiple tweaks but fell to a second straight European power in similar fashion, leaving much to do as the World Cup nears"
+        },
+        {
+          "tag": "Business",
+          "hot": false,
+          "text": "Atletico tripleheader set for Miami venue",
+          "url": "https://www.espn.com/soccer/story/_/id/48349555/atletico-madrid-tripleheader-miami-dolphins-define-barcelona-season",
+          "source": "espn.com",
+          "league": "Soccer",
+          "summary": "Barça and Atlético meet three times in 10 days, a trilogy of games that may determine LaLiga champions and Champions League finalists."
+        }
+      ]
+    },
+    {
+      "league": "NWSL",
+      "emoji": "⚽",
+      "category": "soccer",
+      "season": "in",
+      "season_label": "In-season",
+      "stories": [
+        {
+          "tag": "🔥 Expansion",
+          "hot": true,
+          "text": "Denver Summit sets NWSL attendance record",
+          "url": "https://www.nytimes.com/athletic/7155245/2026/03/29/denver-summit-record-attendance-nwsl-expansion/",
+          "source": "nytimes.com",
+          "league": "NWSL",
+          "summary": "Denver Summit's record crowd has opened the NWSL's thinking to bigger attendance targets, including the championship"
+        },
+        {
+          "tag": "🔥 Business",
+          "hot": false,
+          "text": "NWSL highest-paid player revealed: business boom",
+          "url": "https://www.nytimes.com/athletic/7162464/2026/04/01/highest-paid-womens-soccer-player-down-to-business/",
+          "source": "nytimes.com",
+          "league": "NWSL",
+          "summary": "Down to Business with Asli Pelit takes you through the exciting, fast-paced (and sometimes confusing) corporate side of women's soccer."
+        },
+        {
+          "tag": "Business",
+          "hot": false,
+          "text": "NWSL hires key executives for growth",
+          "url": "https://www.nytimes.com/athletic/7162678/2026/04/01/nwsl-hirings-brian-kelly-rachel-epstein/",
+          "source": "nytimes.com",
+          "league": "NWSL",
+          "summary": "Commissioner Jessica Berman says Brian Kelly and Rachel Epstein \"are uniquely equipped to help shape the next chapter of the league.\""
+        }
+      ]
+    },
+    {
+      "league": "Formula 1",
+      "emoji": "🏎️",
+      "category": "motorsport",
+      "season": "in",
+      "season_label": "In-season",
+      "stories": [
+        {
+          "tag": "🔥 Controversy",
+          "hot": true,
+          "text": "Verstappen hints at walking away from F1",
+          "url": "https://www.espn.com/racing/f1/story/_/id/48347648/why-new-rules-max-verstappen-brink-walking-away-f1",
+          "source": "espn.com",
+          "league": "Formula 1",
+          "summary": "Max Verstappen predicted F1's new rule set would underwhelm, and 2026 is proving him correct, so much so that he might just quit the sport entirely."
+        },
+        {
+          "tag": "🔥 Performance",
+          "hot": false,
+          "text": "Leclerc hails huge gains in Ferrari car",
+          "url": "https://www.autosport.com/f1/news/leclerc-ferrari-f1-car-huge-gains/10810619/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-ALL&utm_term=News&utm_content=uk",
+          "source": "autosport.com",
+          "league": "Formula 1",
+          "summary": "Charles Leclerc believes “huge gains” are within reach in all compartments of Ferrari’s 2026 Formula 1 car – including its power unit, chassis, aerodynamics and tyre management. Ferrari has emerg"
+        },
+        {
+          "tag": "🔥 Analysis",
+          "hot": false,
+          "text": "Antonelli emerges as 2026 F1 title favorite",
+          "url": "https://www.autosport.com/f1/news/is-kimi-antonelli-now-the-2026-f1-title-favourite/10810109/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-ALL&utm_term=News&utm_content=uk",
+          "source": "autosport.com",
+          "league": "Formula 1",
+          "summary": "Betteridge's law of headlines dictates that any headline phrased as a question can be answered with a hard ‘no', and disregarded. Certainly a cursory perusal of the odds being offered by various bookm"
+        },
+        {
+          "tag": "🔥 Controversy",
+          "hot": true,
+          "text": "Alpine denies Colapinto sabotage, condemns abuse",
+          "url": "https://www.autosport.com/f1/news/alpine-f1-team-denies-franco-colapinto-sabotage-claims/10810532/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-ALL&utm_term=News&utm_content=uk",
+          "source": "autosport.com",
+          "league": "Formula 1",
+          "summary": "The Alpine Formula 1 team has denied claims that it has been sabotaging its second driver Franco Colapinto’s car. Autosport understands the claims were made on social media by primarily Argentini"
+        },
+        {
+          "tag": "Business",
+          "hot": true,
+          "text": "Audi boss may reveal why Wheatley quit",
+          "url": "https://www.autosport.com/f1/news/audi-f1-boss-may-have-revealed-why-wheatley-quit/10810407/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-ALL&utm_term=News&utm_content=uk",
+          "source": "autosport.com",
+          "league": "Formula 1",
+          "summary": "It was at the Japanese Grand Prix last year that Jonathan Wheatley made his first appearance as team principal of what is now Audi's works Formula 1 team. After two decades as sporting director of Red"
+        },
+        {
+          "tag": "Signing",
+          "hot": false,
+          "text": "Doriane Pin adds WEC role with Mercedes",
+          "url": "https://www.mercedesamgf1.com/news/doriane-adds-wec-development-driver-role-to-2026-programme",
+          "source": "mercedesamgf1.com",
+          "league": "Formula 1",
+          "summary": "Doriane will add another string to her racing bow this season by linking up with Peugeot as part of their World Endurance Championship (WEC) programme as a Development Driver."
+        },
+        {
+          "tag": "Business",
+          "hot": false,
+          "text": "Wolff warns Horner F1 return faces obstacles",
+          "url": "https://www.autosport.com/f1/news/wolff-on-horner-f1-return-hes-broken-a-lot-of-glass/10809861/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-ALL&utm_term=News&utm_content=uk",
+          "source": "autosport.com",
+          "league": "Formula 1",
+          "summary": "Mercedes' Toto Wolff says he is \"in two minds\" about the prospect of facing off against his old Red Bull foe Christian Horner again if the latter returns to Formula 1. Since his dismissal from Re"
+        },
+        {
+          "tag": "Regulation",
+          "hot": false,
+          "text": "Norris slams 2026 rules, drivers at mercy",
+          "url": "https://www.espn.com/f1/story/_/id/48354235/lando-norris-f1-drivers-mercy-power-units-not-racing-rules-cars-2026",
+          "source": "espn.com",
+          "league": "Formula 1",
+          "summary": "Lando Norris has said there were moments during the Japanese Grand Prix when he was \"at the mercy\" of his McLaren's power unit"
+        },
+        {
+          "tag": "Business",
+          "hot": false,
+          "text": "Ford reveals first WEC LMDh prototype test",
+          "url": "https://www.autosport.com/wec/news/ford-reveals-plans-for-first-test-for-its-new-wec-lmdh-prototype/10810030/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-ALL&utm_term=News&utm_content=uk",
+          "source": "autosport.com",
+          "league": "Formula 1",
+          "summary": "Ford is aiming to conduct the first test of its LMDh car in the third quarter of this year, ahead of its debut in the World Endurance Championship’s Hypercar class in 2027. In a call with select"
+        },
+        {
+          "tag": "Expansion",
+          "hot": false,
+          "text": "Honda plans six-bike MotoGP grid expansion",
+          "url": "https://www.autosport.com/motogp/news/honda-plans-to-field-six-bikes-in-motogp-next-year/10809989/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-ALL&utm_term=News&utm_content=uk",
+          "source": "autosport.com",
+          "league": "Formula 1",
+          "summary": "Honda is planning for the prospect of fielding six bikes on the MotoGP grid next season, a goal that hinges on securing an agreement with a second satellite team, Autosport has learned. Between 2"
+        },
+        {
+          "tag": "Safety",
+          "hot": false,
+          "text": "Bearman survives alarming 50G Suzuka crash",
+          "url": "https://www.autosport.com/f1/news/the-alarming-factors-that-triggered-bearmans-50g-crash-at-f1-japanese-gp/10809908/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-ALL&utm_term=News&utm_content=uk",
+          "source": "autosport.com",
+          "league": "Formula 1",
+          "summary": "The drivers had been saying it loud and clear since the very first test: it was only a matter of time before an accident like the one involving Oliver Bearman and Franco Colapinto occurred at the Japa"
+        },
+        {
+          "tag": "Analysis",
+          "hot": false,
+          "text": "Red Bull pays price for 2025 title push",
+          "url": "https://www.autosport.com/f1/news/red-bull-now-paying-the-price-for-f1-2025-title-charge-but-it-has-no-regrets/10810404/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-ALL&utm_term=News&utm_content=uk",
+          "source": "autosport.com",
+          "league": "Formula 1",
+          "summary": "Red Bull is ‘paying the price’ for its 2025 Formula 1 title bid with Max Verstappen, as resources were diverted from its 2026 challenger, team principal Laurent Mekies has admitted. Last season,"
+        },
+        {
+          "tag": "Business",
+          "hot": false,
+          "text": "Gresini flirts with leaving Ducati in MotoGP",
+          "url": "https://www.autosport.com/motogp/news/why-gresini-has-flirted-with-leaving-ducati/10810836/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-ALL&utm_term=News&utm_content=uk",
+          "source": "autosport.com",
+          "league": "Formula 1",
+          "summary": "In many two-child families, parents are often required to step in and mediate domestic disputes driven by rivalry and ego. Transpose that dynamic to the MotoGP paddock, and Ducati has effectively been"
+        },
+        {
+          "tag": "Regulation",
+          "hot": false,
+          "text": "F1 Academy adds three-race weekend format",
+          "url": "https://www.mercedesamgf1.com/news/f1-academy-introduces-three-race-weekend-format-in-montreal-and-austin",
+          "source": "mercedesamgf1.com",
+          "league": "Formula 1",
+          "summary": "F1 ACADEMY has today announced the introduction of a new three-race weekend format for select events in 2026 and beyond"
+        }
+      ]
+    },
+    {
+      "league": "NASCAR",
+      "emoji": "🏁",
+      "category": "motorsport",
+      "season": "in",
+      "season_label": "In-season",
+      "stories": [
+        {
+          "tag": "🔥 Race",
+          "hot": true,
+          "text": "Antonelli wins Japanese GP over Piastri",
+          "url": "https://www.espn.com/f1/story/_/id/48302539/japanese-grand-prix-2026-race-report-kimi-antonelli-oscar-piastri-lewis-hamilton-result",
+          "source": "espn.com",
+          "league": "NASCAR",
+          "summary": "Mercedes driver Kimi Antonelli moved clear after a mid-race safety car to seal his second Formula 1 win at the Japanese Grand Prix."
+        }
+      ]
+    },
+    {
+      "league": "Business & Media",
+      "emoji": "💼",
+      "category": "general",
+      "season": "off",
+      "season_label": "This Week",
+      "stories": [
+        {
+          "tag": "🔥 Legal",
+          "hot": true,
+          "text": "Trump signs executive order reshaping college sports",
+          "url": "https://frontofficesports.com/trump-executive-order-college-sports-eligibility-transfers-revenue-sharing/",
+          "source": "frontofficesports.com",
+          "league": "Business & Media",
+          "summary": "It's unclear if Trump's order has legal teeth."
+        },
+        {
+          "tag": "🔥 Media",
+          "hot": true,
+          "text": "Jake Paul's MVP lands Sky Sports deal",
+          "url": "https://www.sportspro.com/news/broadcast-ott/jake-paul-most-valuable-promotions-mvp-sky-sports-boxing-media-rights-deal-april-2026/",
+          "source": "sportspro.com",
+          "league": "Business & Media",
+          "summary": "Pay-TV broadcaster becomes exclusive home of MVPW in the UK and Ireland."
+        },
+        {
+          "tag": "Media",
+          "hot": false,
+          "text": "FIFA World Cup drink breaks spark broadcast debate",
+          "url": "https://www.sportspro.com/broadcast-ott/fifa-world-cup-drinks-break-itv-march-2026/",
+          "source": "sportspro.com",
+          "league": "Business & Media",
+          "summary": "Broadcaster successfully launched picture-in-picture advertising during the Six Nations."
+        },
+        {
+          "tag": "🔥 Business",
+          "hot": false,
+          "text": "Google Gemini AI partners with cricket",
+          "url": "https://www.sportspro.com/sponsorship-marketing/google-gemini-ai-ip-cricket-march-2026/",
+          "source": "sportspro.com",
+          "league": "Business & Media",
+          "summary": "Google expands interest in cricket as it seeks to conquer global and local AI markets."
+        },
+        {
+          "tag": "🔥 Business",
+          "hot": true,
+          "text": "FIFA 2026 World Cup sponsor revenue surges",
+          "url": "https://www.sportspro.com/news/sponsorship-marketing/fifa-2026-world-cup-sponsors-revenue-march-2026/",
+          "source": "sportspro.com",
+          "league": "Business & Media",
+          "summary": "Governing body says tournament will deliver highest partnership revenue ever for a standalone sports event."
+        },
+        {
+          "tag": "🔥 Expansion",
+          "hot": false,
+          "text": "WTA Finals moves to Saudi Arabia",
+          "url": "https://www.sportspro.com/news/major-events/wta-finals-saudi-arabia-riyadh-charlotte-host-april-2026/",
+          "source": "sportspro.com",
+          "league": "Business & Media",
+          "summary": "WTA CEO Portia Archer had wanted to extend the event’s stay in Riyadh."
+        },
+        {
+          "tag": "🔥 Business",
+          "hot": false,
+          "text": "Whoop valued at $10B in new funding",
+          "url": "https://www.sportspro.com/news/technology/whoop-fitness-investment-10bn-april-2026/",
+          "source": "sportspro.com",
+          "league": "Business & Media",
+          "summary": "Fitness tracking specialist now valued at US$10.1bn and has raised nearly US$1bn as it preps for IPO."
+        },
+        {
+          "tag": "Media",
+          "hot": false,
+          "text": "IPL media rights value keeps climbing",
+          "url": "https://www.sportspro.com/news/broadcast-ott/ipl-media-broadcast-rights-value-april-arun-singh-dhumal-april-2026/",
+          "source": "sportspro.com",
+          "league": "Business & Media",
+          "summary": "Arun Singh Dhumal does “not see any reason” for decline and expects strong interest from broadcasters."
+        },
+        {
+          "tag": "Business",
+          "hot": false,
+          "text": "Private equity eyes Big East college sports",
+          "url": "https://www.sportspro.com/analysis/finance-investment/private-equity-college-sports-big-east-val-ackerman-dave-checketts-arctos/",
+          "source": "sportspro.com",
+          "league": "Business & Media",
+          "summary": "Private equity firms have been circling as the NIL era and direct athlete payments transform the commercial landscape of college sports."
+        },
+        {
+          "tag": "Business",
+          "hot": false,
+          "text": "Kalshi prediction market partners with LaLiga",
+          "url": "https://www.sportspro.com/news/betting/kalshi-prediction-market-laliga-april-2026/",
+          "source": "sportspro.com",
+          "league": "Business & Media",
+          "summary": "Exchange operator argues trademark filing does not characterise its business as lobbying efforts intensify."
+        },
+        {
+          "tag": "Media",
+          "hot": false,
+          "text": "ESPN hires Rapoport, Jeremiah for long-term",
+          "url": "https://frontofficesports.com/ian-rapoport-daniel-jeremiah-fit-espn-long-term-plans/",
+          "source": "frontofficesports.com",
+          "league": "Business & Media",
+          "summary": "ESPN has high hopes for two of NFL Network's biggest stars."
+        },
+        {
+          "tag": "Legal",
+          "hot": false,
+          "text": "NCAA changes prize money rules after lawsuit",
+          "url": "https://frontofficesports.com/ncaa-prize-money-limit-rule-change-tennis-lawsuit-settlement/",
+          "source": "frontofficesports.com",
+          "league": "Business & Media",
+          "summary": "The change would allow players to accept prize money without affecting eligibility."
+        },
+        {
+          "tag": "Expansion",
+          "hot": false,
+          "text": "McCourt launches Premier Jumping League",
+          "url": "https://www.sportspro.com/news/premier-jumping-league-frank-mccourt-marseille-prize-money-march-2026/",
+          "source": "sportspro.com",
+          "league": "Business & Media",
+          "summary": "PJL to launch in 2027 and offer record-breaking US$300m prize pot."
+        },
+        {
+          "tag": "Legal",
+          "hot": false,
+          "text": "Iran faces FIFA World Cup hosting questions",
+          "url": "https://www.sportspro.com/news/decision-makers/iran-2026-fifa-world-cup-gianni-infantino-april-2026/",
+          "source": "sportspro.com",
+          "league": "Business & Media",
+          "summary": "Fifa president offers strongest indication yet that Iran will play at the tournament."
+        },
+        {
+          "tag": "Media",
+          "hot": false,
+          "text": "FloSports outlines aggressive growth strategy",
+          "url": "https://www.sportspro.com/features/broadcast-ott/flosports-growth-strategy-marc-floreani-sportspro-new-york-media-rights/",
+          "source": "sportspro.com",
+          "league": "Business & Media",
+          "summary": "FloSports' Marc Floreani on serving “the other 99 per cent” of sports fans, why passion drives monetisation, and the value of building niche media destinations."
+        },
+        {
+          "tag": "Business",
+          "hot": false,
+          "text": "Tom Brady partners with Ferrero for World Cup",
+          "url": "https://www.sportspro.com/announcements/spotlight-agency/ten-toes-champions-tom-brady-partnership-for-ferreros-world-cup-campaign/",
+          "source": "sportspro.com",
+          "league": "Business & Media",
+          "summary": "Sports marketing agency Ten Toes secured and manages the talent partnership with NFL legend Tom Brady for Ferrero North America’s landmark campaign surrounding soccer's global stage. The pos"
+        },
+        {
+          "tag": "Business",
+          "hot": false,
+          "text": "Arctos Partners bets big on sports assets",
+          "url": "https://www.sportspro.com/features/finance-investment/arctos-partners-chad-hutchinson-sports-investment-asset-class/",
+          "source": "sportspro.com",
+          "league": "Business & Media",
+          "summary": "Arctos partner Chad Hutchinson on the thesis guiding one of the most active investors in global sport."
+        },
+        {
+          "tag": "Business",
+          "hot": false,
+          "text": "Big 12 taps Cody Campbell for leadership",
+          "url": "https://frontofficesports.com/brett-yormark-cody-campbell-big-12/",
+          "source": "frontofficesports.com",
+          "league": "Business & Media",
+          "summary": "“He is not the dictator of the conference. That’s not his role.”"
+        }
+      ]
+    },
+    {
+      "league": "Volleyball",
+      "emoji": "🏐",
+      "category": "volleyball",
+      "season": "in",
+      "season_label": "In-season",
+      "stories": [
+        {
+          "tag": "🔥 Game",
+          "hot": true,
+          "text": "Chieri falls to Galatasaray in CEV final",
+          "url": "https://www.chieri76.it/la-reale-mutua-fenera-chieri-76-cede-2-3-al-galatasaray-nel-primo-atto-della-finale-di-coppa-cev/",
+          "source": "chieri76.it",
+          "league": "Volleyball",
+          "summary": "The first act of the double final of the Cev Cup speaks in favor of Galatasaray Daikin Istanbul who conquered Pala Gianni Asti in a tie-break. In a sold out and very hot Reale Mutua Fenera arena"
+        },
+        {
+          "tag": "Signing",
+          "hot": false,
+          "text": "Alsmeier extends stay with Azzurro third year",
+          "url": "https://www.legavolleyfemminile.it/terzo-anno-in-azzurro-per-lina-alsmeier/",
+          "source": "legavolleyfemminile.it",
+          "league": "Volleyball",
+          "summary": "Another confirmation for the department"
+        },
+        {
+          "tag": "Game",
+          "hot": false,
+          "text": "Megabox secures crucial point against Bergamo",
+          "url": "https://www.legavolleyfemminile.it/la-megabox-trova-il-punto-che-cercava-con-bergamo/",
+          "source": "legavolleyfemminile.it",
+          "league": "Volleyball",
+          "summary": "The Megabox Corrugated del Savio finds with the nails and"
+        },
+        {
+          "tag": "Game",
+          "hot": false,
+          "text": "Chieri dominates Macerata, nears playoff final",
+          "url": "https://www.chieri76.it/la-reale-mutua-fenera-chieri-76-sbanca-1-3-macerata-ed-e-sempre-piu-vicina-alla-finale-dei-playoff-challenge/",
+          "source": "chieri76.it",
+          "league": "Volleyball",
+          "summary": "Fourth three-point victory for Reale Mutua Fenera Chieri ’76 in the Challenge Playoffs. The blue and whites celebrate 1-3 at the home of Cbf Balducci Hr Macerata, confirming their first place with full points and"
+        },
+        {
+          "tag": "Transfer",
+          "hot": false,
+          "text": "Kump bids farewell to Perugia",
+          "url": "https://www.legavolleyfemminile.it/kump-perugia-gia-mi-manchi/",
+          "source": "legavolleyfemminile.it",
+          "league": "Volleyball",
+          "summary": "The Hungarian powerhouse bids farewell to the Black Angels after just one season"
+        }
+      ]
+    },
+    {
+      "league": "HYROX",
+      "emoji": "🏋️",
+      "category": "fitness",
+      "season": "in",
+      "season_label": "In-Season",
+      "stories": [
+        {
+          "tag": "🔥 Race",
+          "hot": true,
+          "text": "HYROX World Championships deliver record results",
+          "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPTDZHQVZ5Tmlhd2ppVkRhcC1YdFZhdTlVU2tSVjQzVmpZeUJzdmhMQ1FGUkZ6eXBkV25COHljS3JsNjRoc2J6VFRTWWxJR0otQVF5R1lNZFV0bzNESG5zQ3ZUZ2dYRFZGbmV6X3d4ZUVRcWkwdFl2UThhcVRSaEF1MFJOejU?oc=5",
+          "source": "Athletech News",
+          "league": "HYROX",
+          "summary": "Hyrox Targets Independent Gyms With New Wodify Deal Athletech News"
+        },
+        {
+          "tag": "Expansion",
+          "hot": false,
+          "text": "HYROX expands global race calendar for 2025",
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQcjUxcnA3VUd1UUlmdGlvMVdWa0pNTjZqdnVReE9uSXBpLUs2bExBaFBiY0NKSmQzSlJKQUM3VVVMVk5JdWw2bEoxM0Z4dUdmbUNTZ2djamNlVjdUelZtdkhCQklhalZNWEt2dXZBV3I2c1V2X1E1OF81QkFIZE1GbmhFNklFenoyZ0pHMFRIWnAzT3BoUzd2WQ?oc=5",
+          "source": "Newsweek",
+          "league": "HYROX",
+          "summary": "Woman Needs a HYROX Doubles Partner—Then Her Life Took an Unexpected Turn Newsweek"
+        }
+      ]
+    },
+    {
+      "league": "Enhanced Games",
+      "emoji": "⚡",
+      "category": "fitness",
+      "season": "in",
+      "season_label": "In-Season",
+      "stories": [
+        {
+          "tag": "🔥 Event",
+          "hot": true,
+          "text": "Enhanced Games debut sparks global controversy",
+          "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxQY3BhQnNqVm5STEZxMHRuR1VlM3BNN1pIWHV5TDBZa2doZTJsS3FXckJwc3J0ckRONU9QTEJ0ajA0UEc5Sm9EZjBVejBfR3c3dldvcnlsMC1sUHZ6TjgzcGJNR1d6NGMzaU11LS1LM2IybFJKbXN4eW1HOFhqZmx0U3pFcGhSV3N5V0czTGZZTmVfVk4zeGxfWnladUNoVXdZdGlIN0c0UFJoczkwNDlLZWUwT201MDRhdnloUnVXS09sVEQ4MkVWYTVJVlBVc1I2U2RRcmNsQWNGeUxXQlJySlBuRElUT0RvZW9qQzJTektNWDEyZDRhTklmSlBpcWF6aUHSAYICQVVfeXFMUGNwYUJzalZuUkxGcTB0bkdVZTNwTTdaSFh1eUwwWWtnaGUybEtxV3JCcHNydHJETjVPUExCdGowNFBHOUpvRGYwVXowX0d3N3ZXb3J5bDAtbFB2ek44M3BiTUdXejRjM2lNdS0tSzNiMmxSSm1zeHltRzhYamZsdFN6RXBoUldzeVdHM0xmWU5lX1ZOM3hsX1p5WnVDaFV3WXRpSDdHNFBSaHM5MDQ5S2VlME9tNTA0YXZ5aFJ1V0tPbFREODJFVmE1SVZQVXNSNlNkUXJjbEFjRnlMV0JSckpQbkRJVE9Eb2VvakMyU3pLTVgxMmQ0YU5JZkpQaXFhemlB?oc=5",
+          "source": "news.google.com",
+          "league": "Enhanced Games",
+          "summary": ""
+        },
+        {
+          "tag": "🔥 Event",
+          "hot": false,
+          "text": "Enhanced Games athletes chase doping-free records",
+          "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNMS1sbnluN0MtMWg0LU5MSGZkRHBIdU42ZG9fcXFiaC1Ud0RocElfNFFKV0RNMkRFVTBoT21vYzJjSS1VWW1mZGZodk1jR2YtZjJjam5acHZaS0ItY3NqQjBFZTdPYjgwYXRLQ1RTdmhWMWsySFE1TkZGNGJ1SW9wZ0dTV24?oc=5",
+          "source": "Financial Times",
+          "league": "Enhanced Games",
+          "summary": "‘Steroid Olympics’ company to start selling peptides after Kennedy signals deregulation Financial Times"
+        },
+        {
+          "tag": "Legal",
+          "hot": false,
+          "text": "Enhanced Games face Olympic backlash, ethics debate",
+          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPNHRQbGhoeUZMd1JYeVZPOG81dXhYZUJhS3VsZDRzT1ZaSF96SGFpT0VIVXl1aGpkd2hoZEx5Rm9NSEllZmNhSTkxZWZMLWVtVHltclR6clM4ancwaTFmWHlYUUNrMDJFWkRLbEg4VFRoMkhNQzNNbEJuZ0JId2IxdHgyb3BvLW1nOHQwc3A2TTlRSDltLUZQdGFNU3dzbHFPVjZ0ZkFfVTAweHM5cnJpcHNrcXl1eVUyZHhv?oc=5",
+          "source": "The Irish Times",
+          "league": "Enhanced Games",
+          "summary": "Ian O’Riordan: The Enhanced Games are fast becoming a running joke The Irish Times"
+        }
+      ]
+    }
+  ]
+}
