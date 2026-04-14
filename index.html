@@ -436,6 +436,12 @@ let angle = 0;
 
 document.getElementById('total-issues').textContent =
   document.querySelectorAll('.issue-card').length;
+
+const latestCount = document.querySelector('.issue-card.latest .issue-count');
+if (latestCount) {
+  const match = latestCount.textContent.match(/[\d,]+/);
+  if (match) document.getElementById('total-stories').textContent = match[0];
+}
 </script>
 </body>
 </html>
