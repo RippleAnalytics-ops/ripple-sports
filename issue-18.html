@@ -137,6 +137,69 @@ footer{border-top:1px solid var(--border);padding:28px 32px;display:flex;align-i
 @media(max-width:900px){.main{grid-template-columns:1fr}.sidebar{position:static;top:auto}}
 @media(max-width:640px){.shell,.controls-inner,footer{padding-left:16px;padding-right:16px}.header-inner{grid-template-columns:1fr}.header-meta{align-items:flex-start;flex-direction:row;flex-wrap:wrap}.feed-cols{flex-direction:column}.brand-title{font-size:64px}.search-box{width:100%}.controls-inner{flex-wrap:wrap}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+
+/* ── Visual enhancements ─────────────────────────────────────── */
+
+/* Category left accent border */
+.card[data-cat="us-sports"]  { border-left:3px solid #2563eb; }
+.card[data-cat="soccer"]     { border-left:3px solid #16a34a; }
+.card[data-cat="motorsport"] { border-left:3px solid #dc2626; }
+.card[data-cat="volleyball"] { border-left:3px solid #d97706; }
+.card[data-cat="fitness"]    { border-left:3px solid #7c3aed; }
+.card[data-cat="general"]    { border-left:3px solid #0891b2; }
+
+/* Category glow on card hover */
+.card[data-cat="us-sports"]:hover  { box-shadow:0 8px 28px rgba(37,99,235,.30),0 2px 8px rgba(0,0,0,.4); }
+.card[data-cat="soccer"]:hover     { box-shadow:0 8px 28px rgba(22,163,74,.30),0 2px 8px rgba(0,0,0,.4); }
+.card[data-cat="motorsport"]:hover { box-shadow:0 8px 28px rgba(220,38,38,.30),0 2px 8px rgba(0,0,0,.4); }
+.card[data-cat="volleyball"]:hover { box-shadow:0 8px 28px rgba(217,119,6,.30),0 2px 8px rgba(0,0,0,.4); }
+.card[data-cat="fitness"]:hover    { box-shadow:0 8px 28px rgba(124,58,237,.30),0 2px 8px rgba(0,0,0,.4); }
+.card[data-cat="general"]:hover    { box-shadow:0 8px 28px rgba(8,145,178,.30),0 2px 8px rgba(0,0,0,.4); }
+
+/* Stronger card header tint + colored separator */
+.card[data-cat="us-sports"]  .card-head { background:color-mix(in srgb,#2563eb 13%,var(--surface2));border-bottom:1px solid color-mix(in srgb,#2563eb 28%,transparent); }
+.card[data-cat="soccer"]     .card-head { background:color-mix(in srgb,#16a34a 13%,var(--surface2));border-bottom:1px solid color-mix(in srgb,#16a34a 28%,transparent); }
+.card[data-cat="motorsport"] .card-head { background:color-mix(in srgb,#dc2626 13%,var(--surface2));border-bottom:1px solid color-mix(in srgb,#dc2626 28%,transparent); }
+.card[data-cat="volleyball"] .card-head { background:color-mix(in srgb,#d97706 13%,var(--surface2));border-bottom:1px solid color-mix(in srgb,#d97706 28%,transparent); }
+.card[data-cat="fitness"]    .card-head { background:color-mix(in srgb,#7c3aed 13%,var(--surface2));border-bottom:1px solid color-mix(in srgb,#7c3aed 28%,transparent); }
+.card[data-cat="general"]    .card-head { background:color-mix(in srgb,#0891b2 13%,var(--surface2));border-bottom:1px solid color-mix(in srgb,#0891b2 28%,transparent); }
+
+/* HOT badge */
+.hot-flag { display:none; }
+.hot-badge {
+  display:inline-flex;align-items:center;
+  font-family:'DM Mono',monospace;font-size:8px;font-weight:700;letter-spacing:.1em;
+  padding:2px 6px;border-radius:3px;
+  background:linear-gradient(90deg,#ff4500,#ff8c00);
+  color:#fff;flex-shrink:0;
+  box-shadow:0 0 8px rgba(255,80,0,.45);
+}
+
+/* Story count badge */
+.story-count {
+  font-family:'DM Mono',monospace;font-size:9px;
+  color:var(--ink3);padding:2px 8px;
+  border:1px solid var(--border);border-radius:20px;margin-left:8px;
+}
+
+/* Header aurora blobs */
+.aurora-blob {
+  position:absolute;border-radius:50%;pointer-events:none;z-index:0;
+}
+.aurora-blob-a {
+  width:480px;height:280px;top:-50px;left:-80px;
+  background:radial-gradient(ellipse,rgba(140,82,255,.20) 0%,transparent 70%);
+  filter:blur(52px);
+  animation:auroraA 10s ease-in-out infinite alternate;
+}
+.aurora-blob-b {
+  width:380px;height:220px;top:10px;left:280px;
+  background:radial-gradient(ellipse,rgba(43,168,255,.16) 0%,transparent 70%);
+  filter:blur(56px);
+  animation:auroraB 13s ease-in-out infinite alternate;
+}
+@keyframes auroraA{0%{transform:translate(0,0) scale(1)}100%{transform:translate(44px,24px) scale(1.18)}}
+@keyframes auroraB{0%{transform:translate(0,0) scale(1)}100%{transform:translate(-30px,16px) scale(1.12)}}
 </style>
 </head>
 
@@ -595,6 +658,41 @@ function updateStats(){
 allCards=Array.from(document.querySelectorAll('#card-pool .card'));distributeCards();updateStats();applyRead();
 const toTop=document.getElementById('toTop');window.addEventListener('scroll',()=>toTop.classList.toggle('show',window.scrollY>300),{passive:true});toTop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
 (function(){const tip=document.getElementById('storyTip');if(!tip)return;let t,cur=null;document.addEventListener('mouseover',e=>{const el=e.target.closest('.item[data-summary]');if(el===cur)return;clearTimeout(t);tip.classList.remove('show');cur=el;if(!el)return;t=setTimeout(()=>{tip.textContent=el.dataset.summary;tip.classList.add('show')},400)});document.addEventListener('mousemove',e=>{tip.style.left=(e.clientX+16)+'px';tip.style.top=(e.clientY-8)+'px'});document.addEventListener('mouseout',e=>{if(cur&&!cur.contains(e.relatedTarget)){clearTimeout(t);tip.classList.remove('show');cur=null}})})();
+</script>
+<script>
+// Aurora blobs in header
+(function(){
+  const brand=document.querySelector('.brand');
+  if(!brand)return;
+  brand.style.position='relative';
+  ['aurora-blob aurora-blob-a','aurora-blob aurora-blob-b'].forEach(cls=>{
+    const d=document.createElement('div');
+    d.className=cls;
+    brand.prepend(d);
+  });
+})();
+// HOT badges
+document.querySelectorAll('.item').forEach(el=>{
+  const flag=el.querySelector('.hot-flag');
+  if(flag&&flag.textContent.trim()){
+    const badge=document.createElement('span');
+    badge.className='hot-badge';
+    badge.textContent='HOT';
+    const body=el.querySelector('.item-body');
+    if(body)el.insertBefore(badge,body);
+  }
+});
+// Story count badges
+document.querySelectorAll('.card').forEach(card=>{
+  const count=card.querySelectorAll('.item').length;
+  if(!count)return;
+  const seasonTag=card.querySelector('.season-tag');
+  if(!seasonTag)return;
+  const badge=document.createElement('span');
+  badge.className='story-count';
+  badge.textContent=count;
+  seasonTag.after(badge);
+});
 </script>
 </body>
 </html>
